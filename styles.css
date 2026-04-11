@@ -709,23 +709,167 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
   .hero-nav-btn { width: 2.75rem; height: 2.75rem; }
   .testi-btn    { width: 2.75rem; height: 2.75rem; }
 
-  /* ── Navbar ────────────────────────────────────────────── */
-  #navbar .inner { height: 4rem; }
-
-  /* ── Hero section ──────────────────────────────────────── */
-  #hero { min-height: 100svh; }
-
-  .slide-content {
-    bottom: 10rem;
-    padding: 0 1.25rem;
-    text-align: center;
+  /* ── Navbar (mobile) ───────────────────────────────────── */
+  #navbar .inner { height: 3.75rem; }
+  /* Ensure always a readable bg on mobile regardless of scroll */
+  #navbar:not(.scrolled) {
+    background: rgba(10, 5, 20, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-color: rgba(255,255,255,0.08);
   }
-  .slide-h1 { font-size: clamp(1.75rem, 7vw, 2.75rem); }
-  .slide-sub { font-size: 0.95rem; }
 
-  /* CTA bar stacks on mobile */
-  #hero .absolute.bottom-20 { bottom: 5rem; }
-  #hero .absolute.bottom-20 .flex { flex-direction: column; gap: 0.75rem; }
+  /* ═══════════════════════════════════════════════════════════
+     MOBILE HERO — Vertically centered, Apple/Stripe style
+  ═══════════════════════════════════════════════════════════ */
+
+  /* Hero height & flex layout */
+  #hero {
+    min-height: 90vh;
+    min-height: 90svh;
+  }
+
+  /* Each slide becomes a flex column, centered */
+  .hero-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Darker, stronger overlay for mobile readability */
+  .slide-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.72) 60%,
+      rgba(0, 0, 0, 0.82) 100%
+    );
+  }
+
+  /* Content block: vertically centered, full width */
+  .slide-content {
+    position: absolute;
+    bottom: auto;                    /* cancel desktop bottom positioning */
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 1.375rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    /* Fade-in animation */
+    animation: heroFadeUp 0.7s ease both;
+  }
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(calc(-50% + 1.5rem)); }
+    to   { opacity: 1; transform: translateY(-50%); }
+  }
+
+  /* Eyebrow pill — smaller on mobile */
+  .slide-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    padding: 0.35rem 0.9rem;
+    margin-bottom: 1.125rem;
+  }
+
+  /* H1 — bold and prominent */
+  .slide-h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  .slide-h1 br { display: none; }   /* remove forced line breaks */
+
+  /* Subtitle — slimmer, max 2 lines */
+  .slide-sub {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,.68);
+    max-width: 26rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── Arrow buttons: hidden on mobile (swipe instead) ──── */
+  #slider-prev,
+  #slider-next {
+    display: none;
+  }
+
+  /* ── Dots: repositioned and slightly larger touch targets */
+  #hero .absolute.bottom-8 {
+    bottom: 1.25rem;
+    gap: 0.5rem;
+  }
+  .hero-dot {
+    width: 0.5rem; height: 0.5rem;
+    min-width: 44px; min-height: 44px;
+    /* Large invisible tap region, small visual dot */
+    background: clip-padding;
+    padding: 1.1rem;
+    border-radius: 50%;
+    background-clip: content-box;
+    background-color: rgba(255,255,255,0.35);
+  }
+  .hero-dot.active {
+    background-color: #fff;
+    width: 1.5rem;
+    min-width: 44px;
+    border-radius: 999px;
+  }
+
+  /* ── CTA bar — removed from separate floating div,
+     integrated into slide-content via CSS reposition ─── */
+  #hero .absolute.bottom-20 {
+    /* Move CTA block below the centered text block */
+    bottom: 3.5rem;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding: 0 1.375rem;
+  }
+  #hero .absolute.bottom-20 .flex {
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+
+  /* Primary CTA — full-width, gradient, rounded, shadowed */
+  #hero .btn-primary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.875rem;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 8px 28px rgba(109,31,160,.45);
+    min-height: 52px;
+    justify-content: center;
+  }
+
+  /* Secondary / glass button — slimmer outline */
+  #hero .btn-glass {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.875rem;
+    font-size: 0.9375rem;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    min-height: 48px;
+    justify-content: center;
+  }
 
   /* ── Trust bar ─────────────────────────────────────────── */
   .trust-item { font-size: 0.8rem; }
@@ -919,8 +1063,11 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
 
 /* ── Extra small (max-width: 480px) ─────────────────────── */
 @media (max-width: 480px) {
-  #hero .absolute.bottom-20 { bottom: 4rem; }
-  .slide-h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
+  /* Hero: CTA bar lower, heading even larger for impact */
+  #hero .absolute.bottom-20 { bottom: 2.5rem; padding: 0 1.125rem; }
+  .slide-h1 { font-size: clamp(1.65rem, 8vw, 2.1rem); }
+  .slide-sub { font-size: 0.85rem; }
+  #hero .absolute.bottom-20 .flex { max-width: 100%; }
 
   /* Service cards slightly wider on tiny screens */
   #services .grid .svc-card { flex: 0 0 90%; }

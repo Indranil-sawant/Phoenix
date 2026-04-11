@@ -85,6 +85,17 @@ function goHeroSlide(idx) {
   heroIndex = (idx + heroSlides.length) % heroSlides.length;
   heroSlides[heroIndex].classList.add('active');
   heroDots[heroIndex].classList.add('active');
+
+  // Re-trigger CSS fade-in animation for the new slide's content on mobile
+  if (window.innerWidth < 769) {
+    const content = heroSlides[heroIndex].querySelector('.slide-content');
+    if (content) {
+      content.style.animation = 'none';
+      // Force reflow to restart animation
+      void content.offsetWidth;
+      content.style.animation = '';
+    }
+  }
 }
 
 function startHeroAuto() {
