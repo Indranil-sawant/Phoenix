@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Products | Premium Export/Import Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f2a44;
+            --primary-light: #1a3a54;
+            --primary-lighter: #2d4a64;
+            --secondary: #00b4d8;
+            --background: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --border: #e8eef7;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            --transition: 0.3s ease;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            display: flex;
+            height: calc(100vh - 180px);
+            gap: 0;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 280px;
+            background: var(--card-bg);
+            border-right: 1px solid var(--border);
+            padding: 2rem;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .toggle-sidebar {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* SEARCH BAR */
+        .search-container {
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background-color: var(--background);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: #999;
+        }
+
+        /* FILTER SECTION */
+        .filter-section {
+            margin-bottom: 2rem;
+        }
+
+        .filter-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .filter-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-item {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            background-color: var(--background);
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .filter-item:hover {
+            background-color: #e8f1f8;
+            transform: translateX(4px);
+        }
+
+        .filter-item.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .filter-item.all {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            flex: 1;
+            padding: 2.5rem;
+            overflow-y: auto;
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stats-text {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .stats-text strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* CARDS GRID */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* SERVICE CARD */
+        .service-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .card-category {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-lighter) 100%);
+        }
+
+        .card-button:active {
+            transform: translateY(0);
+        }
+
+        /* EMPTY STATE */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem 2rem;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .empty-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-state p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .sidebar {
+                width: 240px;
+                padding: 1.5rem;
+            }
+
+            .main-content {
+                padding: 2rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                position: relative;
+                padding: 1.5rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                position: static;
+            }
+
+            .sidebar.mobile-open {
+                max-height: 600px;
+                overflow-y: auto;
+            }
+
+            .toggle-sidebar {
+                display: block;
+            }
+
+            .main-content {
+                padding: 1.5rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .header {
+                padding: 2rem 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.75rem;
+            }
+
+            .header p {
+                font-size: 0.95rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .card-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .header {
+                padding: 1.5rem 1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .cards-grid {
+                gap: 1rem;
+            }
+
+            .service-card {
+                padding: 1.25rem;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card-description {
+                font-size: 0.85rem;
+            }
+
+            .card-button {
+                padding: 0.65rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .sidebar {
+                padding: 1rem;
+            }
+
+            .filter-item {
+                padding: 0.65rem 0.85rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* SCROLLBAR STYLING */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ccc;
+        }
+
+        /* UTILITY */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Services & Products</h1>
+        <p>Explore our comprehensive catalog of industrial solutions</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-title">Filters</span>
+                <button class="toggle-sidebar" aria-label="Close sidebar">✕</button>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Search services..."
+                    aria-label="Search services"
+                >
+            </div>
+
+            <!-- CATEGORY FILTER -->
+            <div class="filter-section">
+                <label class="filter-title">Categories</label>
+                <ul class="filter-list" id="filterList">
+                    <li class="filter-item all" data-category="all">All Services</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- STATS BAR -->
+            <div class="stats-bar">
+                <div class="stats-text">
+                    Showing <strong id="cardCount">0</strong> services
+                </div>
+            </div>
+
+            <!-- CARDS GRID -->
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Cards rendered by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        /**
+         * SERVICES DATA
+         * Dynamic data structure - easily scalable
+         */
+        const servicesData = [
+            {
+                id: 1,
+                title: "Gas Equipment",
+                category: "Gas Equipment",
+                icon: "⚙️",
+                description: "Compressors, regulators, and detection systems"
+            },
+            {
+                id: 2,
+                title: "Air Compressors",
+                category: "Gas Equipment",
+                icon: "💨",
+                description: "Industrial-grade air compression solutions"
+            },
+            {
+                id: 3,
+                title: "Gas Cylinder Regulators",
+                category: "Gas Equipment",
+                icon: "🔧",
+                description: "Precision pressure regulation systems"
+            },
+            {
+                id: 4,
+                title: "Automatic Changeover",
+                category: "Gas Equipment",
+                icon: "🔄",
+                description: "Mechanical and electronic switchover systems"
+            },
+            {
+                id: 5,
+                title: "Gas Detection System",
+                category: "Gas Equipment",
+                icon: "🚨",
+                description: "Advanced monitoring and alert systems"
+            },
+            {
+                id: 6,
+                title: "3-in-1 Combination Generator",
+                category: "Gas Generators",
+                icon: "🔬",
+                description: "N₂, Zero Air, and H₂ generation in one unit"
+            },
+            {
+                id: 7,
+                title: "Hydrogen Gas Generator",
+                category: "Gas Generators",
+                icon: "⚡",
+                description: "Ultra high pure hydrogen production"
+            },
+            {
+                id: 8,
+                title: "Nitrogen Generator for GC",
+                category: "Gas Generators",
+                icon: "🧪",
+                description: "Membrane technology for gas chromatography"
+            },
+            {
+                id: 9,
+                title: "Zero Air Generator",
+                category: "Gas Generators",
+                icon: "💧",
+                description: "GC/TOC certified zero air production"
+            },
+            {
+                id: 10,
+                title: "Gas Generator for LCMS",
+                category: "Gas Generators",
+                icon: "🔬",
+                description: "Liquid chromatography mass spectrometry grade"
+            },
+            {
+                id: 11,
+                title: "Gas Piping & Utility Systems",
+                category: "Gas Piping",
+                icon: "🔌",
+                description: "Complete gas routing and distribution solutions"
+            },
+            {
+                id: 12,
+                title: "Gas Distribution Panel",
+                category: "Gas Piping",
+                icon: "📊",
+                description: "Multi-line distribution and selector systems"
+            },
+            {
+                id: 13,
+                title: "Gas Monitoring System",
+                category: "Gas Piping",
+                icon: "📡",
+                description: "Real-time pressure and flow monitoring"
+            },
+            {
+                id: 14,
+                title: "P-Lok Precision Fittings",
+                category: "Gas Piping",
+                icon: "🔗",
+                description: "High-precision connection systems"
+            },
+            {
+                id: 15,
+                title: "Advanced Sonicator",
+                category: "Analytical Equipment",
+                icon: "🔊",
+                description: "With chiller, HMI, and printer integration"
+            },
+            {
+                id: 16,
+                title: "HPLC Column Ovens",
+                category: "Analytical Equipment",
+                icon: "🌡️",
+                description: "Temperature-controlled storage and operation"
+            },
+            {
+                id: 17,
+                title: "Vacuum Pumps",
+                category: "Analytical Equipment",
+                icon: "💫",
+                description: "High-performance vacuum generation systems"
+            },
+            {
+                id: 18,
+                title: "Recirculating Water Chillers",
+                category: "Analytical Equipment",
+                icon: "❄️",
+                description: "Precision temperature control for laboratories"
+            },
+            {
+                id: 19,
+                title: "Digital Gas Flow Meter",
+                category: "Analytical Equipment",
+                icon: "📏",
+                description: "Accurate flow rate measurement and logging"
+            },
+            {
+                id: 20,
+                title: "Ultrasonic Bath Sonicator",
+                category: "Analytical Equipment",
+                icon: "🛁",
+                description: "Laboratory sample preparation system"
+            },
+            {
+                id: 21,
+                title: "Chemical Reference Standards",
+                category: "Chromatography Consumables",
+                icon: "⚗️",
+                description: "Certified and traceable reference materials"
+            },
+            {
+                id: 22,
+                title: "HPLC Columns",
+                category: "Chromatography Consumables",
+                icon: "📦",
+                description: "Cosmosil and Nucleosil high-performance columns"
+            },
+            {
+                id: 23,
+                title: "GC & HPLC Syringes",
+                category: "Chromatography Consumables",
+                icon: "💉",
+                description: "Precision sample injection systems"
+            },
+            {
+                id: 24,
+                title: "Syringe Filters & Vials",
+                category: "Chromatography Consumables",
+                icon: "🧬",
+                description: "Laboratory filtration and storage solutions"
+            },
+            {
+                id: 25,
+                title: "Hollow Cathode Lamps",
+                category: "Chromatography Consumables",
+                icon: "💡",
+                description: "D2 and cathode lamp systems for spectroscopy"
+            },
+            {
+                id: 26,
+                title: "Precision Fittings",
+                category: "Fittings & Accessories",
+                icon: "🔩",
+                description: "High-quality connection components"
+            },
+            {
+                id: 27,
+                title: "Semi-Automatic Changeover",
+                category: "Fittings & Accessories",
+                icon: "⚙️",
+                description: "Hybrid manual/automatic switching systems"
+            },
+            {
+                id: 28,
+                title: "Gas Regulators",
+                category: "Fittings & Accessories",
+                icon: "🎚️",
+                description: "Pressure and flow control systems"
+            },
+            {
+                id: 29,
+                title: "Quick Release Couplings",
+                category: "Fittings & Accessories",
+                icon: "🔓",
+                description: "Fast-connect/disconnect solutions"
+            },
+            {
+                id: 30,
+                title: "Flexible Hoses & Tubing",
+                category: "Fittings & Accessories",
+                icon: "🪢",
+                description: "Durable gas and fluid transmission lines"
+            }
+        ];
+
+        /**
+         * STATE MANAGEMENT
+         */
+        let filteredData = [...servicesData];
+        let selectedCategory = "all";
+
+        /**
+         * DOM ELEMENTS
+         */
+        const searchInput = document.getElementById("searchInput");
+        const cardsGrid = document.getElementById("cardsGrid");
+        const filterList = document.getElementById("filterList");
+        const cardCount = document.getElementById("cardCount");
+        const toggleButton = document.querySelector(".toggle-sidebar");
+        const sidebar = document.querySelector(".sidebar");
+
+        /**
+         * INITIALIZE APP
+         */
+        function init() {
+            populateCategories();
+            renderCards(servicesData);
+            attachEventListeners();
+        }
+
+        /**
+         * POPULATE CATEGORIES FROM DATA
+         */
+        function populateCategories() {
+            const categories = [...new Set(servicesData.map(service => service.category))];
+            const categoryItems = categories.map(category => `
+                <li class="filter-item" data-category="${category}">
+                    ${category}
+                </li>
+            `).join("");
+            
+            filterList.innerHTML += categoryItems;
+            attachFilterListeners();
+        }
+
+        /**
+         * RENDER CARDS DYNAMICALLY
+         */
+        function renderCards(data) {
+            if (data.length === 0) {
+                cardsGrid.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <h3>No results found</h3>
+                        <p>Try adjusting your search or filter criteria</p>
+                    </div>
+                `;
+                cardCount.textContent = "0";
+                return;
+            }
+
+            cardsGrid.innerHTML = data.map(service => `
+                <div class="service-card" data-id="${service.id}">
+                    <div class="card-icon">${service.icon}</div>
+                    <span class="card-category">${service.category}</span>
+                    <h3 class="card-title">${escapeHtml(service.title)}</h3>
+                    <p class="card-description">${escapeHtml(service.description)}</p>
+                    <button class="card-button">View Inventory</button>
+                </div>
+            `).join("");
+
+            cardCount.textContent = data.length;
+        }
+
+        /**
+         * FILTER AND SEARCH LOGIC
+         */
+        function filterCards() {
+            filteredData = servicesData.filter(service => {
+                const matchesSearch = service.title.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+                                     service.description.toLowerCase().includes(searchInput.value.toLowerCase());
+                const matchesCategory = selectedCategory === "all" || service.category === selectedCategory;
+                return matchesSearch && matchesCategory;
+            });
+
+            renderCards(filteredData);
+        }
+
+        /**
+         * EVENT LISTENERS
+         */
+        function attachEventListeners() {
+            // Search input
+            searchInput.addEventListener("input", filterCards);
+
+            // Mobile toggle
+            toggleButton.addEventListener("click", () => {
+                sidebar.classList.toggle("mobile-open");
+                toggleButton.textContent = sidebar.classList.contains("mobile-open") ? "✕" : "☰";
+            });
+
+            // Close sidebar when clicking main content on mobile
+            if (window.innerWidth <= 768) {
+                document.querySelector(".main-content").addEventListener("click", () => {
+                    sidebar.classList.remove("mobile-open");
+                    toggleButton.textContent = "☰";
+                });
+            }
+        }
+
+        function attachFilterListeners() {
+            const filterItems = document.querySelectorAll(".filter-item");
+            filterItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    filterItems.forEach(i => i.classList.remove("active"));
+                    item.classList.add("active");
+                    selectedCategory = item.dataset.category;
+                    filterCards();
+
+                    // Close sidebar on mobile
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove("mobile-open");
+                    }
+                });
+            });
+
+            // Set "All Services" as initially active
+            filterItems[0].classList.add("active");
+        }
+
+        /**
+         * UTILITY: ESCAPE HTML TO PREVENT XSS
+         */
+        function escapeHtml(text) {
+            const map = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        /**
+         * HANDLE RESPONSIVE BEHAVIOR
+         */
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768 && sidebar.classList.contains("mobile-open")) {
+                sidebar.classList.remove("mobile-open");
+            }
+        });
+
+        /**
+         * START APP
+         */
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
+</html>

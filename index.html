@@ -444,6 +444,514 @@
 </section>
 
 
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     3b. GAS DISTRIBUTION SYSTEM — Live Animated SVG
+═══════════════════════════════════════════════════════════ -->
+<section id="gas-system" style="padding:80px 0;background:#0b0f14;overflow:hidden;position:relative;">
+
+  <!-- Subtle radial ambient glow -->
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(0,229,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+
+  <div class="container-wide" style="position:relative;z-index:1;">
+
+    <!-- Section Header -->
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;background:rgba(0,229,255,0.07);border:1px solid rgba(0,229,255,0.18);margin-bottom:20px;">
+        <span style="width:8px;height:8px;border-radius:50%;background:#00E5FF;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 8px #00E5FF;display:inline-block;"></span>
+        <span style="font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#00E5FF;font-family:'JetBrains Mono','Courier New',monospace;">Live System Monitor</span>
+      </div>
+      <h2 style="font-family:'Outfit','Inter',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);color:#fff;line-height:1.15;margin:0 0 16px;">
+        Gas Distribution
+        <span style="background:linear-gradient(135deg,#00E5FF 0%,#0072ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;">Network Overview</span>
+      </h2>
+      <p style="color:rgba(255,255,255,0.45);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.7;">Real-time process flow monitoring across the industrial distribution manifold — pressure-regulated, precision-engineered.</p>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:2.5rem;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#00E5FF;box-shadow:0 0 8px #00E5FF;display:inline-block;"></span>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">SYSTEM STATUS: <strong style="color:#00E5FF;">OPERATIONAL</strong></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;display:inline-block;"></span>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">PRESSURE: <strong style="color:#22c55e;">4.2 BAR</strong></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px #f59e0b;display:inline-block;"></span>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">FLOW RATE: <strong style="color:#f59e0b;">18.6 L/MIN</strong></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#a78bfa;box-shadow:0 0 8px #a78bfa;display:inline-block;"></span>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">PURITY: <strong style="color:#a78bfa;">99.999%</strong></span>
+      </div>
+    </div>
+
+    <!-- SVG Gas Distribution System -->
+    <div class="reveal" style="width:100%;overflow:visible;border-radius:16px;border:1px solid rgba(0,229,255,0.1);background:rgba(0,229,255,0.02);padding:24px;box-sizing:border-box;">
+      <svg id="gas-dist-svg" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" aria-label="Gas Distribution System Diagram" role="img">
+        <defs>
+          <!-- Glow filters -->
+          <filter id="gfx-glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="gfx-glow-strong" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="7" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="gfx-glow-node" x="-120%" y="-120%" width="340%" height="340%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- Gradients -->
+          <radialGradient id="gfx-node-cyan" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#00E5FF" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#0072ff" stop-opacity="0.5"/>
+          </radialGradient>
+          <radialGradient id="gfx-node-purple" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c084fc" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.5"/>
+          </radialGradient>
+          <radialGradient id="gfx-node-green" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#4ade80" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#15803d" stop-opacity="0.5"/>
+          </radialGradient>
+          <!-- Motion paths (embedded in defs for animateMotion) -->
+          <path id="mp-trunk" d="M80,240 L820,240"/>
+          <path id="mp-trunk-r2" d="M80,240 L820,240"/>
+          <path id="mp-top-loop" d="M200,240 L200,100 L720,100 L720,240"/>
+          <path id="mp-bd1" d="M290,240 L290,380"/>
+          <path id="mp-bd2" d="M470,240 L470,380"/>
+          <path id="mp-bd3" d="M650,240 L650,380"/>
+          <path id="mp-bu1" d="M200,240 L200,100"/>
+          <path id="mp-bu2" d="M380,240 L380,100"/>
+          <path id="mp-bu3" d="M560,240 L560,100"/>
+          <path id="mp-bu4" d="M720,240 L720,100"/>
+        </defs>
+
+        <!-- ── BACKGROUND GRID ── -->
+        <defs>
+          <pattern id="gfx-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,229,255,0.04)" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="900" height="480" fill="url(#gfx-grid)"/>
+
+        <!-- ── PIPE BASE TRACKS (dim background layer) ── -->
+        <!-- Main horizontal trunk -->
+        <line x1="80" y1="240" x2="820" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <!-- Vertical up-branches -->
+        <line x1="200" y1="100" x2="200" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <line x1="380" y1="100" x2="380" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <line x1="560" y1="100" x2="560" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <line x1="720" y1="100" x2="720" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <!-- Top horizontal connector -->
+        <line x1="200" y1="100" x2="720" y2="100" stroke="rgba(0,229,255,0.07)" stroke-width="5" stroke-linecap="round"/>
+        <!-- Vertical down-branches -->
+        <line x1="290" y1="240" x2="290" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <line x1="470" y1="240" x2="470" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <line x1="650" y1="240" x2="650" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6" stroke-linecap="round"/>
+        <!-- Bottom horizontal connector -->
+        <line x1="290" y1="380" x2="650" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="5" stroke-linecap="round"/>
+
+        <!-- ── ANIMATED FLOW PIPES (cyan glowing lines) ── -->
+        <line class="gas-pipe" x1="80" y1="240" x2="820" y2="240"
+              stroke="#00E5FF" stroke-width="1.8" stroke-linecap="round"
+              stroke-dasharray="18 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowH 2.4s linear infinite;"/>
+        <!-- Up branches (slightly slower) -->
+        <line class="gas-pipe" x1="200" y1="240" x2="200" y2="100"
+              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowV 2.0s linear infinite;"/>
+        <line class="gas-pipe" x1="380" y1="240" x2="380" y2="100"
+              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowV 2.2s linear infinite -0.5s;"/>
+        <line class="gas-pipe" x1="560" y1="240" x2="560" y2="100"
+              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowV 2.0s linear infinite -1s;"/>
+        <line class="gas-pipe" x1="720" y1="240" x2="720" y2="100"
+              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowV 2.15s linear infinite -0.3s;"/>
+        <!-- Top horizontal connector -->
+        <line class="gas-pipe" x1="200" y1="100" x2="720" y2="100"
+              stroke="#00E5FF" stroke-width="1.2" stroke-linecap="round"
+              stroke-dasharray="10 14" stroke-opacity="0.65" filter="url(#gfx-glow-soft)"
+              style="animation:flowH 3.2s linear infinite;"/>
+        <!-- Down branches -->
+        <line class="gas-pipe" x1="290" y1="240" x2="290" y2="380"
+              stroke="#00bcd4" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowVDown 1.8s linear infinite;"/>
+        <line class="gas-pipe" x1="470" y1="240" x2="470" y2="380"
+              stroke="#00bcd4" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowVDown 1.95s linear infinite -0.6s;"/>
+        <line class="gas-pipe" x1="650" y1="240" x2="650" y2="380"
+              stroke="#00bcd4" stroke-width="1.5" stroke-linecap="round"
+              stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
+              style="animation:flowVDown 1.85s linear infinite -1.2s;"/>
+        <!-- Bottom horizontal connector -->
+        <line class="gas-pipe" x1="290" y1="380" x2="650" y2="380"
+              stroke="#00bcd4" stroke-width="1.2" stroke-linecap="round"
+              stroke-dasharray="8 12" stroke-opacity="0.55" filter="url(#gfx-glow-soft)"
+              style="animation:flowH 3.5s linear infinite;"/>
+
+        <!-- ── FLOW PARTICLES (bright moving dots using animateMotion) ── -->
+        <!-- Trunk particle 1 -->
+        <circle r="3.5" fill="#00E5FF" filter="url(#gfx-glow-strong)" opacity="0.95">
+          <animateMotion dur="3s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-trunk"/>
+          </animateMotion>
+        </circle>
+        <!-- Trunk particle 2 (offset) -->
+        <circle r="2.8" fill="#7efeff" filter="url(#gfx-glow-strong)" opacity="0.75">
+          <animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-trunk-r2"/>
+          </animateMotion>
+        </circle>
+        <!-- Top loop particle -->
+        <circle r="2.5" fill="#00E5FF" filter="url(#gfx-glow-strong)" opacity="0.8">
+          <animateMotion dur="4.2s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-top-loop"/>
+          </animateMotion>
+        </circle>
+        <!-- Down branch particles -->
+        <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
+          <animateMotion dur="1.7s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bd1"/>
+          </animateMotion>
+        </circle>
+        <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
+          <animateMotion dur="1.9s" begin="-0.5s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bd2"/>
+          </animateMotion>
+        </circle>
+        <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
+          <animateMotion dur="1.8s" begin="-1s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bd3"/>
+          </animateMotion>
+        </circle>
+        <!-- Up branch particles -->
+        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+          <animateMotion dur="1.6s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bu1"/>
+          </animateMotion>
+        </circle>
+        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+          <animateMotion dur="1.8s" begin="-0.4s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bu2"/>
+          </animateMotion>
+        </circle>
+        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+          <animateMotion dur="1.7s" begin="-0.9s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bu3"/>
+          </animateMotion>
+        </circle>
+        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+          <animateMotion dur="1.65s" begin="-1.3s" repeatCount="indefinite" calcMode="linear">
+            <mpath href="#mp-bu4"/>
+          </animateMotion>
+        </circle>
+
+        <!-- ── FLOW DIRECTION ARROWS (chevrons on main trunk) ── -->
+        <g fill="rgba(0,229,255,0.45)" filter="url(#gfx-glow-soft)">
+          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(148,240)"/>
+          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(328,240)"/>
+          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(508,240)"/>
+          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(688,240)"/>
+        </g>
+
+        <!-- ── GAS SOURCE NODE (left, purple — high voltage supply) ── -->
+        <g class="gas-node" id="node-source" transform="translate(80,240)">
+          <!-- Pulse rings -->
+          <circle r="26" fill="none" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2" class="node-pulse-ring"/>
+          <circle r="16" fill="rgba(192,132,252,0.1)" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.45"/>
+          <!-- Core glow -->
+          <circle r="9" fill="url(#gfx-node-purple)" filter="url(#gfx-glow-node)"/>
+          <circle r="3.5" fill="white" opacity="0.95"/>
+          <!-- Labels -->
+          <text y="-36" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" fill="rgba(192,132,252,0.9)" letter-spacing="1.5">GAS SOURCE</text>
+          <text y="-22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="0.5">HP-01</text>
+          <text y="28" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(192,132,252,0.5)">↑ 200 BAR</text>
+        </g>
+
+        <!-- ── MAIN OUTLET NODE (right, green) ── -->
+        <g class="gas-node" id="node-outlet" transform="translate(820,240)">
+          <circle r="26" fill="none" stroke="#4ade80" stroke-width="1" stroke-opacity="0.2" class="node-pulse-ring"/>
+          <circle r="16" fill="rgba(74,222,128,0.1)" stroke="#4ade80" stroke-width="1.5" stroke-opacity="0.45"/>
+          <circle r="9" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
+          <circle r="3.5" fill="white" opacity="0.95"/>
+          <text y="-36" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" fill="rgba(74,222,128,0.9)" letter-spacing="1.5">MAIN OUTLET</text>
+          <text y="-22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="0.5">HB-07</text>
+          <text y="28" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(74,222,128,0.5)">NOMINAL</text>
+        </g>
+
+        <!-- ── TRUNK JUNCTION NODES (valve nodes) ── -->
+        <!-- V-01 at 200,240 -->
+        <g class="gas-node" id="node-v01" transform="translate(200,240)">
+          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
+          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
+          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.5" fill="white" opacity="0.9"/>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-01</text>
+        </g>
+        <!-- V-02 at 380,240 -->
+        <g class="gas-node" id="node-v02" transform="translate(380,240)">
+          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
+          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
+          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.5" fill="white" opacity="0.9"/>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-02</text>
+        </g>
+        <!-- V-03 at 560,240 -->
+        <g class="gas-node" id="node-v03" transform="translate(560,240)">
+          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
+          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
+          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.5" fill="white" opacity="0.9"/>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-03</text>
+        </g>
+        <!-- V-04 at 720,240 -->
+        <g class="gas-node" id="node-v04" transform="translate(720,240)">
+          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
+          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
+          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.5" fill="white" opacity="0.9"/>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-04</text>
+        </g>
+
+        <!-- ── TOP PRESSURE REGULATOR NODES ── -->
+        <!-- REG-01 at 200,100 -->
+        <g class="gas-node" id="node-reg01" transform="translate(200,100)">
+          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-01</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.2 BAR</text>
+        </g>
+        <!-- REG-02 at 380,100 -->
+        <g class="gas-node" id="node-reg02" transform="translate(380,100)">
+          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-02</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.1 BAR</text>
+        </g>
+        <!-- REG-03 at 560,100 -->
+        <g class="gas-node" id="node-reg03" transform="translate(560,100)">
+          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-03</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.3 BAR</text>
+        </g>
+        <!-- REG-04 at 720,100 -->
+        <g class="gas-node" id="node-reg04" transform="translate(720,100)">
+          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-04</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.2 BAR</text>
+        </g>
+
+        <!-- ── PRESSURE RELIEF VALVE BADGES (on trunk) ── -->
+        <!-- PRV-01 at 290,240 (between V-01 and V-02) -->
+        <g id="node-prv01" transform="translate(290,240)">
+          <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)" stroke-width="0.9"/>
+          <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(0,229,255,0.85)">PRV-01</text>
+        </g>
+        <!-- PRV-02 at 470,240 -->
+        <g id="node-prv02" transform="translate(470,240)">
+          <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)" stroke-width="0.9"/>
+          <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(0,229,255,0.85)">PRV-02</text>
+        </g>
+        <!-- PRV-03 at 650,240 -->
+        <g id="node-prv03" transform="translate(650,240)">
+          <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)" stroke-width="0.9"/>
+          <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(0,229,255,0.85)">PRV-03</text>
+        </g>
+
+        <!-- ── DELIVERY OUTLET NODES (bottom) ── -->
+        <!-- OUT-A at 290,380 -->
+        <g class="gas-node" id="node-outa" transform="translate(290,380)">
+          <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-A</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.28)">DELIVERED</text>
+        </g>
+        <!-- OUT-B at 470,380 -->
+        <g class="gas-node" id="node-outb" transform="translate(470,380)">
+          <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-B</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.28)">DELIVERED</text>
+        </g>
+        <!-- OUT-C at 650,380 -->
+        <g class="gas-node" id="node-outc" transform="translate(650,380)">
+          <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38"/>
+          <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
+          <circle r="2.8" fill="white" opacity="0.9"/>
+          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-C</text>
+          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.28)">DELIVERED</text>
+        </g>
+
+        <!-- ── SYSTEM WATERMARK ── -->
+        <text x="450" y="467" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(0,229,255,0.1)" letter-spacing="2.5">
+          PHOENIX TECHNICAL SOLUTION  •  GAS DISTRIBUTION MANIFOLD  •  SCHEMATIC REV 2.1
+        </text>
+
+      </svg>
+    </div>
+
+    <!-- Legend row -->
+    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:2rem;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:2px;background:#c084fc;border-radius:2px;box-shadow:0 0 6px #c084fc;"></div>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Gas Source</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:2px;background:#00E5FF;border-radius:2px;box-shadow:0 0 6px #00E5FF;"></div>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Primary Pipeline</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:2px;background:#00bcd4;border-radius:2px;box-shadow:0 0 4px #00bcd4;"></div>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Distribution Branch</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:2px;background:#4ade80;border-radius:2px;box-shadow:0 0 6px #4ade80;"></div>
+        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Delivery Outlet</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Keyframe CSS + Node hover/interaction JS -->
+  <style>
+    /* ── Flow keyframes ── */
+    @keyframes flowH {
+      from { stroke-dashoffset: 0; }
+      to   { stroke-dashoffset: -56; }
+    }
+    @keyframes flowV {
+      from { stroke-dashoffset: 0; }
+      to   { stroke-dashoffset: -44; }
+    }
+    @keyframes flowVDown {
+      from { stroke-dashoffset: 0; }
+      to   { stroke-dashoffset: 40; }
+    }
+    /* ── Node pulse ring animation ── */
+    @keyframes nodePulse {
+      0%   { r: 19; opacity: 0.35; }
+      60%  { r: 28; opacity: 0;    }
+      100% { r: 19; opacity: 0.35; }
+    }
+    .node-pulse-ring {
+      animation: nodePulse 2.8s ease-out infinite;
+    }
+    /* ── Status dot blink ── */
+    .gas-status-dot {
+      animation: gasDotBlink 2s ease-in-out infinite;
+    }
+    @keyframes gasDotBlink {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    /* ── Hover: highlight pipeline and node ── */
+    #gas-dist-svg .gas-pipe {
+      cursor: default;
+      transition: stroke-opacity 0.3s, stroke-width 0.3s;
+    }
+    #gas-dist-svg .gas-node {
+      cursor: pointer;
+      transition: opacity 0.25s;
+    }
+    #gas-dist-svg .gas-node:hover > circle:nth-child(2) {
+      stroke-opacity: 0.85 !important;
+      fill-opacity: 0.25 !important;
+    }
+    #gas-dist-svg .gas-node:hover > circle:nth-child(3) {
+      filter: url(#gfx-glow-strong);
+    }
+    /* ── Responsive SVG wrapper ── */
+    #gas-dist-svg {
+      width: 100%;
+      height: auto;
+    }
+    /* ── Mobile: reduce glow intensity ── */
+    @media (max-width: 640px) {
+      #gas-dist-svg .gas-pipe { stroke-width: 1.2px; }
+    }
+  </style>
+
+  <script>
+    (function() {
+      // Hover tooltip for gas nodes
+      const svg = document.getElementById('gas-dist-svg');
+      if (!svg) return;
+
+      const nodeData = {
+        'node-source':  { label: 'GAS SOURCE',     detail: 'HP Cylinder Bank • 200 BAR',       color: '#c084fc' },
+        'node-outlet':  { label: 'MAIN OUTLET',     detail: 'Final delivery header • NOMINAL',  color: '#4ade80' },
+        'node-v01':     { label: 'VALVE V-01',      detail: 'Ball Valve • OPEN • 4.2 BAR',      color: '#00E5FF' },
+        'node-v02':     { label: 'VALVE V-02',      detail: 'Ball Valve • OPEN • 4.1 BAR',      color: '#00E5FF' },
+        'node-v03':     { label: 'VALVE V-03',      detail: 'Ball Valve • OPEN • 4.3 BAR',      color: '#00E5FF' },
+        'node-v04':     { label: 'VALVE V-04',      detail: 'Ball Valve • OPEN • 4.2 BAR',      color: '#00E5FF' },
+        'node-reg01':   { label: 'REGULATOR REG-01', detail: 'Pressure set: 4.2 BAR',           color: '#00E5FF' },
+        'node-reg02':   { label: 'REGULATOR REG-02', detail: 'Pressure set: 4.1 BAR',           color: '#00E5FF' },
+        'node-reg03':   { label: 'REGULATOR REG-03', detail: 'Pressure set: 4.3 BAR',           color: '#00E5FF' },
+        'node-reg04':   { label: 'REGULATOR REG-04', detail: 'Pressure set: 4.2 BAR',           color: '#00E5FF' },
+        'node-outa':    { label: 'OUTLET A',         detail: 'Lab Station A • Delivering',      color: '#4ade80' },
+        'node-outb':    { label: 'OUTLET B',         detail: 'Lab Station B • Delivering',      color: '#4ade80' },
+        'node-outc':    { label: 'OUTLET C',         detail: 'Lab Station C • Delivering',      color: '#4ade80' },
+      };
+
+      // Create tooltip element
+      const tip = document.createElement('div');
+      tip.id = 'gas-svg-tooltip';
+      tip.style.cssText = [
+        'position:fixed','pointer-events:none','z-index:9999',
+        'background:rgba(11,15,20,0.92)','border:1px solid rgba(0,229,255,0.3)',
+        'padding:8px 12px','border-radius:8px','font-family:JetBrains Mono,Courier New,monospace',
+        'font-size:11px','color:#fff','opacity:0','transition:opacity 0.2s',
+        'backdrop-filter:blur(8px)','line-height:1.6','min-width:160px',
+        'box-shadow:0 0 20px rgba(0,229,255,0.15)'
+      ].join(';');
+      document.body.appendChild(tip);
+
+      Object.keys(nodeData).forEach(function(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const nd = nodeData[id];
+        el.addEventListener('mouseenter', function(e) {
+          tip.innerHTML = '<span style=\"color:' + nd.color + ';font-size:10px;letter-spacing:1.5px;\">' + nd.label + '</span><br/><span style=\"color:rgba(255,255,255,0.55);\">' + nd.detail + '</span>';
+          tip.style.opacity = '1';
+        });
+        el.addEventListener('mousemove', function(e) {
+          tip.style.left = (e.clientX + 14) + 'px';
+          tip.style.top  = (e.clientY - 10) + 'px';
+        });
+        el.addEventListener('mouseleave', function() {
+          tip.style.opacity = '0';
+        });
+      });
+    })();
+  </script>
+
+</section>
+
+
+
 <!-- ═══════════════════════════════════════════════════════════
      4. WHY CHOOSE US
 ═══════════════════════════════════════════════════════════ -->
