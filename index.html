@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ── SEO ────────────────────────────────────────────────── -->
   <title>Phoenix Technical Solution | Process Systems, Industrial Piping &amp; Automation Experts</title>
-  <meta name="description" content="Leading engineering experts in Pune specializing in high-pressure systems, industrial piping, PLC/SCADA automation, and custom process equipment fabrication. Swagelok certified engineers with 24/7 support." />
-  <meta name="keywords" content="process engineering Pune, industrial piping, high-pressure reactors, PLC SCADA automation, Swagelok certified, gas generators, analytical equipment, Pune" />
+  <meta name="description"
+    content="Leading engineering experts in Pune specializing in high-pressure systems, industrial piping, PLC/SCADA automation, and custom process equipment fabrication. Swagelok certified engineers with 24/7 support." />
+  <meta name="keywords"
+    content="process engineering Pune, industrial piping, high-pressure reactors, PLC SCADA automation, Swagelok certified, gas generators, analytical equipment, Pune" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.phoenixtechnicalsolution.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Phoenix Technical Solution | Process Systems, Piping &amp; Automation" />
-  <meta property="og:description" content="Swagelok-certified engineers delivering high-pressure reactors, industrial piping, gas systems, PLC/SCADA automation from Pune." />
+  <meta property="og:description"
+    content="Swagelok-certified engineers delivering high-pressure reactors, industrial piping, gas systems, PLC/SCADA automation from Pune." />
 
   <!-- Mobile experience meta -->
   <meta name="theme-color" content="#6d1fa0" />
@@ -26,27 +30,29 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans:    ['Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
             display: ['Space Grotesk', 'sans-serif'],
           },
           colors: {
             brand: {
-              purple:       '#6d1fa0',
-              'purple-lt':  '#8b3bbf',
-              'purple-dk':  '#4a1070',
-              magenta:      '#9c1fad',
-              crimson:      '#b6171e',
+              purple: '#6d1fa0',
+              'purple-lt': '#8b3bbf',
+              'purple-dk': '#4a1070',
+              magenta: '#9c1fad',
+              crimson: '#b6171e',
               'crimson-dk': '#8c0f14',
             },
-            surf: { 50:'#fafafa', 100:'#f5f5f7', 200:'#ebebf0', 300:'#d4d4de' },
-            ink:  { 900:'#1a1c2e', 700:'#2d3048', 500:'#5a5e7a', 400:'#7a7e96', 300:'#9da1b8' },
+            surf: { 50: '#fafafa', 100: '#f5f5f7', 200: '#ebebf0', 300: '#d4d4de' },
+            ink: { 900: '#1a1c2e', 700: '#2d3048', 500: '#5a5e7a', 400: '#7a7e96', 300: '#9da1b8' },
           },
         },
       },
@@ -58,1526 +64,1846 @@
 
 <body class="bg-surf-50 text-ink-900 font-sans overflow-x-hidden">
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      NAVIGATION
 ═══════════════════════════════════════════════════════════ -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-400">
-  <div class="container-wide">
-    <div class="inner flex items-center justify-between">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-400">
+    <div class="container-wide">
+      <div class="inner flex items-center justify-between">
 
-      <a href="#hero" class="flex items-center gap-3 group" aria-label="Phoenix Technical Solution">
-        <div class="logo-mark flex-shrink-0">
-          <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
-            <defs>
-              <linearGradient id="lgMark" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#9c1fad"/><stop offset="100%" stop-color="#b6171e"/>
-              </linearGradient>
-            </defs>
-            <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="url(#lgMark)" opacity="0.15"/>
-            <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="none" stroke="url(#lgMark)" stroke-width="1.8" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="leading-tight">
-          <div class="logo-text-main font-display font-bold text-[20px] text-ink-900 leading-none tracking-tight">Phoenix Technical</div>
-          <div class="logo-text-sub text-[12px] font-semibold tracking-[0.22em] uppercase brand-gradient-text leading-none mt-0.5">Solution</div>
-        </div>
-      </a>
-
-      <div class="hidden lg:flex items-center gap-7">
-        <a href="#services"    class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Services</a>
-        <a href="#process"     class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Process</a>
-        <a href="#industries"  class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Industries</a>
-        <a href="#showcase"    class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Products</a>
-        <a href="#faq"         class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">FAQ</a>
-        <a href="#about"       class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">About</a>
-      </div>
-
-      <div class="hidden lg:flex items-center gap-3">
-        <a href="tel:9423239466" class="nav-call-link flex items-center gap-2 text-[15px] font-semibold text-ink-700 hover:text-brand-purple transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          Call Now
+        <a href="#hero" class="flex items-center gap-3 group" aria-label="Phoenix Technical Solution">
+          <div class="logo-mark flex-shrink-0">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <defs>
+                <linearGradient id="lgMark" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#9c1fad" />
+                  <stop offset="100%" stop-color="#b6171e" />
+                </linearGradient>
+              </defs>
+              <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="url(#lgMark)" opacity="0.15" />
+              <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="none" stroke="url(#lgMark)"
+                stroke-width="1.8" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <div class="logo-text-main font-display font-bold text-[20px] text-ink-900 leading-none tracking-tight">
+              Phoenix Technical</div>
+            <div
+              class="logo-text-sub text-[12px] font-semibold tracking-[0.22em] uppercase brand-gradient-text leading-none mt-0.5">
+              Solution</div>
+          </div>
         </a>
-        <a href="#contact" class="btn-primary text-base px-6 py-3">Get a Free Consultation</a>
+
+        <div class="hidden lg:flex items-center gap-7">
+          <a href="#services"
+            class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Services</a>
+          <a href="#process"
+            class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Process</a>
+          <a href="#industries"
+            class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Industries</a>
+          <a href="services.html"
+            class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">Products</a>
+          <a href="#faq"
+            class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">FAQ</a>
+          <a href="#about"
+            class="nav-link text-base font-medium text-ink-500 hover:text-ink-900 transition-colors">About</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="tel:9423239466"
+            class="nav-call-link flex items-center gap-2 text-[15px] font-semibold text-ink-700 hover:text-brand-purple transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call Now
+          </a>
+          <a href="#contact" class="btn-primary text-base px-6 py-3">Get a Free Consultation</a>
+        </div>
+
+        <button id="hamburger-btn" class="lg:hidden p-2 flex flex-col gap-[5px]" aria-label="Toggle menu"
+          aria-expanded="false">
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+          <span class="ham-bar w-[75%]"></span>
+        </button>
       </div>
-
-      <button id="hamburger-btn" class="lg:hidden p-2 flex flex-col gap-[5px]" aria-label="Toggle menu" aria-expanded="false">
-        <span class="ham-bar"></span>
-        <span class="ham-bar"></span>
-        <span class="ham-bar w-[75%]"></span>
-      </button>
     </div>
-  </div>
 
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-surf-200 shadow-lg">
-    <div class="container-wide py-4 flex flex-col gap-3">
-      <a href="#services"   class="mob-link">Services</a>
-      <a href="#process"    class="mob-link">Process</a>
-      <a href="#industries" class="mob-link">Industries</a>
-      <a href="#showcase"   class="mob-link">Products</a>
-      <a href="#faq"        class="mob-link">FAQ</a>
-      <a href="#about"      class="mob-link">About</a>
-      <a href="#contact"    class="btn-primary text-center mt-2">Get a Free Consultation</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-surf-200 shadow-lg">
+      <div class="container-wide py-4 flex flex-col gap-3">
+        <a href="#services" class="mob-link">Services</a>
+        <a href="#process" class="mob-link">Process</a>
+        <a href="#industries" class="mob-link">Industries</a>
+        <a href="#showcase" class="mob-link">Products</a>
+        <a href="#faq" class="mob-link">FAQ</a>
+        <a href="#about" class="mob-link">About</a>
+        <a href="#contact" class="btn-primary text-center mt-2">Get a Free Consultation</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      1. HERO — Full-bleed image slider with text overlay
 ═══════════════════════════════════════════════════════════ -->
-<section id="hero" class="relative min-h-[100svh] overflow-hidden">
+  <section id="hero" class="relative min-h-[100svh] overflow-hidden">
 
-  <!-- Slider track -->
-  <div id="hero-slider" class="absolute inset-0">
-    <!-- Each slide: image fills full bleed -->
-    <div class="hero-slide active" data-slide="0">
-      <img src="img/home/slider1.jpg" alt="Analytical Equipments — Phoenix Technical Solution"
-           class="absolute inset-0 w-full h-full object-cover object-center" loading="eager" />
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-eyebrow">Analytical Equipment Solutions</div>
-        <h1 class="slide-h1">Engineering Perfection in<br/><span class="text-white">Process Systems</span></h1>
-        <p class="slide-sub">Shaping the future of industrial analysis with precision-built systems and Swagelok-certified installation.</p>
+    <!-- Slider track -->
+    <div id="hero-slider" class="absolute inset-0">
+      <!-- Each slide: image fills full bleed -->
+      <div class="hero-slide active" data-slide="0">
+        <img src="img/home/slider1.jpg" alt="Analytical Equipments — Phoenix Technical Solution"
+          class="absolute inset-0 w-full h-full object-cover object-center" loading="eager" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-eyebrow">Analytical Equipment Solutions</div>
+          <h1 class="slide-h1">Engineering Perfection in<br /><span class="text-white">Process Systems</span></h1>
+          <p class="slide-sub">Shaping the future of industrial analysis with precision-built systems and
+            Swagelok-certified installation.</p>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide="1">
+        <img src="img/home/slider2.jpg" alt="Gas Equipment Systems — Phoenix Technical Solution"
+          class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-eyebrow">Gas Equipment &amp; Piping</div>
+          <h1 class="slide-h1">Engineered for Precision,<br /><span class="text-white">Built for Reliability</span></h1>
+          <p class="slide-sub">Safe, consistent gas equipment performance across every industrial and laboratory
+            application.</p>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide="2">
+        <img src="img/home/slider3.jpg" alt="Ultra-High Pure Gas Generators — Phoenix Technical Solution"
+          class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-eyebrow">Gas Generation Systems</div>
+          <h1 class="slide-h1">Ultra-High Purity<br /><span class="text-white">Gas On Demand</span></h1>
+          <p class="slide-sub">Replace cylinders with on-site gas generation — maximising safety, uptime, and cost
+            efficiency.</p>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide="3">
+        <img src="img/home/slider4.jpg" alt="Chromatography Consumables — Phoenix Technical Solution"
+          class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-eyebrow">Chromatography Consumables</div>
+          <h1 class="slide-h1">Precision Instrumentation<br /><span class="text-white">&amp; Automation</span></h1>
+          <p class="slide-sub">Consistency in every run — from HPLC columns to PLC/SCADA automation for Pharma &amp;
+            Chemical labs.</p>
+        </div>
       </div>
     </div>
 
-    <div class="hero-slide" data-slide="1">
-      <img src="img/home/slider2.jpg" alt="Gas Equipment Systems — Phoenix Technical Solution"
-           class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-eyebrow">Gas Equipment &amp; Piping</div>
-        <h1 class="slide-h1">Engineered for Precision,<br/><span class="text-white">Built for Reliability</span></h1>
-        <p class="slide-sub">Safe, consistent gas equipment performance across every industrial and laboratory application.</p>
+    <!-- Slider controls -->
+    <button id="slider-prev" class="hero-nav-btn left-4 lg:left-8" aria-label="Previous slide">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="slider-next" class="hero-nav-btn right-4 lg:right-8" aria-label="Next slide">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Slide dots -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <button class="hero-dot active" data-dot="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-dot="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-dot="2" aria-label="Slide 3"></button>
+      <button class="hero-dot" data-dot="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Floating CTA bar — sits above slider bottom -->
+    <div class="absolute bottom-20 left-0 right-0 z-20 px-5">
+      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="btn-primary flex items-center gap-2 px-8 py-4 text-base shadow-xl">
+          Get a Free Consultation
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="#services" class="btn-glass flex items-center gap-2 px-8 py-4 text-base">
+          Explore Our Services
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
       </div>
     </div>
-
-    <div class="hero-slide" data-slide="2">
-      <img src="img/home/slider3.jpg" alt="Ultra-High Pure Gas Generators — Phoenix Technical Solution"
-           class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-eyebrow">Gas Generation Systems</div>
-        <h1 class="slide-h1">Ultra-High Purity<br/><span class="text-white">Gas On Demand</span></h1>
-        <p class="slide-sub">Replace cylinders with on-site gas generation — maximising safety, uptime, and cost efficiency.</p>
-      </div>
-    </div>
-
-    <div class="hero-slide" data-slide="3">
-      <img src="img/home/slider4.jpg" alt="Chromatography Consumables — Phoenix Technical Solution"
-           class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <div class="slide-eyebrow">Chromatography Consumables</div>
-        <h1 class="slide-h1">Precision Instrumentation<br/><span class="text-white">&amp; Automation</span></h1>
-        <p class="slide-sub">Consistency in every run — from HPLC columns to PLC/SCADA automation for Pharma &amp; Chemical labs.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Slider controls -->
-  <button id="slider-prev" class="hero-nav-btn left-4 lg:left-8" aria-label="Previous slide">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-  </button>
-  <button id="slider-next" class="hero-nav-btn right-4 lg:right-8" aria-label="Next slide">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-  </button>
-
-  <!-- Slide dots -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-    <button class="hero-dot active" data-dot="0" aria-label="Slide 1"></button>
-    <button class="hero-dot" data-dot="1" aria-label="Slide 2"></button>
-    <button class="hero-dot" data-dot="2" aria-label="Slide 3"></button>
-    <button class="hero-dot" data-dot="3" aria-label="Slide 4"></button>
-  </div>
-
-  <!-- Floating CTA bar — sits above slider bottom -->
-  <div class="absolute bottom-20 left-0 right-0 z-20 px-5">
-    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#contact" class="btn-primary flex items-center gap-2 px-8 py-4 text-base shadow-xl">
-        Get a Free Consultation
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-      <a href="#services" class="btn-glass flex items-center gap-2 px-8 py-4 text-base">
-        Explore Our Services
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      TRUST BAR
 ═══════════════════════════════════════════════════════════ -->
-<div class="bg-white border-y border-surf-200 py-6">
-  <div class="container-wide">
-    <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-      <div class="trust-item">
-        <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        <span>Swagelok Certified</span>
-      </div>
-      <div class="trust-item">
-        <svg class="w-5 h-5 text-brand-crimson flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        <span>24/7 Emergency Support</span>
-      </div>
-      <div class="trust-item">
-        <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-        <span>Based in Pune, MH</span>
-      </div>
-      <div class="trust-item">
-        <svg class="w-5 h-5 text-brand-crimson flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        <span>PLC · SCADA · IoT</span>
-      </div>
-      <div class="trust-item">
-        <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        <span>Turnkey Engineering</span>
+  <div class="bg-white border-y border-surf-200 py-6">
+    <div class="container-wide">
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+        <div class="trust-item">
+          <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>Swagelok Certified</span>
+        </div>
+        <div class="trust-item">
+          <svg class="w-5 h-5 text-brand-crimson flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>24/7 Emergency Support</span>
+        </div>
+        <div class="trust-item">
+          <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          <span>Based in Pune, MH</span>
+        </div>
+        <div class="trust-item">
+          <svg class="w-5 h-5 text-brand-crimson flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>PLC · SCADA · IoT</span>
+        </div>
+        <div class="trust-item">
+          <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>Turnkey Engineering</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      2. ABOUT — Split layout with real installation photo
 ═══════════════════════════════════════════════════════════ -->
-<section id="about" class="section-pad bg-white">
-  <div class="container-wide">
-    <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+  <section id="about" class="section-pad bg-white">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
 
-      <!-- LEFT: visual — real gas utility piping installation -->
-      <div class="reveal relative order-2 lg:order-1">
-        <div class="relative">
-          <!-- Main installation photo -->
-          <div class="rounded-2xl overflow-hidden shadow-2xl shadow-brand-purple/10 border border-surf-200">
-            <img
-              src="img/home/gas_utility_piping1.jpg"
-              alt="Gas utility piping installation by Phoenix Technical Solution — Kalewadi Alandi Pune"
-              class="w-full h-[480px] object-cover object-center"
-              loading="lazy"
-            />
-            <!-- Gradient overlay at bottom for the floating card -->
-            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/60 to-transparent rounded-b-2xl"></div>
-          </div>
+        <!-- LEFT: visual — real gas utility piping installation -->
+        <div class="reveal relative order-2 lg:order-1">
+          <div class="relative">
+            <!-- Main installation photo -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl shadow-brand-purple/10 border border-surf-200">
+              <img src="img/home/gas_utility_piping1.jpg"
+                alt="Gas utility piping installation by Phoenix Technical Solution — Kalewadi Alandi Pune"
+                class="w-full h-[480px] object-cover object-center" loading="lazy" />
+              <!-- Gradient overlay at bottom for the floating card -->
+              <div
+                class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/60 to-transparent rounded-b-2xl">
+              </div>
+            </div>
 
-          <!-- Floating stat card — overlaps image -->
-          <div class="about-float-stat">
-            <div class="font-display font-black brand-gradient-text leading-none" style="font-size:var(--text-3xl)">200+</div>
-            <div class="text-ink-500 font-medium mt-1" style="font-size:var(--text-sm)">Installations Completed</div>
-          </div>
+            <!-- Floating stat card — overlaps image -->
+            <div class="about-float-stat">
+              <div class="font-display font-black brand-gradient-text leading-none" style="font-size:var(--text-3xl)">
+                200+</div>
+              <div class="text-ink-500 font-medium mt-1" style="font-size:var(--text-sm)">Installations Completed</div>
+            </div>
 
-          <!-- Secondary product thumbnail — bottom-right -->
-          <div class="absolute -bottom-6 -right-4 w-32 h-32 rounded-xl overflow-hidden border-4 border-white shadow-xl hidden sm:block">
-            <img
-              src="img/home/auto-gas-changeover.jpg"
-              alt="Auto gas changeover panel"
-              class="w-full h-full object-contain bg-surf-100 p-2"
-              loading="lazy"
-            />
+            <!-- Secondary product thumbnail — bottom-right -->
+            <div
+              class="absolute -bottom-6 -right-4 w-32 h-32 rounded-xl overflow-hidden border-4 border-white shadow-xl hidden sm:block">
+              <img src="img/home/auto-gas-changeover.jpg" alt="Auto gas changeover panel"
+                class="w-full h-full object-contain bg-surf-100 p-2" loading="lazy" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- RIGHT: text -->
-      <div class="order-1 lg:order-2">
-        <div class="reveal section-eyebrow mb-4">About Phoenix Technical Solution</div>
-        <h2 class="reveal font-display font-bold text-ink-900 mb-3 leading-tight">
-          "We Make Perfect."
-        </h2>
-        <div class="reveal brand-accent-line mb-7"></div>
-        <p class="reveal text-ink-500 mb-5" style="font-size:var(--text-lg);line-height:1.75">
-          At Phoenix Technical Solution, we are driven by a commitment to <strong class="text-ink-900">precision, safety, and innovation</strong>. Based in Pune, we specialize in the comprehensive design, fabrication, and maintenance of advanced process systems and automation architecture.
-        </p>
-        <p class="reveal text-ink-500 mb-9" style="font-size:var(--text-lg);line-height:1.75">
-          Whether you are building a new facility or upgrading legacy infrastructure, our flexible and scalable solutions are engineered to your exact industrial requirements. With a team of <strong class="text-ink-900">Swagelok-certified engineers and technicians</strong>, we guarantee industry-leading quality in every pipe, panel, and process.
-        </p>
+        <!-- RIGHT: text -->
+        <div class="order-1 lg:order-2">
+          <div class="reveal section-eyebrow mb-4">About Phoenix Technical Solution</div>
+          <h2 class="reveal font-display font-bold text-ink-900 mb-3 leading-tight">
+            "We Make Perfect."
+          </h2>
+          <div class="reveal brand-accent-line mb-7"></div>
+          <p class="reveal text-ink-500 mb-5" style="font-size:var(--text-lg);line-height:1.75">
+            At Phoenix Technical Solution, we are driven by a commitment to <strong class="text-ink-900">precision,
+              safety, and innovation</strong>. Based in Pune, we specialize in the comprehensive design, fabrication,
+            and maintenance of advanced process systems and automation architecture.
+          </p>
+          <p class="reveal text-ink-500 mb-9" style="font-size:var(--text-lg);line-height:1.75">
+            Whether you are building a new facility or upgrading legacy infrastructure, our flexible and scalable
+            solutions are engineered to your exact industrial requirements. With a team of <strong
+              class="text-ink-900">Swagelok-certified engineers and technicians</strong>, we guarantee industry-leading
+            quality in every pipe, panel, and process.
+          </p>
 
-        <div class="reveal space-y-4">
-          <h3 style="font-size:var(--text-xs);" class="font-bold uppercase tracking-[0.2em] text-ink-400 mb-5">Our Core Values</h3>
-          <div class="value-item">
-            <div class="value-icon bg-brand-purple/10">
-              <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <div class="reveal space-y-4">
+            <h3 style="font-size:var(--text-xs);" class="font-bold uppercase tracking-[0.2em] text-ink-400 mb-5">Our
+              Core Values</h3>
+            <div class="value-item">
+              <div class="value-icon bg-brand-purple/10">
+                <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-ink-900 mb-1" style="font-size:var(--text-base)">Safety First</div>
+                <div class="text-ink-500" style="font-size:var(--text-base);line-height:1.65">Strict adherence to all
+                  industry safety standards and regulations.</div>
+              </div>
             </div>
-            <div>
-              <div class="font-semibold text-ink-900 mb-1" style="font-size:var(--text-base)">Safety First</div>
-              <div class="text-ink-500" style="font-size:var(--text-base);line-height:1.65">Strict adherence to all industry safety standards and regulations.</div>
+            <div class="value-item">
+              <div class="value-icon bg-brand-crimson/10">
+                <svg class="w-5 h-5 text-brand-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-ink-900 mb-1" style="font-size:var(--text-base)">End-to-End Support</div>
+                <div class="text-ink-500" style="font-size:var(--text-base);line-height:1.65">Comprehensive service from
+                  initial design consultation to routine maintenance.</div>
+              </div>
             </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon bg-brand-crimson/10">
-              <svg class="w-5 h-5 text-brand-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-            </div>
-            <div>
-              <div class="font-semibold text-ink-900 mb-1" style="font-size:var(--text-base)">End-to-End Support</div>
-              <div class="text-ink-500" style="font-size:var(--text-base);line-height:1.65">Comprehensive service from initial design consultation to routine maintenance.</div>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon bg-brand-purple/10">
-              <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <div>
-              <div class="font-semibold text-ink-900 mb-1" style="font-size:var(--text-base)">Always Available</div>
-              <div class="text-ink-500" style="font-size:var(--text-base);line-height:1.65">24/7 technical support and emergency services, always on standby.</div>
+            <div class="value-item">
+              <div class="value-icon bg-brand-purple/10">
+                <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-ink-900 mb-1" style="font-size:var(--text-base)">Always Available</div>
+                <div class="text-ink-500" style="font-size:var(--text-base);line-height:1.65">24/7 technical support and
+                  emergency services, always on standby.</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      3. SERVICES — Cards with real product photography
 ═══════════════════════════════════════════════════════════ -->
-<section id="services" class="section-pad bg-surf-100">
-  <div class="container-wide">
+  <section id="services" class="section-pad bg-surf-100">
+    <div class="container-wide">
 
-    <div class="section-header text-center">
-      <div class="reveal section-eyebrow mx-auto mb-4">What We Do</div>
-      <h2 class="reveal font-display font-bold text-ink-900 mb-4">
-        Our Specialized Services &amp;<br class="hidden sm:block"/> Engineering Solutions
-      </h2>
-      <p class="reveal text-ink-500 mx-auto" style="max-width:42rem;font-size:var(--text-lg)">Four core pillars of precision engineering — designed to deliver from concept to commissioning.</p>
+      <div class="section-header text-center">
+        <div class="reveal section-eyebrow mx-auto mb-4">What We Do</div>
+        <h2 class="reveal font-display font-bold text-ink-900 mb-4">
+          Our Specialized Services &amp;<br class="hidden sm:block" /> Engineering Solutions
+        </h2>
+        <p class="reveal text-ink-500 mx-auto" style="max-width:42rem;font-size:var(--text-lg)">Four core pillars of
+          precision engineering — designed to deliver from concept to commissioning.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-7">
+
+        <!-- Card 1: High Pressure & Reactor — gas_equipments1 (square product shot) -->
+        <div class="reveal svc-card group" id="svc-reactors">
+          <div class="svc-img-wrap">
+            <img src="img/home/gas_equipments1.jpg" alt="High Pressure &amp; Reactor Systems" class="svc-img"
+              loading="lazy" />
+            <div class="svc-img-overlay"></div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-num">01</span>
+            <h3 class="svc-title">High Pressure &amp; Reactor Systems</h3>
+            <ul class="svc-list">
+              <li>High-pressure batch and tubular flow reactor systems</li>
+              <li>Advanced slurry and fluidized bed reactor systems</li>
+              <li>Custom pressure vessels, static mixers &amp; heat exchangers</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Industrial Piping — analytical_equipments -->
+        <div class="reveal svc-card group" id="svc-piping">
+          <div class="svc-img-wrap">
+            <img src="img/home/analytical_equipments.jpg" alt="Industrial Piping &amp; Tubing Systems" class="svc-img"
+              loading="lazy" />
+            <div class="svc-img-overlay"></div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-num">02</span>
+            <h3 class="svc-title">Industrial Piping &amp; Tubing Systems</h3>
+            <ul class="svc-list">
+              <li>Expert design for complex piping and tubing infrastructure</li>
+              <li>Fluid transfer system design for safe handling</li>
+              <li>Installation by Swagelok-certified engineers</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Electrical & Automation — gas_generator -->
+        <div class="reveal svc-card group" id="svc-electrical">
+          <div class="svc-img-wrap">
+            <img src="img/home/gas_generator.jpg" alt="Electrical Wiring &amp; Automation Panels" class="svc-img"
+              loading="lazy" />
+            <div class="svc-img-overlay"></div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-num">03</span>
+            <h3 class="svc-title">Electrical Wiring &amp; Automation Panels</h3>
+            <ul class="svc-list">
+              <li>Custom electrical system design with durable components</li>
+              <li>Advanced PLC, SCADA, and IoT system integration</li>
+              <li>Process &amp; control panel fabrication</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 4: Fabrication & Consultation — chromatography_consumables -->
+        <div class="reveal svc-card group" id="svc-fabrication">
+          <div class="svc-img-wrap">
+            <img src="img/home/chromatography_consumables.jpg" alt="Fabrication, Revamping &amp; Consultation"
+              class="svc-img" loading="lazy" />
+            <div class="svc-img-overlay"></div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-num">04</span>
+            <h3 class="svc-title">Fabrication, Revamping &amp; Consultation</h3>
+            <ul class="svc-list">
+              <li>Consultation for bespoke process equipment design</li>
+              <li>Modernization of old process and automation systems</li>
+              <li>Complete instrumentation installation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal text-center mt-10">
+        <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+          Request a Custom Engineering Proposal
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
     </div>
-
-    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-7">
-
-      <!-- Card 1: High Pressure & Reactor — gas_equipments1 (square product shot) -->
-      <div class="reveal svc-card group" id="svc-reactors">
-        <div class="svc-img-wrap">
-          <img
-            src="img/home/gas_equipments1.jpg"
-            alt="High Pressure &amp; Reactor Systems"
-            class="svc-img"
-            loading="lazy"
-          />
-          <div class="svc-img-overlay"></div>
-        </div>
-        <div class="svc-body">
-          <span class="svc-num">01</span>
-          <h3 class="svc-title">High Pressure &amp; Reactor Systems</h3>
-          <ul class="svc-list">
-            <li>High-pressure batch and tubular flow reactor systems</li>
-            <li>Advanced slurry and fluidized bed reactor systems</li>
-            <li>Custom pressure vessels, static mixers &amp; heat exchangers</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 2: Industrial Piping — analytical_equipments -->
-      <div class="reveal svc-card group" id="svc-piping">
-        <div class="svc-img-wrap">
-          <img
-            src="img/home/analytical_equipments.jpg"
-            alt="Industrial Piping &amp; Tubing Systems"
-            class="svc-img"
-            loading="lazy"
-          />
-          <div class="svc-img-overlay"></div>
-        </div>
-        <div class="svc-body">
-          <span class="svc-num">02</span>
-          <h3 class="svc-title">Industrial Piping &amp; Tubing Systems</h3>
-          <ul class="svc-list">
-            <li>Expert design for complex piping and tubing infrastructure</li>
-            <li>Fluid transfer system design for safe handling</li>
-            <li>Installation by Swagelok-certified engineers</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 3: Electrical & Automation — gas_generator -->
-      <div class="reveal svc-card group" id="svc-electrical">
-        <div class="svc-img-wrap">
-          <img
-            src="img/home/gas_generator.jpg"
-            alt="Electrical Wiring &amp; Automation Panels"
-            class="svc-img"
-            loading="lazy"
-          />
-          <div class="svc-img-overlay"></div>
-        </div>
-        <div class="svc-body">
-          <span class="svc-num">03</span>
-          <h3 class="svc-title">Electrical Wiring &amp; Automation Panels</h3>
-          <ul class="svc-list">
-            <li>Custom electrical system design with durable components</li>
-            <li>Advanced PLC, SCADA, and IoT system integration</li>
-            <li>Process &amp; control panel fabrication</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 4: Fabrication & Consultation — chromatography_consumables -->
-      <div class="reveal svc-card group" id="svc-fabrication">
-        <div class="svc-img-wrap">
-          <img
-            src="img/home/chromatography_consumables.jpg"
-            alt="Fabrication, Revamping &amp; Consultation"
-            class="svc-img"
-            loading="lazy"
-          />
-          <div class="svc-img-overlay"></div>
-        </div>
-        <div class="svc-body">
-          <span class="svc-num">04</span>
-          <h3 class="svc-title">Fabrication, Revamping &amp; Consultation</h3>
-          <ul class="svc-list">
-            <li>Consultation for bespoke process equipment design</li>
-            <li>Modernization of old process and automation systems</li>
-            <li>Complete instrumentation installation</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="reveal text-center mt-10">
-      <a href="#contact" class="btn-primary inline-flex items-center gap-2">
-        Request a Custom Engineering Proposal
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      3b. GAS DISTRIBUTION SYSTEM — Live Animated SVG
 ═══════════════════════════════════════════════════════════ -->
-<section id="gas-system" style="padding:80px 0;background:#0b0f14;overflow:hidden;position:relative;">
+  <section id="gas-system" style="padding:80px 0;background:#0b0f14;overflow:hidden;position:relative;">
 
-  <!-- Subtle radial ambient glow -->
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(0,229,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
-
-  <div class="container-wide" style="position:relative;z-index:1;">
-
-    <!-- Section Header -->
-    <div class="text-center reveal" style="margin-bottom:3rem;">
-      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;background:rgba(0,229,255,0.07);border:1px solid rgba(0,229,255,0.18);margin-bottom:20px;">
-        <span style="width:8px;height:8px;border-radius:50%;background:#00E5FF;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 8px #00E5FF;display:inline-block;"></span>
-        <span style="font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#00E5FF;font-family:'JetBrains Mono','Courier New',monospace;">Live System Monitor</span>
-      </div>
-      <h2 style="font-family:'Outfit','Inter',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);color:#fff;line-height:1.15;margin:0 0 16px;">
-        Gas Distribution
-        <span style="background:linear-gradient(135deg,#00E5FF 0%,#0072ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;">Network Overview</span>
-      </h2>
-      <p style="color:rgba(255,255,255,0.45);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.7;">Real-time process flow monitoring across the industrial distribution manifold — pressure-regulated, precision-engineered.</p>
+    <!-- Subtle radial ambient glow -->
+    <div
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(0,229,255,0.04) 0%,transparent 70%);pointer-events:none;">
     </div>
 
-    <!-- Status Bar -->
-    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:2.5rem;">
-      <div style="display:flex;align-items:center;gap:8px;">
-        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#00E5FF;box-shadow:0 0 8px #00E5FF;display:inline-block;"></span>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">SYSTEM STATUS: <strong style="color:#00E5FF;">OPERATIONAL</strong></span>
+    <div class="container-wide" style="position:relative;z-index:1;">
+
+      <!-- Section Header -->
+      <div class="text-center reveal" style="margin-bottom:3rem;">
+        <div
+          style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;background:rgba(0,229,255,0.07);border:1px solid rgba(0,229,255,0.18);margin-bottom:20px;">
+          <span
+            style="width:8px;height:8px;border-radius:50%;background:#00E5FF;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 8px #00E5FF;display:inline-block;"></span>
+          <span
+            style="font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#00E5FF;font-family:'JetBrains Mono','Courier New',monospace;">Live
+            System Monitor</span>
+        </div>
+        <h2
+          style="font-family:'Outfit','Inter',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);color:#fff;line-height:1.15;margin:0 0 16px;">
+          Gas Distribution
+          <span
+            style="background:linear-gradient(135deg,#00E5FF 0%,#0072ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;">Network
+            Overview</span>
+        </h2>
+        <p style="color:rgba(255,255,255,0.45);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.7;">Real-time
+          process flow monitoring across the industrial distribution manifold — pressure-regulated,
+          precision-engineered.</p>
       </div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;display:inline-block;"></span>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">PRESSURE: <strong style="color:#22c55e;">4.2 BAR</strong></span>
+
+      <!-- Status Bar -->
+      <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:2.5rem;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="gas-status-dot"
+            style="width:8px;height:8px;border-radius:50%;background:#00E5FF;box-shadow:0 0 8px #00E5FF;display:inline-block;"></span>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">SYSTEM
+            STATUS: <strong style="color:#00E5FF;">OPERATIONAL</strong></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="gas-status-dot"
+            style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;display:inline-block;"></span>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">PRESSURE:
+            <strong style="color:#22c55e;">4.2 BAR</strong></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="gas-status-dot"
+            style="width:8px;height:8px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px #f59e0b;display:inline-block;"></span>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">FLOW
+            RATE: <strong style="color:#f59e0b;">18.6 L/MIN</strong></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="gas-status-dot"
+            style="width:8px;height:8px;border-radius:50%;background:#a78bfa;box-shadow:0 0 8px #a78bfa;display:inline-block;"></span>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">PURITY:
+            <strong style="color:#a78bfa;">99.999%</strong></span>
+        </div>
       </div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px #f59e0b;display:inline-block;"></span>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">FLOW RATE: <strong style="color:#f59e0b;">18.6 L/MIN</strong></span>
+
+      <!-- SVG Gas Distribution System -->
+      <div class="reveal"
+        style="width:100%;overflow:visible;border-radius:16px;border:1px solid rgba(0,229,255,0.1);background:rgba(0,229,255,0.02);padding:24px;box-sizing:border-box;">
+        <svg id="gas-dist-svg" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg"
+          style="width:100%;height:auto;display:block;" aria-label="Gas Distribution System Diagram" role="img">
+          <defs>
+            <!-- Glow filters -->
+            <filter id="gfx-glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="gfx-glow-strong" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="7" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="gfx-glow-node" x="-120%" y="-120%" width="340%" height="340%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <!-- Gradients -->
+            <radialGradient id="gfx-node-cyan" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#00E5FF" stop-opacity="1" />
+              <stop offset="100%" stop-color="#0072ff" stop-opacity="0.5" />
+            </radialGradient>
+            <radialGradient id="gfx-node-purple" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="1" />
+              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.5" />
+            </radialGradient>
+            <radialGradient id="gfx-node-green" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#4ade80" stop-opacity="1" />
+              <stop offset="100%" stop-color="#15803d" stop-opacity="0.5" />
+            </radialGradient>
+            <!-- Motion paths (embedded in defs for animateMotion) -->
+            <path id="mp-trunk" d="M80,240 L820,240" />
+            <path id="mp-trunk-r2" d="M80,240 L820,240" />
+            <path id="mp-top-loop" d="M200,240 L200,100 L720,100 L720,240" />
+            <path id="mp-bd1" d="M290,240 L290,380" />
+            <path id="mp-bd2" d="M470,240 L470,380" />
+            <path id="mp-bd3" d="M650,240 L650,380" />
+            <path id="mp-bu1" d="M200,240 L200,100" />
+            <path id="mp-bu2" d="M380,240 L380,100" />
+            <path id="mp-bu3" d="M560,240 L560,100" />
+            <path id="mp-bu4" d="M720,240 L720,100" />
+          </defs>
+
+          <!-- ── BACKGROUND GRID ── -->
+          <defs>
+            <pattern id="gfx-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,229,255,0.04)" stroke-width="0.5" />
+            </pattern>
+          </defs>
+          <rect width="900" height="480" fill="url(#gfx-grid)" />
+
+          <!-- ── PIPE BASE TRACKS (dim background layer) ── -->
+          <!-- Main horizontal trunk -->
+          <line x1="80" y1="240" x2="820" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <!-- Vertical up-branches -->
+          <line x1="200" y1="100" x2="200" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <line x1="380" y1="100" x2="380" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <line x1="560" y1="100" x2="560" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <line x1="720" y1="100" x2="720" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <!-- Top horizontal connector -->
+          <line x1="200" y1="100" x2="720" y2="100" stroke="rgba(0,229,255,0.07)" stroke-width="5"
+            stroke-linecap="round" />
+          <!-- Vertical down-branches -->
+          <line x1="290" y1="240" x2="290" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <line x1="470" y1="240" x2="470" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <line x1="650" y1="240" x2="650" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6"
+            stroke-linecap="round" />
+          <!-- Bottom horizontal connector -->
+          <line x1="290" y1="380" x2="650" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="5"
+            stroke-linecap="round" />
+
+          <!-- ── ANIMATED FLOW PIPES (cyan glowing lines) ── -->
+          <line class="gas-pipe" x1="80" y1="240" x2="820" y2="240" stroke="#00E5FF" stroke-width="1.8"
+            stroke-linecap="round" stroke-dasharray="18 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowH 2.4s linear infinite;" />
+          <!-- Up branches (slightly slower) -->
+          <line class="gas-pipe" x1="200" y1="240" x2="200" y2="100" stroke="#00E5FF" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowV 2.0s linear infinite;" />
+          <line class="gas-pipe" x1="380" y1="240" x2="380" y2="100" stroke="#00E5FF" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowV 2.2s linear infinite -0.5s;" />
+          <line class="gas-pipe" x1="560" y1="240" x2="560" y2="100" stroke="#00E5FF" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowV 2.0s linear infinite -1s;" />
+          <line class="gas-pipe" x1="720" y1="240" x2="720" y2="100" stroke="#00E5FF" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowV 2.15s linear infinite -0.3s;" />
+          <!-- Top horizontal connector -->
+          <line class="gas-pipe" x1="200" y1="100" x2="720" y2="100" stroke="#00E5FF" stroke-width="1.2"
+            stroke-linecap="round" stroke-dasharray="10 14" stroke-opacity="0.65" filter="url(#gfx-glow-soft)"
+            style="animation:flowH 3.2s linear infinite;" />
+          <!-- Down branches -->
+          <line class="gas-pipe" x1="290" y1="240" x2="290" y2="380" stroke="#00bcd4" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowVDown 1.8s linear infinite;" />
+          <line class="gas-pipe" x1="470" y1="240" x2="470" y2="380" stroke="#00bcd4" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowVDown 1.95s linear infinite -0.6s;" />
+          <line class="gas-pipe" x1="650" y1="240" x2="650" y2="380" stroke="#00bcd4" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
+            style="animation:flowVDown 1.85s linear infinite -1.2s;" />
+          <!-- Bottom horizontal connector -->
+          <line class="gas-pipe" x1="290" y1="380" x2="650" y2="380" stroke="#00bcd4" stroke-width="1.2"
+            stroke-linecap="round" stroke-dasharray="8 12" stroke-opacity="0.55" filter="url(#gfx-glow-soft)"
+            style="animation:flowH 3.5s linear infinite;" />
+
+          <!-- ── FLOW PARTICLES (bright moving dots using animateMotion) ── -->
+          <!-- Trunk particle 1 -->
+          <circle r="3.5" fill="#00E5FF" filter="url(#gfx-glow-strong)" opacity="0.95">
+            <animateMotion dur="3s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-trunk" />
+            </animateMotion>
+          </circle>
+          <!-- Trunk particle 2 (offset) -->
+          <circle r="2.8" fill="#7efeff" filter="url(#gfx-glow-strong)" opacity="0.75">
+            <animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-trunk-r2" />
+            </animateMotion>
+          </circle>
+          <!-- Top loop particle -->
+          <circle r="2.5" fill="#00E5FF" filter="url(#gfx-glow-strong)" opacity="0.8">
+            <animateMotion dur="4.2s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-top-loop" />
+            </animateMotion>
+          </circle>
+          <!-- Down branch particles -->
+          <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
+            <animateMotion dur="1.7s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bd1" />
+            </animateMotion>
+          </circle>
+          <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
+            <animateMotion dur="1.9s" begin="-0.5s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bd2" />
+            </animateMotion>
+          </circle>
+          <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
+            <animateMotion dur="1.8s" begin="-1s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bd3" />
+            </animateMotion>
+          </circle>
+          <!-- Up branch particles -->
+          <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+            <animateMotion dur="1.6s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bu1" />
+            </animateMotion>
+          </circle>
+          <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+            <animateMotion dur="1.8s" begin="-0.4s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bu2" />
+            </animateMotion>
+          </circle>
+          <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+            <animateMotion dur="1.7s" begin="-0.9s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bu3" />
+            </animateMotion>
+          </circle>
+          <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
+            <animateMotion dur="1.65s" begin="-1.3s" repeatCount="indefinite" calcMode="linear">
+              <mpath href="#mp-bu4" />
+            </animateMotion>
+          </circle>
+
+          <!-- ── FLOW DIRECTION ARROWS (chevrons on main trunk) ── -->
+          <g fill="rgba(0,229,255,0.45)" filter="url(#gfx-glow-soft)">
+            <polygon points="0,-3.5 7,0 0,3.5" transform="translate(148,240)" />
+            <polygon points="0,-3.5 7,0 0,3.5" transform="translate(328,240)" />
+            <polygon points="0,-3.5 7,0 0,3.5" transform="translate(508,240)" />
+            <polygon points="0,-3.5 7,0 0,3.5" transform="translate(688,240)" />
+          </g>
+
+          <!-- ── GAS SOURCE NODE (left, purple — high voltage supply) ── -->
+          <g class="gas-node" id="node-source" transform="translate(80,240)">
+            <!-- Pulse rings -->
+            <circle r="26" fill="none" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2" class="node-pulse-ring" />
+            <circle r="16" fill="rgba(192,132,252,0.1)" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.45" />
+            <!-- Core glow -->
+            <circle r="9" fill="url(#gfx-node-purple)" filter="url(#gfx-glow-node)" />
+            <circle r="3.5" fill="white" opacity="0.95" />
+            <!-- Labels -->
+            <text y="-36" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5"
+              fill="rgba(192,132,252,0.9)" letter-spacing="1.5">GAS SOURCE</text>
+            <text y="-22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8"
+              fill="rgba(255,255,255,0.3)" letter-spacing="0.5">HP-01</text>
+            <text y="28" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8"
+              fill="rgba(192,132,252,0.5)">↑ 200 BAR</text>
+          </g>
+
+          <!-- ── MAIN OUTLET NODE (right, green) ── -->
+          <g class="gas-node" id="node-outlet" transform="translate(820,240)">
+            <circle r="26" fill="none" stroke="#4ade80" stroke-width="1" stroke-opacity="0.2" class="node-pulse-ring" />
+            <circle r="16" fill="rgba(74,222,128,0.1)" stroke="#4ade80" stroke-width="1.5" stroke-opacity="0.45" />
+            <circle r="9" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)" />
+            <circle r="3.5" fill="white" opacity="0.95" />
+            <text y="-36" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5"
+              fill="rgba(74,222,128,0.9)" letter-spacing="1.5">MAIN OUTLET</text>
+            <text y="-22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8"
+              fill="rgba(255,255,255,0.3)" letter-spacing="0.5">HB-07</text>
+            <text y="28" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8"
+              fill="rgba(74,222,128,0.5)">NOMINAL</text>
+          </g>
+
+          <!-- ── TRUNK JUNCTION NODES (valve nodes) ── -->
+          <!-- V-01 at 200,240 -->
+          <g class="gas-node" id="node-v01" transform="translate(200,240)">
+            <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18"
+              class="node-pulse-ring" />
+            <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4" />
+            <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.5" fill="white" opacity="0.9" />
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(0,229,255,0.65)">V-01</text>
+          </g>
+          <!-- V-02 at 380,240 -->
+          <g class="gas-node" id="node-v02" transform="translate(380,240)">
+            <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18"
+              class="node-pulse-ring" />
+            <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4" />
+            <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.5" fill="white" opacity="0.9" />
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(0,229,255,0.65)">V-02</text>
+          </g>
+          <!-- V-03 at 560,240 -->
+          <g class="gas-node" id="node-v03" transform="translate(560,240)">
+            <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18"
+              class="node-pulse-ring" />
+            <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4" />
+            <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.5" fill="white" opacity="0.9" />
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(0,229,255,0.65)">V-03</text>
+          </g>
+          <!-- V-04 at 720,240 -->
+          <g class="gas-node" id="node-v04" transform="translate(720,240)">
+            <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18"
+              class="node-pulse-ring" />
+            <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4" />
+            <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.5" fill="white" opacity="0.9" />
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(0,229,255,0.65)">V-04</text>
+          </g>
+
+          <!-- ── TOP PRESSURE REGULATOR NODES ── -->
+          <!-- REG-01 at 200,100 -->
+          <g class="gas-node" id="node-reg01" transform="translate(200,100)">
+            <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9"
+              fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-01</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.3)">4.2 BAR</text>
+          </g>
+          <!-- REG-02 at 380,100 -->
+          <g class="gas-node" id="node-reg02" transform="translate(380,100)">
+            <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9"
+              fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-02</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.3)">4.1 BAR</text>
+          </g>
+          <!-- REG-03 at 560,100 -->
+          <g class="gas-node" id="node-reg03" transform="translate(560,100)">
+            <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9"
+              fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-03</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.3)">4.3 BAR</text>
+          </g>
+          <!-- REG-04 at 720,100 -->
+          <g class="gas-node" id="node-reg04" transform="translate(720,100)">
+            <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9"
+              fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-04</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.3)">4.2 BAR</text>
+          </g>
+
+          <!-- ── PRESSURE RELIEF VALVE BADGES (on trunk) ── -->
+          <!-- PRV-01 at 290,240 (between V-01 and V-02) -->
+          <g id="node-prv01" transform="translate(290,240)">
+            <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)"
+              stroke-width="0.9" />
+            <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(0,229,255,0.85)">PRV-01</text>
+          </g>
+          <!-- PRV-02 at 470,240 -->
+          <g id="node-prv02" transform="translate(470,240)">
+            <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)"
+              stroke-width="0.9" />
+            <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(0,229,255,0.85)">PRV-02</text>
+          </g>
+          <!-- PRV-03 at 650,240 -->
+          <g id="node-prv03" transform="translate(650,240)">
+            <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)"
+              stroke-width="0.9" />
+            <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(0,229,255,0.85)">PRV-03</text>
+          </g>
+
+          <!-- ── DELIVERY OUTLET NODES (bottom) ── -->
+          <!-- OUT-A at 290,380 -->
+          <g class="gas-node" id="node-outa" transform="translate(290,380)">
+            <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-A</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.28)">DELIVERED</text>
+          </g>
+          <!-- OUT-B at 470,380 -->
+          <g class="gas-node" id="node-outb" transform="translate(470,380)">
+            <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-B</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.28)">DELIVERED</text>
+          </g>
+          <!-- OUT-C at 650,380 -->
+          <g class="gas-node" id="node-outc" transform="translate(650,380)">
+            <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38" />
+            <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)" />
+            <circle r="2.8" fill="white" opacity="0.9" />
+            <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5"
+              fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-C</text>
+            <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
+              fill="rgba(255,255,255,0.28)">DELIVERED</text>
+          </g>
+
+          <!-- ── SYSTEM WATERMARK ── -->
+          <text x="450" y="467" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace"
+            font-size="7.5" fill="rgba(0,229,255,0.1)" letter-spacing="2.5">
+            PHOENIX TECHNICAL SOLUTION • GAS DISTRIBUTION MANIFOLD • SCHEMATIC REV 2.1
+          </text>
+
+        </svg>
       </div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <span class="gas-status-dot" style="width:8px;height:8px;border-radius:50%;background:#a78bfa;box-shadow:0 0 8px #a78bfa;display:inline-block;"></span>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.45);">PURITY: <strong style="color:#a78bfa;">99.999%</strong></span>
+
+      <!-- Legend row -->
+      <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:2rem;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:28px;height:2px;background:#c084fc;border-radius:2px;box-shadow:0 0 6px #c084fc;"></div>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Gas
+            Source</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:28px;height:2px;background:#00E5FF;border-radius:2px;box-shadow:0 0 6px #00E5FF;"></div>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Primary
+            Pipeline</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:28px;height:2px;background:#00bcd4;border-radius:2px;box-shadow:0 0 4px #00bcd4;"></div>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Distribution
+            Branch</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:28px;height:2px;background:#4ade80;border-radius:2px;box-shadow:0 0 6px #4ade80;"></div>
+          <span
+            style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Delivery
+            Outlet</span>
+        </div>
       </div>
+
     </div>
 
-    <!-- SVG Gas Distribution System -->
-    <div class="reveal" style="width:100%;overflow:visible;border-radius:16px;border:1px solid rgba(0,229,255,0.1);background:rgba(0,229,255,0.02);padding:24px;box-sizing:border-box;">
-      <svg id="gas-dist-svg" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" aria-label="Gas Distribution System Diagram" role="img">
-        <defs>
-          <!-- Glow filters -->
-          <filter id="gfx-glow-soft" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <filter id="gfx-glow-strong" x="-80%" y="-80%" width="260%" height="260%">
-            <feGaussianBlur stdDeviation="7" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <filter id="gfx-glow-node" x="-120%" y="-120%" width="340%" height="340%">
-            <feGaussianBlur stdDeviation="6" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <!-- Gradients -->
-          <radialGradient id="gfx-node-cyan" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#00E5FF" stop-opacity="1"/>
-            <stop offset="100%" stop-color="#0072ff" stop-opacity="0.5"/>
-          </radialGradient>
-          <radialGradient id="gfx-node-purple" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#c084fc" stop-opacity="1"/>
-            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.5"/>
-          </radialGradient>
-          <radialGradient id="gfx-node-green" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#4ade80" stop-opacity="1"/>
-            <stop offset="100%" stop-color="#15803d" stop-opacity="0.5"/>
-          </radialGradient>
-          <!-- Motion paths (embedded in defs for animateMotion) -->
-          <path id="mp-trunk" d="M80,240 L820,240"/>
-          <path id="mp-trunk-r2" d="M80,240 L820,240"/>
-          <path id="mp-top-loop" d="M200,240 L200,100 L720,100 L720,240"/>
-          <path id="mp-bd1" d="M290,240 L290,380"/>
-          <path id="mp-bd2" d="M470,240 L470,380"/>
-          <path id="mp-bd3" d="M650,240 L650,380"/>
-          <path id="mp-bu1" d="M200,240 L200,100"/>
-          <path id="mp-bu2" d="M380,240 L380,100"/>
-          <path id="mp-bu3" d="M560,240 L560,100"/>
-          <path id="mp-bu4" d="M720,240 L720,100"/>
-        </defs>
+    <!-- Keyframe CSS + Node hover/interaction JS -->
+    <style>
+      /* ── Flow keyframes ── */
+      @keyframes flowH {
+        from {
+          stroke-dashoffset: 0;
+        }
 
-        <!-- ── BACKGROUND GRID ── -->
-        <defs>
-          <pattern id="gfx-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,229,255,0.04)" stroke-width="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="900" height="480" fill="url(#gfx-grid)"/>
+        to {
+          stroke-dashoffset: -56;
+        }
+      }
 
-        <!-- ── PIPE BASE TRACKS (dim background layer) ── -->
-        <!-- Main horizontal trunk -->
-        <line x1="80" y1="240" x2="820" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <!-- Vertical up-branches -->
-        <line x1="200" y1="100" x2="200" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <line x1="380" y1="100" x2="380" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <line x1="560" y1="100" x2="560" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <line x1="720" y1="100" x2="720" y2="240" stroke="rgba(0,229,255,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <!-- Top horizontal connector -->
-        <line x1="200" y1="100" x2="720" y2="100" stroke="rgba(0,229,255,0.07)" stroke-width="5" stroke-linecap="round"/>
-        <!-- Vertical down-branches -->
-        <line x1="290" y1="240" x2="290" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <line x1="470" y1="240" x2="470" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <line x1="650" y1="240" x2="650" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="6" stroke-linecap="round"/>
-        <!-- Bottom horizontal connector -->
-        <line x1="290" y1="380" x2="650" y2="380" stroke="rgba(0,188,212,0.07)" stroke-width="5" stroke-linecap="round"/>
+      @keyframes flowV {
+        from {
+          stroke-dashoffset: 0;
+        }
 
-        <!-- ── ANIMATED FLOW PIPES (cyan glowing lines) ── -->
-        <line class="gas-pipe" x1="80" y1="240" x2="820" y2="240"
-              stroke="#00E5FF" stroke-width="1.8" stroke-linecap="round"
-              stroke-dasharray="18 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowH 2.4s linear infinite;"/>
-        <!-- Up branches (slightly slower) -->
-        <line class="gas-pipe" x1="200" y1="240" x2="200" y2="100"
-              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowV 2.0s linear infinite;"/>
-        <line class="gas-pipe" x1="380" y1="240" x2="380" y2="100"
-              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowV 2.2s linear infinite -0.5s;"/>
-        <line class="gas-pipe" x1="560" y1="240" x2="560" y2="100"
-              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowV 2.0s linear infinite -1s;"/>
-        <line class="gas-pipe" x1="720" y1="240" x2="720" y2="100"
-              stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="12 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowV 2.15s linear infinite -0.3s;"/>
-        <!-- Top horizontal connector -->
-        <line class="gas-pipe" x1="200" y1="100" x2="720" y2="100"
-              stroke="#00E5FF" stroke-width="1.2" stroke-linecap="round"
-              stroke-dasharray="10 14" stroke-opacity="0.65" filter="url(#gfx-glow-soft)"
-              style="animation:flowH 3.2s linear infinite;"/>
-        <!-- Down branches -->
-        <line class="gas-pipe" x1="290" y1="240" x2="290" y2="380"
-              stroke="#00bcd4" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowVDown 1.8s linear infinite;"/>
-        <line class="gas-pipe" x1="470" y1="240" x2="470" y2="380"
-              stroke="#00bcd4" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowVDown 1.95s linear infinite -0.6s;"/>
-        <line class="gas-pipe" x1="650" y1="240" x2="650" y2="380"
-              stroke="#00bcd4" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="10 10" filter="url(#gfx-glow-soft)"
-              style="animation:flowVDown 1.85s linear infinite -1.2s;"/>
-        <!-- Bottom horizontal connector -->
-        <line class="gas-pipe" x1="290" y1="380" x2="650" y2="380"
-              stroke="#00bcd4" stroke-width="1.2" stroke-linecap="round"
-              stroke-dasharray="8 12" stroke-opacity="0.55" filter="url(#gfx-glow-soft)"
-              style="animation:flowH 3.5s linear infinite;"/>
+        to {
+          stroke-dashoffset: -44;
+        }
+      }
 
-        <!-- ── FLOW PARTICLES (bright moving dots using animateMotion) ── -->
-        <!-- Trunk particle 1 -->
-        <circle r="3.5" fill="#00E5FF" filter="url(#gfx-glow-strong)" opacity="0.95">
-          <animateMotion dur="3s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-trunk"/>
-          </animateMotion>
-        </circle>
-        <!-- Trunk particle 2 (offset) -->
-        <circle r="2.8" fill="#7efeff" filter="url(#gfx-glow-strong)" opacity="0.75">
-          <animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-trunk-r2"/>
-          </animateMotion>
-        </circle>
-        <!-- Top loop particle -->
-        <circle r="2.5" fill="#00E5FF" filter="url(#gfx-glow-strong)" opacity="0.8">
-          <animateMotion dur="4.2s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-top-loop"/>
-          </animateMotion>
-        </circle>
-        <!-- Down branch particles -->
-        <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
-          <animateMotion dur="1.7s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bd1"/>
-          </animateMotion>
-        </circle>
-        <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
-          <animateMotion dur="1.9s" begin="-0.5s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bd2"/>
-          </animateMotion>
-        </circle>
-        <circle r="2.2" fill="#00bcd4" filter="url(#gfx-glow-soft)" opacity="0.9">
-          <animateMotion dur="1.8s" begin="-1s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bd3"/>
-          </animateMotion>
-        </circle>
-        <!-- Up branch particles -->
-        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
-          <animateMotion dur="1.6s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bu1"/>
-          </animateMotion>
-        </circle>
-        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
-          <animateMotion dur="1.8s" begin="-0.4s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bu2"/>
-          </animateMotion>
-        </circle>
-        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
-          <animateMotion dur="1.7s" begin="-0.9s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bu3"/>
-          </animateMotion>
-        </circle>
-        <circle r="2" fill="#00E5FF" filter="url(#gfx-glow-soft)" opacity="0.75">
-          <animateMotion dur="1.65s" begin="-1.3s" repeatCount="indefinite" calcMode="linear">
-            <mpath href="#mp-bu4"/>
-          </animateMotion>
-        </circle>
+      @keyframes flowVDown {
+        from {
+          stroke-dashoffset: 0;
+        }
 
-        <!-- ── FLOW DIRECTION ARROWS (chevrons on main trunk) ── -->
-        <g fill="rgba(0,229,255,0.45)" filter="url(#gfx-glow-soft)">
-          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(148,240)"/>
-          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(328,240)"/>
-          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(508,240)"/>
-          <polygon points="0,-3.5 7,0 0,3.5" transform="translate(688,240)"/>
-        </g>
+        to {
+          stroke-dashoffset: 40;
+        }
+      }
 
-        <!-- ── GAS SOURCE NODE (left, purple — high voltage supply) ── -->
-        <g class="gas-node" id="node-source" transform="translate(80,240)">
-          <!-- Pulse rings -->
-          <circle r="26" fill="none" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2" class="node-pulse-ring"/>
-          <circle r="16" fill="rgba(192,132,252,0.1)" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.45"/>
-          <!-- Core glow -->
-          <circle r="9" fill="url(#gfx-node-purple)" filter="url(#gfx-glow-node)"/>
-          <circle r="3.5" fill="white" opacity="0.95"/>
-          <!-- Labels -->
-          <text y="-36" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" fill="rgba(192,132,252,0.9)" letter-spacing="1.5">GAS SOURCE</text>
-          <text y="-22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="0.5">HP-01</text>
-          <text y="28" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(192,132,252,0.5)">↑ 200 BAR</text>
-        </g>
+      /* ── Node pulse ring animation ── */
+      @keyframes nodePulse {
+        0% {
+          r: 19;
+          opacity: 0.35;
+        }
 
-        <!-- ── MAIN OUTLET NODE (right, green) ── -->
-        <g class="gas-node" id="node-outlet" transform="translate(820,240)">
-          <circle r="26" fill="none" stroke="#4ade80" stroke-width="1" stroke-opacity="0.2" class="node-pulse-ring"/>
-          <circle r="16" fill="rgba(74,222,128,0.1)" stroke="#4ade80" stroke-width="1.5" stroke-opacity="0.45"/>
-          <circle r="9" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
-          <circle r="3.5" fill="white" opacity="0.95"/>
-          <text y="-36" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" fill="rgba(74,222,128,0.9)" letter-spacing="1.5">MAIN OUTLET</text>
-          <text y="-22" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="0.5">HB-07</text>
-          <text y="28" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8" fill="rgba(74,222,128,0.5)">NOMINAL</text>
-        </g>
+        60% {
+          r: 28;
+          opacity: 0;
+        }
 
-        <!-- ── TRUNK JUNCTION NODES (valve nodes) ── -->
-        <!-- V-01 at 200,240 -->
-        <g class="gas-node" id="node-v01" transform="translate(200,240)">
-          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
-          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
-          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.5" fill="white" opacity="0.9"/>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-01</text>
-        </g>
-        <!-- V-02 at 380,240 -->
-        <g class="gas-node" id="node-v02" transform="translate(380,240)">
-          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
-          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
-          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.5" fill="white" opacity="0.9"/>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-02</text>
-        </g>
-        <!-- V-03 at 560,240 -->
-        <g class="gas-node" id="node-v03" transform="translate(560,240)">
-          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
-          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
-          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.5" fill="white" opacity="0.9"/>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-03</text>
-        </g>
-        <!-- V-04 at 720,240 -->
-        <g class="gas-node" id="node-v04" transform="translate(720,240)">
-          <circle r="19" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" class="node-pulse-ring"/>
-          <circle r="12" fill="rgba(0,229,255,0.08)" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.4"/>
-          <circle r="6.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.5" fill="white" opacity="0.9"/>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(0,229,255,0.65)">V-04</text>
-        </g>
+        100% {
+          r: 19;
+          opacity: 0.35;
+        }
+      }
 
-        <!-- ── TOP PRESSURE REGULATOR NODES ── -->
-        <!-- REG-01 at 200,100 -->
-        <g class="gas-node" id="node-reg01" transform="translate(200,100)">
-          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-01</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.2 BAR</text>
-        </g>
-        <!-- REG-02 at 380,100 -->
-        <g class="gas-node" id="node-reg02" transform="translate(380,100)">
-          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-02</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.1 BAR</text>
-        </g>
-        <!-- REG-03 at 560,100 -->
-        <g class="gas-node" id="node-reg03" transform="translate(560,100)">
-          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-03</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.3 BAR</text>
-        </g>
-        <!-- REG-04 at 720,100 -->
-        <g class="gas-node" id="node-reg04" transform="translate(720,100)">
-          <circle r="14" fill="rgba(0,229,255,0.07)" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-cyan)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,229,255,0.75)" letter-spacing="0.5">REG-04</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.3)">4.2 BAR</text>
-        </g>
+      .node-pulse-ring {
+        animation: nodePulse 2.8s ease-out infinite;
+      }
 
-        <!-- ── PRESSURE RELIEF VALVE BADGES (on trunk) ── -->
-        <!-- PRV-01 at 290,240 (between V-01 and V-02) -->
-        <g id="node-prv01" transform="translate(290,240)">
-          <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)" stroke-width="0.9"/>
-          <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(0,229,255,0.85)">PRV-01</text>
-        </g>
-        <!-- PRV-02 at 470,240 -->
-        <g id="node-prv02" transform="translate(470,240)">
-          <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)" stroke-width="0.9"/>
-          <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(0,229,255,0.85)">PRV-02</text>
-        </g>
-        <!-- PRV-03 at 650,240 -->
-        <g id="node-prv03" transform="translate(650,240)">
-          <rect x="-20" y="-10" width="40" height="20" rx="5" fill="rgba(0,229,255,0.06)" stroke="rgba(0,229,255,0.3)" stroke-width="0.9"/>
-          <text text-anchor="middle" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(0,229,255,0.85)">PRV-03</text>
-        </g>
+      /* ── Status dot blink ── */
+      .gas-status-dot {
+        animation: gasDotBlink 2s ease-in-out infinite;
+      }
 
-        <!-- ── DELIVERY OUTLET NODES (bottom) ── -->
-        <!-- OUT-A at 290,380 -->
-        <g class="gas-node" id="node-outa" transform="translate(290,380)">
-          <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-A</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.28)">DELIVERED</text>
-        </g>
-        <!-- OUT-B at 470,380 -->
-        <g class="gas-node" id="node-outb" transform="translate(470,380)">
-          <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-B</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.28)">DELIVERED</text>
-        </g>
-        <!-- OUT-C at 650,380 -->
-        <g class="gas-node" id="node-outc" transform="translate(650,380)">
-          <circle r="14" fill="rgba(74,222,128,0.07)" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.38"/>
-          <circle r="7.5" fill="url(#gfx-node-green)" filter="url(#gfx-glow-node)"/>
-          <circle r="2.8" fill="white" opacity="0.9"/>
-          <text y="-21" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5" fill="rgba(74,222,128,0.8)" letter-spacing="0.5">OUT-C</text>
-          <text y="20" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5" fill="rgba(255,255,255,0.28)">DELIVERED</text>
-        </g>
+      @keyframes gasDotBlink {
 
-        <!-- ── SYSTEM WATERMARK ── -->
-        <text x="450" y="467" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="7.5"
-              fill="rgba(0,229,255,0.1)" letter-spacing="2.5">
-          PHOENIX TECHNICAL SOLUTION  •  GAS DISTRIBUTION MANIFOLD  •  SCHEMATIC REV 2.1
-        </text>
+        0%,
+        100% {
+          opacity: 1;
+        }
 
-      </svg>
-    </div>
+        50% {
+          opacity: 0.35;
+        }
+      }
 
-    <!-- Legend row -->
-    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:2rem;">
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div style="width:28px;height:2px;background:#c084fc;border-radius:2px;box-shadow:0 0 6px #c084fc;"></div>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Gas Source</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div style="width:28px;height:2px;background:#00E5FF;border-radius:2px;box-shadow:0 0 6px #00E5FF;"></div>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Primary Pipeline</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div style="width:28px;height:2px;background:#00bcd4;border-radius:2px;box-shadow:0 0 4px #00bcd4;"></div>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Distribution Branch</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div style="width:28px;height:2px;background:#4ade80;border-radius:2px;box-shadow:0 0 6px #4ade80;"></div>
-        <span style="font-size:11px;font-family:'JetBrains Mono','Courier New',monospace;color:rgba(255,255,255,0.38);">Delivery Outlet</span>
-      </div>
-    </div>
+      /* ── Hover: highlight pipeline and node ── */
+      #gas-dist-svg .gas-pipe {
+        cursor: default;
+        transition: stroke-opacity 0.3s, stroke-width 0.3s;
+      }
 
-  </div>
+      #gas-dist-svg .gas-node {
+        cursor: pointer;
+        transition: opacity 0.25s;
+      }
 
-  <!-- Keyframe CSS + Node hover/interaction JS -->
-  <style>
-    /* ── Flow keyframes ── */
-    @keyframes flowH {
-      from { stroke-dashoffset: 0; }
-      to   { stroke-dashoffset: -56; }
-    }
-    @keyframes flowV {
-      from { stroke-dashoffset: 0; }
-      to   { stroke-dashoffset: -44; }
-    }
-    @keyframes flowVDown {
-      from { stroke-dashoffset: 0; }
-      to   { stroke-dashoffset: 40; }
-    }
-    /* ── Node pulse ring animation ── */
-    @keyframes nodePulse {
-      0%   { r: 19; opacity: 0.35; }
-      60%  { r: 28; opacity: 0;    }
-      100% { r: 19; opacity: 0.35; }
-    }
-    .node-pulse-ring {
-      animation: nodePulse 2.8s ease-out infinite;
-    }
-    /* ── Status dot blink ── */
-    .gas-status-dot {
-      animation: gasDotBlink 2s ease-in-out infinite;
-    }
-    @keyframes gasDotBlink {
-      0%, 100% { opacity: 1; }
-      50%      { opacity: 0.35; }
-    }
-    /* ── Hover: highlight pipeline and node ── */
-    #gas-dist-svg .gas-pipe {
-      cursor: default;
-      transition: stroke-opacity 0.3s, stroke-width 0.3s;
-    }
-    #gas-dist-svg .gas-node {
-      cursor: pointer;
-      transition: opacity 0.25s;
-    }
-    #gas-dist-svg .gas-node:hover > circle:nth-child(2) {
-      stroke-opacity: 0.85 !important;
-      fill-opacity: 0.25 !important;
-    }
-    #gas-dist-svg .gas-node:hover > circle:nth-child(3) {
-      filter: url(#gfx-glow-strong);
-    }
-    /* ── Responsive SVG wrapper ── */
-    #gas-dist-svg {
-      width: 100%;
-      height: auto;
-    }
-    /* ── Mobile: reduce glow intensity ── */
-    @media (max-width: 640px) {
-      #gas-dist-svg .gas-pipe { stroke-width: 1.2px; }
-    }
-  </style>
+      #gas-dist-svg .gas-node:hover>circle:nth-child(2) {
+        stroke-opacity: 0.85 !important;
+        fill-opacity: 0.25 !important;
+      }
 
-  <script>
-    (function() {
-      // Hover tooltip for gas nodes
-      const svg = document.getElementById('gas-dist-svg');
-      if (!svg) return;
+      #gas-dist-svg .gas-node:hover>circle:nth-child(3) {
+        filter: url(#gfx-glow-strong);
+      }
 
-      const nodeData = {
-        'node-source':  { label: 'GAS SOURCE',     detail: 'HP Cylinder Bank • 200 BAR',       color: '#c084fc' },
-        'node-outlet':  { label: 'MAIN OUTLET',     detail: 'Final delivery header • NOMINAL',  color: '#4ade80' },
-        'node-v01':     { label: 'VALVE V-01',      detail: 'Ball Valve • OPEN • 4.2 BAR',      color: '#00E5FF' },
-        'node-v02':     { label: 'VALVE V-02',      detail: 'Ball Valve • OPEN • 4.1 BAR',      color: '#00E5FF' },
-        'node-v03':     { label: 'VALVE V-03',      detail: 'Ball Valve • OPEN • 4.3 BAR',      color: '#00E5FF' },
-        'node-v04':     { label: 'VALVE V-04',      detail: 'Ball Valve • OPEN • 4.2 BAR',      color: '#00E5FF' },
-        'node-reg01':   { label: 'REGULATOR REG-01', detail: 'Pressure set: 4.2 BAR',           color: '#00E5FF' },
-        'node-reg02':   { label: 'REGULATOR REG-02', detail: 'Pressure set: 4.1 BAR',           color: '#00E5FF' },
-        'node-reg03':   { label: 'REGULATOR REG-03', detail: 'Pressure set: 4.3 BAR',           color: '#00E5FF' },
-        'node-reg04':   { label: 'REGULATOR REG-04', detail: 'Pressure set: 4.2 BAR',           color: '#00E5FF' },
-        'node-outa':    { label: 'OUTLET A',         detail: 'Lab Station A • Delivering',      color: '#4ade80' },
-        'node-outb':    { label: 'OUTLET B',         detail: 'Lab Station B • Delivering',      color: '#4ade80' },
-        'node-outc':    { label: 'OUTLET C',         detail: 'Lab Station C • Delivering',      color: '#4ade80' },
-      };
+      /* ── Responsive SVG wrapper ── */
+      #gas-dist-svg {
+        width: 100%;
+        height: auto;
+      }
 
-      // Create tooltip element
-      const tip = document.createElement('div');
-      tip.id = 'gas-svg-tooltip';
-      tip.style.cssText = [
-        'position:fixed','pointer-events:none','z-index:9999',
-        'background:rgba(11,15,20,0.92)','border:1px solid rgba(0,229,255,0.3)',
-        'padding:8px 12px','border-radius:8px','font-family:JetBrains Mono,Courier New,monospace',
-        'font-size:11px','color:#fff','opacity:0','transition:opacity 0.2s',
-        'backdrop-filter:blur(8px)','line-height:1.6','min-width:160px',
-        'box-shadow:0 0 20px rgba(0,229,255,0.15)'
-      ].join(';');
-      document.body.appendChild(tip);
+      /* ── Mobile: reduce glow intensity ── */
+      @media (max-width: 640px) {
+        #gas-dist-svg .gas-pipe {
+          stroke-width: 1.2px;
+        }
+      }
+    </style>
 
-      Object.keys(nodeData).forEach(function(id) {
-        const el = document.getElementById(id);
-        if (!el) return;
-        const nd = nodeData[id];
-        el.addEventListener('mouseenter', function(e) {
-          tip.innerHTML = '<span style=\"color:' + nd.color + ';font-size:10px;letter-spacing:1.5px;\">' + nd.label + '</span><br/><span style=\"color:rgba(255,255,255,0.55);\">' + nd.detail + '</span>';
-          tip.style.opacity = '1';
+    <script>
+      (function () {
+        // Hover tooltip for gas nodes
+        const svg = document.getElementById('gas-dist-svg');
+        if (!svg) return;
+
+        const nodeData = {
+          'node-source': { label: 'GAS SOURCE', detail: 'HP Cylinder Bank • 200 BAR', color: '#c084fc' },
+          'node-outlet': { label: 'MAIN OUTLET', detail: 'Final delivery header • NOMINAL', color: '#4ade80' },
+          'node-v01': { label: 'VALVE V-01', detail: 'Ball Valve • OPEN • 4.2 BAR', color: '#00E5FF' },
+          'node-v02': { label: 'VALVE V-02', detail: 'Ball Valve • OPEN • 4.1 BAR', color: '#00E5FF' },
+          'node-v03': { label: 'VALVE V-03', detail: 'Ball Valve • OPEN • 4.3 BAR', color: '#00E5FF' },
+          'node-v04': { label: 'VALVE V-04', detail: 'Ball Valve • OPEN • 4.2 BAR', color: '#00E5FF' },
+          'node-reg01': { label: 'REGULATOR REG-01', detail: 'Pressure set: 4.2 BAR', color: '#00E5FF' },
+          'node-reg02': { label: 'REGULATOR REG-02', detail: 'Pressure set: 4.1 BAR', color: '#00E5FF' },
+          'node-reg03': { label: 'REGULATOR REG-03', detail: 'Pressure set: 4.3 BAR', color: '#00E5FF' },
+          'node-reg04': { label: 'REGULATOR REG-04', detail: 'Pressure set: 4.2 BAR', color: '#00E5FF' },
+          'node-outa': { label: 'OUTLET A', detail: 'Lab Station A • Delivering', color: '#4ade80' },
+          'node-outb': { label: 'OUTLET B', detail: 'Lab Station B • Delivering', color: '#4ade80' },
+          'node-outc': { label: 'OUTLET C', detail: 'Lab Station C • Delivering', color: '#4ade80' },
+        };
+
+        // Create tooltip element
+        const tip = document.createElement('div');
+        tip.id = 'gas-svg-tooltip';
+        tip.style.cssText = [
+          'position:fixed', 'pointer-events:none', 'z-index:9999',
+          'background:rgba(11,15,20,0.92)', 'border:1px solid rgba(0,229,255,0.3)',
+          'padding:8px 12px', 'border-radius:8px', 'font-family:JetBrains Mono,Courier New,monospace',
+          'font-size:11px', 'color:#fff', 'opacity:0', 'transition:opacity 0.2s',
+          'backdrop-filter:blur(8px)', 'line-height:1.6', 'min-width:160px',
+          'box-shadow:0 0 20px rgba(0,229,255,0.15)'
+        ].join(';');
+        document.body.appendChild(tip);
+
+        Object.keys(nodeData).forEach(function (id) {
+          const el = document.getElementById(id);
+          if (!el) return;
+          const nd = nodeData[id];
+          el.addEventListener('mouseenter', function (e) {
+            tip.innerHTML = '<span style=\"color:' + nd.color + ';font-size:10px;letter-spacing:1.5px;\">' + nd.label + '</span><br/><span style=\"color:rgba(255,255,255,0.55);\">' + nd.detail + '</span>';
+            tip.style.opacity = '1';
+          });
+          el.addEventListener('mousemove', function (e) {
+            tip.style.left = (e.clientX + 14) + 'px';
+            tip.style.top = (e.clientY - 10) + 'px';
+          });
+          el.addEventListener('mouseleave', function () {
+            tip.style.opacity = '0';
+          });
         });
-        el.addEventListener('mousemove', function(e) {
-          tip.style.left = (e.clientX + 14) + 'px';
-          tip.style.top  = (e.clientY - 10) + 'px';
-        });
-        el.addEventListener('mouseleave', function() {
-          tip.style.opacity = '0';
-        });
-      });
-    })();
-  </script>
+      })();
+    </script>
 
-</section>
+  </section>
 
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      4. WHY CHOOSE US
 ═══════════════════════════════════════════════════════════ -->
-<section id="why-us" class="section-pad bg-white overflow-hidden">
-  <div class="container-wide">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+  <section id="why-us" class="section-pad bg-white overflow-hidden">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-      <!-- Left: dark panel with metrics -->
-      <div class="reveal relative">
-        <div class="why-panel">
-          <div class="why-panel-header">
-            <div class="why-panel-badge">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <!-- Left: dark panel with metrics -->
+        <div class="reveal relative">
+          <div class="why-panel">
+            <div class="why-panel-header">
+              <div class="why-panel-badge">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold" style="font-size:var(--text-base)">The Phoenix Advantage</div>
+                <div class="text-white/60" style="font-size:var(--text-sm)">Precision Engineering · Unmatched
+                  Reliability</div>
+              </div>
             </div>
-            <div>
-              <div class="text-white font-semibold" style="font-size:var(--text-base)">The Phoenix Advantage</div>
-              <div class="text-white/60" style="font-size:var(--text-sm)">Precision Engineering · Unmatched Reliability</div>
+            <div class="grid grid-cols-2 gap-4 mt-7">
+              <div class="why-metric-card">
+                <div class="metric-val">200+</div>
+                <div class="metric-label">Projects Delivered</div>
+              </div>
+              <div class="why-metric-card">
+                <div class="metric-val">24/7</div>
+                <div class="metric-label">Support Availability</div>
+              </div>
+              <div class="why-metric-card">
+                <div class="metric-val">100%</div>
+                <div class="metric-label">Certified Technicians</div>
+              </div>
+              <div class="why-metric-card">
+                <div class="metric-val">0</div>
+                <div class="metric-label">Lost-Time Injuries</div>
+              </div>
             </div>
-          </div>
-          <div class="grid grid-cols-2 gap-4 mt-7">
-            <div class="why-metric-card">
-              <div class="metric-val">200+</div>
-              <div class="metric-label">Projects Delivered</div>
+            <div class="mt-6 px-5 py-4 rounded-xl bg-white/8 border border-white/10 text-center">
+              <p class="tracking-widest uppercase font-semibold text-white/60" style="font-size:var(--text-xs)">
+                Precision Piping · Intelligent Automation</p>
             </div>
-            <div class="why-metric-card">
-              <div class="metric-val">24/7</div>
-              <div class="metric-label">Support Availability</div>
-            </div>
-            <div class="why-metric-card">
-              <div class="metric-val">100%</div>
-              <div class="metric-label">Certified Technicians</div>
-            </div>
-            <div class="why-metric-card">
-              <div class="metric-val">0</div>
-              <div class="metric-label">Lost-Time Injuries</div>
-            </div>
-          </div>
-          <div class="mt-6 px-5 py-4 rounded-xl bg-white/8 border border-white/10 text-center">
-            <p class="tracking-widest uppercase font-semibold text-white/60" style="font-size:var(--text-xs)">Precision Piping · Intelligent Automation</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: text with advantages -->
-      <div>
-        <div class="reveal section-eyebrow mb-4">Why Choose Us</div>
-        <h2 class="reveal font-display font-bold text-ink-900 mb-3 leading-tight">
-          The Phoenix Technical<br/><span class="brand-gradient-text">Advantage</span>
-        </h2>
-        <p class="reveal text-ink-500 mb-9" style="font-size:var(--text-lg)">Precision Engineering. Unmatched Reliability.</p>
-
-        <div class="space-y-5">
-          <div class="reveal adv-item">
-            <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
-            <div><span class="font-semibold text-ink-900">Certified Expertise: </span><span class="text-ink-500" style="font-size:var(--text-base)">Our projects are spearheaded by Swagelok-certified engineers and technicians.</span></div>
-          </div>
-          <div class="reveal adv-item">
-            <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
-            <div><span class="font-semibold text-ink-900">Tailored &amp; Scalable: </span><span class="text-ink-500" style="font-size:var(--text-base)">Every system is flexible, scalable, and custom-designed to your specific needs.</span></div>
-          </div>
-          <div class="reveal adv-item">
-            <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
-            <div><span class="font-semibold text-ink-900">24/7 Emergency Support: </span><span class="text-ink-500" style="font-size:var(--text-base)">Round-the-clock technical support to keep your operations running.</span></div>
-          </div>
-          <div class="reveal adv-item">
-            <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
-            <div><span class="font-semibold text-ink-900">Modern Technologies: </span><span class="text-ink-500" style="font-size:var(--text-base)">Cutting-edge IoT, SCADA, and high-pressure fluid delivery systems.</span></div>
-          </div>
-          <div class="reveal adv-item">
-            <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
-            <div><span class="font-semibold text-ink-900">Turnkey Solutions: </span><span class="text-ink-500" style="font-size:var(--text-base)">From consultation to fabrication, installation, and ongoing maintenance.</span></div>
           </div>
         </div>
 
-        <div class="reveal mt-10 flex flex-wrap gap-3">
-          <a href="#contact" class="btn-primary flex items-center gap-2">Speak to a Certified Engineer</a>
-          <a href="tel:9423239466" class="btn-outline flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            Call: 94232 39466
-          </a>
+        <!-- Right: text with advantages -->
+        <div>
+          <div class="reveal section-eyebrow mb-4">Why Choose Us</div>
+          <h2 class="reveal font-display font-bold text-ink-900 mb-3 leading-tight">
+            The Phoenix Technical<br /><span class="brand-gradient-text">Advantage</span>
+          </h2>
+          <p class="reveal text-ink-500 mb-9" style="font-size:var(--text-lg)">Precision Engineering. Unmatched
+            Reliability.</p>
+
+          <div class="space-y-5">
+            <div class="reveal adv-item">
+              <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div><span class="font-semibold text-ink-900">Certified Expertise: </span><span class="text-ink-500"
+                  style="font-size:var(--text-base)">Our projects are spearheaded by Swagelok-certified engineers and
+                  technicians.</span></div>
+            </div>
+            <div class="reveal adv-item">
+              <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div><span class="font-semibold text-ink-900">Tailored &amp; Scalable: </span><span class="text-ink-500"
+                  style="font-size:var(--text-base)">Every system is flexible, scalable, and custom-designed to your
+                  specific needs.</span></div>
+            </div>
+            <div class="reveal adv-item">
+              <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div><span class="font-semibold text-ink-900">24/7 Emergency Support: </span><span class="text-ink-500"
+                  style="font-size:var(--text-base)">Round-the-clock technical support to keep your operations
+                  running.</span></div>
+            </div>
+            <div class="reveal adv-item">
+              <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div><span class="font-semibold text-ink-900">Modern Technologies: </span><span class="text-ink-500"
+                  style="font-size:var(--text-base)">Cutting-edge IoT, SCADA, and high-pressure fluid delivery
+                  systems.</span></div>
+            </div>
+            <div class="reveal adv-item">
+              <div class="adv-check"><svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div><span class="font-semibold text-ink-900">Turnkey Solutions: </span><span class="text-ink-500"
+                  style="font-size:var(--text-base)">From consultation to fabrication, installation, and ongoing
+                  maintenance.</span></div>
+            </div>
+          </div>
+
+          <div class="reveal mt-10 flex flex-wrap gap-3">
+            <a href="#contact" class="btn-primary flex items-center gap-2">Speak to a Certified Engineer</a>
+            <a href="tel:9423239466" class="btn-outline flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call: 94232 39466
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      5. PROCESS
 ═══════════════════════════════════════════════════════════ -->
-<section id="process" class="section-pad bg-surf-100">
-  <div class="container-wide">
-    <div class="section-header text-center">
-      <div class="reveal section-eyebrow mx-auto mb-4">How We Work</div>
-      <h2 class="reveal font-display font-bold text-ink-900">
-        From Concept to <span class="brand-gradient-text">Commissioning</span>
-      </h2>
-    </div>
+  <section id="process" class="section-pad bg-surf-100">
+    <div class="container-wide">
+      <div class="section-header text-center">
+        <div class="reveal section-eyebrow mx-auto mb-4">How We Work</div>
+        <h2 class="reveal font-display font-bold text-ink-900">
+          From Concept to <span class="brand-gradient-text">Commissioning</span>
+        </h2>
+      </div>
 
-    <div class="relative">
-      <div class="hidden lg:block absolute top-11 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-px bg-gradient-to-r from-brand-purple/30 via-brand-crimson/30 to-brand-purple/30 z-0"></div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-        <div class="reveal process-step-card">
-          <div class="ps-number">1</div>
-          <h3 class="ps-title">Consultation &amp; Assessment</h3>
-          <p class="ps-body">We evaluate your specific industrial requirements, fluid handling needs, and automation goals.</p>
+      <div class="relative">
+        <div
+          class="hidden lg:block absolute top-11 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-px bg-gradient-to-r from-brand-purple/30 via-brand-crimson/30 to-brand-purple/30 z-0">
         </div>
-        <div class="reveal process-step-card">
-          <div class="ps-number">2</div>
-          <h3 class="ps-title">Custom Design &amp; Engineering</h3>
-          <p class="ps-body">Our experts draft tailored layouts for piping, reactors, and electrical panels adhering to strict safety standards.</p>
-        </div>
-        <div class="reveal process-step-card">
-          <div class="ps-number">3</div>
-          <h3 class="ps-title">Fabrication &amp; Installation</h3>
-          <p class="ps-body">Using premium components, our certified technicians build and install your systems with precision.</p>
-        </div>
-        <div class="reveal process-step-card">
-          <div class="ps-number">4</div>
-          <h3 class="ps-title">Automation &amp; 24/7 Support</h3>
-          <p class="ps-body">We integrate PLC/SCADA systems, test all parameters, and provide lifetime maintenance support.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+          <div class="reveal process-step-card">
+            <div class="ps-number">1</div>
+            <h3 class="ps-title">Consultation &amp; Assessment</h3>
+            <p class="ps-body">We evaluate your specific industrial requirements, fluid handling needs, and automation
+              goals.</p>
+          </div>
+          <div class="reveal process-step-card">
+            <div class="ps-number">2</div>
+            <h3 class="ps-title">Custom Design &amp; Engineering</h3>
+            <p class="ps-body">Our experts draft tailored layouts for piping, reactors, and electrical panels adhering
+              to strict safety standards.</p>
+          </div>
+          <div class="reveal process-step-card">
+            <div class="ps-number">3</div>
+            <h3 class="ps-title">Fabrication &amp; Installation</h3>
+            <p class="ps-body">Using premium components, our certified technicians build and install your systems with
+              precision.</p>
+          </div>
+          <div class="reveal process-step-card">
+            <div class="ps-number">4</div>
+            <h3 class="ps-title">Automation &amp; 24/7 Support</h3>
+            <p class="ps-body">We integrate PLC/SCADA systems, test all parameters, and provide lifetime maintenance
+              support.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      6. INDUSTRIES
 ═══════════════════════════════════════════════════════════ -->
-<section id="industries" class="section-pad bg-white">
-  <div class="container-wide">
-    <div class="section-header text-center">
-      <div class="reveal section-eyebrow mx-auto mb-4">Sectors We Serve</div>
-      <h2 class="reveal font-display font-bold text-ink-900">
-        Powering <span class="brand-gradient-text">Diverse Industries</span>
-      </h2>
+  <section id="industries" class="section-pad bg-white">
+    <div class="container-wide">
+      <div class="section-header text-center">
+        <div class="reveal section-eyebrow mx-auto mb-4">Sectors We Serve</div>
+        <h2 class="reveal font-display font-bold text-ink-900">
+          Powering <span class="brand-gradient-text">Diverse Industries</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        <div class="reveal ind-card group">
+          <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg></div>
+          <h4 class="ind-title">Chemical &amp; Petrochemical</h4>
+          <p class="ind-body">Batch, continuous, and specialty chemical processing with high-pressure reactor expertise.
+          </p>
+        </div>
+        <div class="reveal ind-card group">
+          <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-crimson" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+            </svg></div>
+          <h4 class="ind-title">Pharmaceutical Manufacturing</h4>
+          <p class="ind-body">cGMP-compliant process systems, cleanroom piping, and validation documentation support.
+          </p>
+        </div>
+        <div class="reveal ind-card group">
+          <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg></div>
+          <h4 class="ind-title">Oil, Gas &amp; Energy</h4>
+          <p class="ind-body">High-pressure flow assurance, piping systems, and SCADA integration for midstream
+            operations.</p>
+        </div>
+        <div class="reveal ind-card group">
+          <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-crimson" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+            </svg></div>
+          <h4 class="ind-title">Water Treatment &amp; Fluid Mgmt.</h4>
+          <p class="ind-body">ETP, WTP, and fluid handling systems with full instrumentation and SCADA control.</p>
+        </div>
+        <div class="reveal ind-card group">
+          <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg></div>
+          <h4 class="ind-title">Industrial Manufacturing &amp; Automation</h4>
+          <p class="ind-body">Assembly line automation, PLC/SCADA integration, and control panel fabrication.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-      <div class="reveal ind-card group">
-        <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
-        <h4 class="ind-title">Chemical &amp; Petrochemical</h4>
-        <p class="ind-body">Batch, continuous, and specialty chemical processing with high-pressure reactor expertise.</p>
-      </div>
-      <div class="reveal ind-card group">
-        <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
-        <h4 class="ind-title">Pharmaceutical Manufacturing</h4>
-        <p class="ind-body">cGMP-compliant process systems, cleanroom piping, and validation documentation support.</p>
-      </div>
-      <div class="reveal ind-card group">
-        <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-        <h4 class="ind-title">Oil, Gas &amp; Energy</h4>
-        <p class="ind-body">High-pressure flow assurance, piping systems, and SCADA integration for midstream operations.</p>
-      </div>
-      <div class="reveal ind-card group">
-        <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></div>
-        <h4 class="ind-title">Water Treatment &amp; Fluid Mgmt.</h4>
-        <p class="ind-body">ETP, WTP, and fluid handling systems with full instrumentation and SCADA control.</p>
-      </div>
-      <div class="reveal ind-card group">
-        <div class="ind-icon-wrap"><svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-        <h4 class="ind-title">Industrial Manufacturing &amp; Automation</h4>
-        <p class="ind-body">Assembly line automation, PLC/SCADA integration, and control panel fabrication.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      7. PRODUCT SHOWCASE — Masonry-style image gallery
 ═══════════════════════════════════════════════════════════ -->
-<section id="showcase" class="section-pad bg-surf-100">
-  <div class="container-wide">
+  <section id="showcase" class="section-pad bg-surf-100">
+    <div class="container-wide">
 
-    <div class="section-header text-center">
-      <div class="reveal section-eyebrow mx-auto mb-4">Our Products &amp; Work</div>
-      <h2 class="reveal font-display font-bold text-ink-900 mb-4">
-        Precision Products, <span class="brand-gradient-text">Real Installations</span>
-      </h2>
-      <p class="reveal text-ink-500 mx-auto" style="max-width:42rem;font-size:var(--text-lg)">A curated selection of systems we supply, install, and maintain across laboratories and industrial facilities.</p>
+      <div class="section-header text-center">
+        <div class="reveal section-eyebrow mx-auto mb-4">Our Products &amp; Work</div>
+        <h2 class="reveal font-display font-bold text-ink-900 mb-4">
+          Precision Products, <span class="brand-gradient-text">Real Installations</span>
+        </h2>
+        <p class="reveal text-ink-500 mx-auto" style="max-width:42rem;font-size:var(--text-lg)">A curated selection of
+          systems we supply, install, and maintain across laboratories and industrial facilities.</p>
+      </div>
+
+      <!-- ── Top feature row: 2 large + 1 tall ── -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+
+        <!-- Feature 1 — large, landscape -->
+        <div class="reveal md:col-span-2 showcase-card group">
+          <img src="img/home/analytical_equipments.jpg" alt="Analytical Lab Equipment — Phoenix Technical Solution"
+            class="showcase-img" loading="lazy" />
+          <div class="showcase-caption">
+            <span class="showcase-tag">Analytical Equipment</span>
+            <p class="showcase-title">Lab-Grade Analytical Instruments</p>
+            <p class="showcase-sub">Precision-built for today's challenges and tomorrow's breakthroughs.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 — tall portrait -->
+        <div class="reveal showcase-card group">
+          <img src="img/home/gas_utility_piping1.jpg" alt="Gas Utility Piping Installation — Phoenix Technical Solution"
+            class="showcase-img" loading="lazy" />
+          <div class="showcase-caption">
+            <span class="showcase-tag">Completed Installation</span>
+            <p class="showcase-title">Gas Utility Piping Systems</p>
+            <p class="showcase-sub">Multi-gas manifold installations for research labs.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Middle row: 4 equal product shots ── -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-5">
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/gas_generator.jpg" alt="Gas Generator" class="showcase-img-sm" loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900 leading-tight">Gas Generators</p>
+            <p class="text-xs text-ink-400 mt-1">N₂, H₂, Zero Air</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/hydrogen-gas-generator.jpg" alt="Hydrogen Gas Generator" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900 leading-tight">Hydrogen Gas Generator</p>
+            <p class="text-xs text-ink-400 mt-1">PGH Series</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/auto-gas-changeover.jpg" alt="Auto Gas Changeover" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900 leading-tight">Auto Gas Changeover</p>
+            <p class="text-xs text-ink-400 mt-1">P-lok Series</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/gas-generator-for-lcms.jpg" alt="Gas Generator for LC-MS" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900 leading-tight">LC-MS Gas Generator</p>
+            <p class="text-xs text-ink-400 mt-1">High-purity nitrogen</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Row 3: Sonicator / Evaporator / SPE — 3 equal cols ── -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-5">
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/probe-sonicator-advanced.jpg" alt="Probe Sonicator" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">Probe Sonicator (Advanced)</p>
+            <p class="text-xs text-ink-400 mt-1">Ultrasonic cell disruption</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/nitrogen-evaporator.jpg" alt="Nitrogen Evaporator" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">Nitrogen Evaporator</p>
+            <p class="text-xs text-ink-400 mt-1">Sample concentration</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/solid-phase-extraction.jpg" alt="Solid Phase Extraction" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">Solid Phase Extraction</p>
+            <p class="text-xs text-ink-400 mt-1">SPE manifold systems</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Row 4: Columns / Bath / 3-in-1 — 4 equal cols ── -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/cosmosil-columns.jpg" alt="Cosmosil HPLC Columns" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">Cosmosil Columns</p>
+            <p class="text-xs text-ink-400 mt-1">HPLC separation</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/nucleosil-hplc-columns.jpg" alt="Nucleosil HPLC Columns" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">Nucleosil HPLC Columns</p>
+            <p class="text-xs text-ink-400 mt-1">Macherey-Nagel</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/ultrasonic-bath-sonicator.jpg" alt="Ultrasonic Bath Sonicator" class="showcase-img-sm"
+              loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">Ultrasonic Bath Sonicator</p>
+            <p class="text-xs text-ink-400 mt-1">Cleaning &amp; degassing</p>
+          </div>
+        </div>
+
+        <div class="reveal showcase-card-sm group">
+          <div class="showcase-img-sm-wrap">
+            <img src="img/home/3-in-1-air-combination-generator.jpg" alt="3-in-1 Air Combination Generator"
+              class="showcase-img-sm" loading="lazy" />
+          </div>
+          <div class="card-label">
+            <p class="text-sm font-semibold text-ink-900">3-in-1 Combination Generator</p>
+            <p class="text-xs text-ink-400 mt-1">H₂ + N₂ + Zero Air system</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal text-center mt-10">
+        <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+          Enquire About a Product
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
     </div>
-
-    <!-- ── Top feature row: 2 large + 1 tall ── -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-
-      <!-- Feature 1 — large, landscape -->
-      <div class="reveal md:col-span-2 showcase-card group">
-        <img
-          src="img/home/analytical_equipments.jpg"
-          alt="Analytical Lab Equipment — Phoenix Technical Solution"
-          class="showcase-img"
-          loading="lazy"
-        />
-        <div class="showcase-caption">
-          <span class="showcase-tag">Analytical Equipment</span>
-          <p class="showcase-title">Lab-Grade Analytical Instruments</p>
-          <p class="showcase-sub">Precision-built for today's challenges and tomorrow's breakthroughs.</p>
-        </div>
-      </div>
-
-      <!-- Feature 2 — tall portrait -->
-      <div class="reveal showcase-card group">
-        <img
-          src="img/home/gas_utility_piping1.jpg"
-          alt="Gas Utility Piping Installation — Phoenix Technical Solution"
-          class="showcase-img"
-          loading="lazy"
-        />
-        <div class="showcase-caption">
-          <span class="showcase-tag">Completed Installation</span>
-          <p class="showcase-title">Gas Utility Piping Systems</p>
-          <p class="showcase-sub">Multi-gas manifold installations for research labs.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ── Middle row: 4 equal product shots ── -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-5">
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/gas_generator.jpg" alt="Gas Generator" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900 leading-tight">Gas Generators</p>
-          <p class="text-xs text-ink-400 mt-1">N₂, H₂, Zero Air</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/hydrogen-gas-generator.jpg" alt="Hydrogen Gas Generator" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900 leading-tight">Hydrogen Gas Generator</p>
-          <p class="text-xs text-ink-400 mt-1">PGH Series</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/auto-gas-changeover.jpg" alt="Auto Gas Changeover" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900 leading-tight">Auto Gas Changeover</p>
-          <p class="text-xs text-ink-400 mt-1">P-lok Series</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/gas-generator-for-lcms.jpg" alt="Gas Generator for LC-MS" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900 leading-tight">LC-MS Gas Generator</p>
-          <p class="text-xs text-ink-400 mt-1">High-purity nitrogen</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ── Row 3: Sonicator / Evaporator / SPE — 3 equal cols ── -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-5">
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/probe-sonicator-advanced.jpg" alt="Probe Sonicator" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">Probe Sonicator (Advanced)</p>
-          <p class="text-xs text-ink-400 mt-1">Ultrasonic cell disruption</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/nitrogen-evaporator.jpg" alt="Nitrogen Evaporator" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">Nitrogen Evaporator</p>
-          <p class="text-xs text-ink-400 mt-1">Sample concentration</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/solid-phase-extraction.jpg" alt="Solid Phase Extraction" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">Solid Phase Extraction</p>
-          <p class="text-xs text-ink-400 mt-1">SPE manifold systems</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ── Row 4: Columns / Bath / 3-in-1 — 4 equal cols ── -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/cosmosil-columns.jpg" alt="Cosmosil HPLC Columns" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">Cosmosil Columns</p>
-          <p class="text-xs text-ink-400 mt-1">HPLC separation</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/nucleosil-hplc-columns.jpg" alt="Nucleosil HPLC Columns" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">Nucleosil HPLC Columns</p>
-          <p class="text-xs text-ink-400 mt-1">Macherey-Nagel</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/ultrasonic-bath-sonicator.jpg" alt="Ultrasonic Bath Sonicator" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">Ultrasonic Bath Sonicator</p>
-          <p class="text-xs text-ink-400 mt-1">Cleaning &amp; degassing</p>
-        </div>
-      </div>
-
-      <div class="reveal showcase-card-sm group">
-        <div class="showcase-img-sm-wrap">
-          <img src="img/home/3-in-1-air-combination-generator.jpg" alt="3-in-1 Air Combination Generator" class="showcase-img-sm" loading="lazy" />
-        </div>
-        <div class="card-label">
-          <p class="text-sm font-semibold text-ink-900">3-in-1 Combination Generator</p>
-          <p class="text-xs text-ink-400 mt-1">H₂ + N₂ + Zero Air system</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="reveal text-center mt-10">
-      <a href="#contact" class="btn-primary inline-flex items-center gap-2">
-        Enquire About a Product
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      8. TESTIMONIALS
 ═══════════════════════════════════════════════════════════ -->
-<section id="testimonials" class="section-pad bg-white">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-14">
-      <div class="reveal section-eyebrow mx-auto mb-4">Client Stories</div>
-      <h2 class="reveal font-display font-bold text-ink-900" style="font-size:clamp(1.85rem,3.5vw,2.75rem);">
-        Trusted by <span class="brand-gradient-text">Industrial Leaders</span>
-      </h2>
-    </div>
-    <div class="testimonial-slider relative overflow-hidden">
-      <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
+  <section id="testimonials" class="section-pad bg-white">
+    <div class="max-w-5xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="reveal section-eyebrow mx-auto mb-4">Client Stories</div>
+        <h2 class="reveal font-display font-bold text-ink-900" style="font-size:clamp(1.85rem,3.5vw,2.75rem);">
+          Trusted by <span class="brand-gradient-text">Industrial Leaders</span>
+        </h2>
+      </div>
+      <div class="testimonial-slider relative overflow-hidden">
+        <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
 
-        <div class="testimonial-slide flex-shrink-0 w-full px-2">
-          <div class="testi-card">
-            <div class="testi-quote">"</div>
-            <p class="testi-body">"Phoenix Technical Solution completely transformed our fluid delivery systems. Their Swagelok-certified team ensured our high-pressure reactors were installed safely and efficiently. The 24/7 support gives us total peace of mind."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">PM</div>
-              <div>
-                <div class="testi-name">Production Manager</div>
-                <div class="testi-company">Chemical Manufacturing Co., Pune</div>
+          <div class="testimonial-slide flex-shrink-0 w-full px-2">
+            <div class="testi-card">
+              <div class="testi-quote">"</div>
+              <p class="testi-body">"Phoenix Technical Solution completely transformed our fluid delivery systems. Their
+                Swagelok-certified team ensured our high-pressure reactors were installed safely and efficiently. The
+                24/7 support gives us total peace of mind."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">PM</div>
+                <div>
+                  <div class="testi-name">Production Manager</div>
+                  <div class="testi-company">Chemical Manufacturing Co., Pune</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="testimonial-slide flex-shrink-0 w-full px-2">
-          <div class="testi-card">
-            <div class="testi-quote">"</div>
-            <p class="testi-body">"We hired Phoenix to upgrade our legacy automation systems. The transition to their custom PLC and SCADA control panels was seamless, drastically improving our process monitoring and reducing unplanned downtime."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">OD</div>
-              <div>
-                <div class="testi-name">Operations Director</div>
-                <div class="testi-company">Pharma Tech, Maharashtra</div>
+          <div class="testimonial-slide flex-shrink-0 w-full px-2">
+            <div class="testi-card">
+              <div class="testi-quote">"</div>
+              <p class="testi-body">"We hired Phoenix to upgrade our legacy automation systems. The transition to their
+                custom PLC and SCADA control panels was seamless, drastically improving our process monitoring and
+                reducing unplanned downtime."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">OD</div>
+                <div>
+                  <div class="testi-name">Operations Director</div>
+                  <div class="testi-company">Pharma Tech, Maharashtra</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
-      <div class="flex justify-center gap-4 mt-6">
-        <button id="testi-prev" class="testi-btn" aria-label="Previous"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
-        <div class="flex items-center gap-2">
-          <button class="testi-dot active" data-idx="0" aria-label="Slide 1"></button>
-          <button class="testi-dot" data-idx="1" aria-label="Slide 2"></button>
         </div>
-        <button id="testi-next" class="testi-btn" aria-label="Next"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+        <div class="flex justify-center gap-4 mt-6">
+          <button id="testi-prev" class="testi-btn" aria-label="Previous"><svg class="w-5 h-5" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg></button>
+          <div class="flex items-center gap-2">
+            <button class="testi-dot active" data-idx="0" aria-label="Slide 1"></button>
+            <button class="testi-dot" data-idx="1" aria-label="Slide 2"></button>
+          </div>
+          <button id="testi-next" class="testi-btn" aria-label="Next"><svg class="w-5 h-5" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg></button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      9. FAQ
 ═══════════════════════════════════════════════════════════ -->
-<section id="faq" class="section-pad bg-surf-100">
-  <div class="max-w-3xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-12">
-      <div class="reveal section-eyebrow mx-auto mb-4">Got Questions?</div>
-      <h2 class="reveal font-display font-bold text-ink-900" style="font-size:clamp(1.85rem,3.5vw,2.75rem);">
-        Frequently Asked <span class="brand-gradient-text">Questions</span>
-      </h2>
+  <section id="faq" class="section-pad bg-surf-100">
+    <div class="max-w-3xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="reveal section-eyebrow mx-auto mb-4">Got Questions?</div>
+        <h2 class="reveal font-display font-bold text-ink-900" style="font-size:clamp(1.85rem,3.5vw,2.75rem);">
+          Frequently Asked <span class="brand-gradient-text">Questions</span>
+        </h2>
+      </div>
+      <div class="space-y-3" id="faq-list">
+        <div class="reveal faq-item" data-faq>
+          <button class="faq-question" aria-expanded="false">Do you build custom reactor systems?<svg
+              class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div class="faq-answer">Yes, we custom design and fabricate various types of reactors, including high-pressure
+            batch, tubular flow, slurry, and fluidized bed reactor systems.</div>
+        </div>
+        <div class="reveal faq-item" data-faq>
+          <button class="faq-question" aria-expanded="false">Are your technicians certified?<svg
+              class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div class="faq-answer">Absolutely. Our team includes Swagelok-certified engineers and technicians, ensuring
+            top-tier safety and precision in piping and tubing systems.</div>
+        </div>
+        <div class="reveal faq-item" data-faq>
+          <button class="faq-question" aria-expanded="false">Can you upgrade our existing, outdated process systems?<svg
+              class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div class="faq-answer">Yes, we specialize in the revamping and upgradation of both old process systems and
+            outdated automation architectures.</div>
+        </div>
+        <div class="reveal faq-item" data-faq>
+          <button class="faq-question" aria-expanded="false">What kind of automation services do you provide?<svg
+              class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div class="faq-answer">We design and install custom electrical panels, process control panels, and integrate
+            advanced PLC, SCADA, and IoT systems for complete automation architecture.</div>
+        </div>
+        <div class="reveal faq-item" data-faq>
+          <button class="faq-question" aria-expanded="false">Do you offer after-sales support?<svg
+              class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div class="faq-answer">Yes — comprehensive support from design to maintenance, including 24/7 technical
+            support and emergency services.</div>
+        </div>
+        <div class="reveal faq-item" data-faq>
+          <button class="faq-question" aria-expanded="false">Where are you located?<svg
+              class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div class="faq-answer">We are based in Pune, Maharashtra — Sr.No. 110 A/3/1/2, Kalewadi, Alandi, Karpureshwar
+            Building, Opp. Devkrupa Petrol Pump, Alandi, Haveli, Pune – 412 105.</div>
+        </div>
+      </div>
     </div>
-    <div class="space-y-3" id="faq-list">
-      <div class="reveal faq-item" data-faq>
-        <button class="faq-question" aria-expanded="false">Do you build custom reactor systems?<svg class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-answer">Yes, we custom design and fabricate various types of reactors, including high-pressure batch, tubular flow, slurry, and fluidized bed reactor systems.</div>
-      </div>
-      <div class="reveal faq-item" data-faq>
-        <button class="faq-question" aria-expanded="false">Are your technicians certified?<svg class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-answer">Absolutely. Our team includes Swagelok-certified engineers and technicians, ensuring top-tier safety and precision in piping and tubing systems.</div>
-      </div>
-      <div class="reveal faq-item" data-faq>
-        <button class="faq-question" aria-expanded="false">Can you upgrade our existing, outdated process systems?<svg class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-answer">Yes, we specialize in the revamping and upgradation of both old process systems and outdated automation architectures.</div>
-      </div>
-      <div class="reveal faq-item" data-faq>
-        <button class="faq-question" aria-expanded="false">What kind of automation services do you provide?<svg class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-answer">We design and install custom electrical panels, process control panels, and integrate advanced PLC, SCADA, and IoT systems for complete automation architecture.</div>
-      </div>
-      <div class="reveal faq-item" data-faq>
-        <button class="faq-question" aria-expanded="false">Do you offer after-sales support?<svg class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-answer">Yes — comprehensive support from design to maintenance, including 24/7 technical support and emergency services.</div>
-      </div>
-      <div class="reveal faq-item" data-faq>
-        <button class="faq-question" aria-expanded="false">Where are you located?<svg class="faq-arrow w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-answer">We are based in Pune, Maharashtra — Sr.No. 110 A/3/1/2, Kalewadi, Alandi, Karpureshwar Building, Opp. Devkrupa Petrol Pump, Alandi, Haveli, Pune – 412 105.</div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      10. CONTACT
 ═══════════════════════════════════════════════════════════ -->
-<section id="contact" class="section-pad bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-14">
-      <div class="reveal section-eyebrow mx-auto mb-4">Get in Touch</div>
-      <h2 class="reveal font-display font-bold text-ink-900 mb-2" style="font-size:clamp(1.85rem,3.5vw,2.75rem);">
-        Ready to Upgrade Your <span class="brand-gradient-text">Industrial Systems?</span>
-      </h2>
-      <p class="reveal text-ink-500">Get in touch with our engineering experts today.</p>
-    </div>
+  <section id="contact" class="section-pad bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="reveal section-eyebrow mx-auto mb-4">Get in Touch</div>
+        <h2 class="reveal font-display font-bold text-ink-900 mb-2" style="font-size:clamp(1.85rem,3.5vw,2.75rem);">
+          Ready to Upgrade Your <span class="brand-gradient-text">Industrial Systems?</span>
+        </h2>
+        <p class="reveal text-ink-500">Get in touch with our engineering experts today.</p>
+      </div>
 
-    <div class="grid lg:grid-cols-5 gap-10 items-start">
+      <div class="grid lg:grid-cols-5 gap-10 items-start">
 
-      <div class="lg:col-span-2 space-y-6">
-        <div class="reveal contact-info-card">
-          <div class="flex items-center gap-4 pb-5 border-b border-surf-200">
-            <div class="rep-avatar">SS</div>
+        <div class="lg:col-span-2 space-y-6">
+          <div class="reveal contact-info-card">
+            <div class="flex items-center gap-4 pb-5 border-b border-surf-200">
+              <div class="rep-avatar">SS</div>
+              <div>
+                <div class="font-semibold text-ink-900">Mr. Sadashiv Shinde</div>
+                <div class="text-sm text-brand-purple font-medium">Representative, Phoenix Technical Solution</div>
+              </div>
+            </div>
+            <div class="pt-5 space-y-4">
+              <div class="contact-row">
+                <svg class="w-4 h-4 text-brand-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <div>
+                  <div class="text-xs text-ink-400 mb-0.5">Phone</div>
+                  <a href="tel:9423239466"
+                    class="text-ink-900 font-medium text-sm hover:text-brand-purple transition-colors block">94232
+                    39466</a>
+                  <a href="tel:9890150707"
+                    class="text-ink-900 font-medium text-sm hover:text-brand-purple transition-colors block">98901
+                    50707</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <svg class="w-4 h-4 text-brand-crimson mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <div class="text-xs text-ink-400 mb-0.5">Email</div>
+                  <a href="mailto:phoenixtechnical.solution4411@gmail.com"
+                    class="text-ink-900 font-medium text-sm hover:text-brand-crimson transition-colors break-all">phoenixtechnical.solution4411@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-row items-start">
+                <svg class="w-4 h-4 text-brand-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div>
+                  <div class="text-xs text-ink-400 mb-0.5">Address</div>
+                  <address class="text-ink-700 text-sm not-italic leading-relaxed">Sr.No. 110 A/3/1/2, Kalewadi,
+                    Alandi<br />Karpureshwar Building, Opp. Devkrupa Petrol Pump<br />Alandi, Haveli, Pune – 412 105
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal px-5 py-4 rounded-2xl bg-surf-50 border border-surf-200 flex items-center gap-3">
+            <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
             <div>
-              <div class="font-semibold text-ink-900">Mr. Sadashiv Shinde</div>
-              <div class="text-sm text-brand-purple font-medium">Representative, Phoenix Technical Solution</div>
+              <div class="text-xs text-ink-400">GSTIN</div>
+              <div class="font-mono font-semibold text-ink-900 text-sm tracking-wide">27IJDPS0146D1ZA</div>
             </div>
           </div>
-          <div class="pt-5 space-y-4">
-            <div class="contact-row">
-              <svg class="w-4 h-4 text-brand-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              <div>
-                <div class="text-xs text-ink-400 mb-0.5">Phone</div>
-                <a href="tel:9423239466" class="text-ink-900 font-medium text-sm hover:text-brand-purple transition-colors block">94232 39466</a>
-                <a href="tel:9890150707" class="text-ink-900 font-medium text-sm hover:text-brand-purple transition-colors block">98901 50707</a>
-              </div>
-            </div>
-            <div class="contact-row">
-              <svg class="w-4 h-4 text-brand-crimson mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <div>
-                <div class="text-xs text-ink-400 mb-0.5">Email</div>
-                <a href="mailto:phoenixtechnical.solution4411@gmail.com" class="text-ink-900 font-medium text-sm hover:text-brand-crimson transition-colors break-all">phoenixtechnical.solution4411@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-row items-start">
-              <svg class="w-4 h-4 text-brand-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <div>
-                <div class="text-xs text-ink-400 mb-0.5">Address</div>
-                <address class="text-ink-700 text-sm not-italic leading-relaxed">Sr.No. 110 A/3/1/2, Kalewadi, Alandi<br/>Karpureshwar Building, Opp. Devkrupa Petrol Pump<br/>Alandi, Haveli, Pune – 412 105</address>
-              </div>
-            </div>
+
+          <div class="reveal rounded-2xl overflow-hidden border border-surf-200 shadow-sm h-52">
+            <iframe title="Phoenix Technical Solution location"
+              src="https://maps.google.com/maps?q=Kalewadi+Alandi+Pune+412105&output=embed&z=14" width="100%"
+              height="100%" style="border:0;" loading="lazy" allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
-        <div class="reveal px-5 py-4 rounded-2xl bg-surf-50 border border-surf-200 flex items-center gap-3">
-          <svg class="w-5 h-5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          <div>
-            <div class="text-xs text-ink-400">GSTIN</div>
-            <div class="font-mono font-semibold text-ink-900 text-sm tracking-wide">27IJDPS0146D1ZA</div>
-          </div>
-        </div>
-
-        <div class="reveal rounded-2xl overflow-hidden border border-surf-200 shadow-sm h-52">
-          <iframe title="Phoenix Technical Solution location" src="https://maps.google.com/maps?q=Kalewadi+Alandi+Pune+412105&output=embed&z=14" width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <div class="lg:col-span-3 reveal">
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="grid sm:grid-cols-2 gap-5 mb-5">
-            <div class="form-group">
-              <label class="form-label" for="cf-name">Full Name *</label>
-              <input type="text" id="cf-name" name="name" class="form-input" placeholder="Your full name" required />
+        <div class="lg:col-span-3 reveal">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5 mb-5">
+              <div class="form-group">
+                <label class="form-label" for="cf-name">Full Name *</label>
+                <input type="text" id="cf-name" name="name" class="form-input" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Email Address *</label>
+                <input type="email" id="cf-email" name="email" class="form-input" placeholder="you@company.com"
+                  required />
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="cf-email">Email Address *</label>
-              <input type="email" id="cf-email" name="email" class="form-input" placeholder="you@company.com" required />
+            <div class="form-group mb-5">
+              <label class="form-label" for="cf-phone">Phone Number</label>
+              <input type="tel" id="cf-phone" name="phone" class="form-input" placeholder="+91 00000 00000" />
             </div>
-          </div>
-          <div class="form-group mb-5">
-            <label class="form-label" for="cf-phone">Phone Number</label>
-            <input type="tel" id="cf-phone" name="phone" class="form-input" placeholder="+91 00000 00000" />
-          </div>
-          <div class="form-group mb-5">
-            <label class="form-label" for="cf-service">Service Needed</label>
-            <select id="cf-service" name="service" class="form-input">
-              <option value="">Select a service…</option>
-              <option>High Pressure &amp; Reactor Systems</option>
-              <option>Industrial Piping &amp; Tubing Systems</option>
-              <option>Electrical Wiring &amp; Automation Panels</option>
-              <option>Fabrication, Revamping &amp; Consultation</option>
-              <option>Gas Generators &amp; Equipment Supply</option>
-              <option>Chromatography Consumables</option>
-              <option>24/7 Emergency Support</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group mb-6">
-            <label class="form-label" for="cf-message">Project Details *</label>
-            <textarea id="cf-message" name="message" class="form-input resize-none" rows="5" placeholder="Describe your project requirements, current setup, and timeline…" required></textarea>
-          </div>
-          <button type="submit" id="form-submit-btn" class="btn-primary w-full justify-center flex items-center gap-2 py-4 text-base">
-            <span id="btn-label">Request Consultation</span>
-            <svg id="btn-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            <svg id="btn-spin" class="w-4 h-4 hidden animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-          </button>
-          <div id="form-msg" class="hidden mt-4 p-4 rounded-xl text-sm text-center font-medium"></div>
-        </form>
+            <div class="form-group mb-5">
+              <label class="form-label" for="cf-service">Service Needed</label>
+              <select id="cf-service" name="service" class="form-input">
+                <option value="">Select a service…</option>
+                <option>High Pressure &amp; Reactor Systems</option>
+                <option>Industrial Piping &amp; Tubing Systems</option>
+                <option>Electrical Wiring &amp; Automation Panels</option>
+                <option>Fabrication, Revamping &amp; Consultation</option>
+                <option>Gas Generators &amp; Equipment Supply</option>
+                <option>Chromatography Consumables</option>
+                <option>24/7 Emergency Support</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group mb-6">
+              <label class="form-label" for="cf-message">Project Details *</label>
+              <textarea id="cf-message" name="message" class="form-input resize-none" rows="5"
+                placeholder="Describe your project requirements, current setup, and timeline…" required></textarea>
+            </div>
+            <button type="submit" id="form-submit-btn"
+              class="btn-primary w-full justify-center flex items-center gap-2 py-4 text-base">
+              <span id="btn-label">Request Consultation</span>
+              <svg id="btn-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+              <svg id="btn-spin" class="w-4 h-4 hidden animate-spin" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </button>
+            <div id="form-msg" class="hidden mt-4 p-4 rounded-xl text-sm text-center font-medium"></div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════════════════════ -->
-<footer class="bg-ink-900 text-white pt-14 pb-8">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
-      <div class="col-span-2 md:col-span-1">
-        <div class="flex items-center gap-3 mb-4">
-          <svg width="32" height="32" viewBox="0 0 38 38" fill="none">
-            <defs><linearGradient id="lgFoot" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#9c1fad"/><stop offset="100%" stop-color="#b6171e"/></linearGradient></defs>
-            <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="url(#lgFoot)" opacity="0.2"/>
-            <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="none" stroke="url(#lgFoot)" stroke-width="1.8" stroke-linejoin="round"/>
-          </svg>
-          <div class="leading-tight">
-            <div class="font-display font-bold text-base text-white">Phoenix Technical</div>
-            <div class="text-[9px] tracking-[0.25em] uppercase text-brand-magenta/80">Solution</div>
+  <footer class="bg-ink-900 text-white pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <svg width="32" height="32" viewBox="0 0 38 38" fill="none">
+              <defs>
+                <linearGradient id="lgFoot" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#9c1fad" />
+                  <stop offset="100%" stop-color="#b6171e" />
+                </linearGradient>
+              </defs>
+              <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="url(#lgFoot)" opacity="0.2" />
+              <path d="M19 3 L9 22 L15.5 22 L12 35 L29 14 L22.5 14 L28 3 Z" fill="none" stroke="url(#lgFoot)"
+                stroke-width="1.8" stroke-linejoin="round" />
+            </svg>
+            <div class="leading-tight">
+              <div class="font-display font-bold text-base text-white">Phoenix Technical</div>
+              <div class="text-[9px] tracking-[0.25em] uppercase text-brand-magenta/80">Solution</div>
+            </div>
+          </div>
+          <p class="text-white/50 text-xs leading-relaxed max-w-[220px]">Precision engineering for India's process,
+            automation, and infrastructure industry.</p>
+          <div class="flex gap-2 mt-5">
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"
+              class="footer-social-btn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
           </div>
         </div>
-        <p class="text-white/50 text-xs leading-relaxed max-w-[220px]">Precision engineering for India's process, automation, and infrastructure industry.</p>
-        <div class="flex gap-2 mt-5">
-          <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener" class="footer-social-btn">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
+        <div>
+          <h5 class="footer-heading">Services</h5>
+          <ul class="space-y-2">
+            <li><a href="#svc-reactors" class="footer-link">High Pressure &amp; Reactors</a></li>
+            <li><a href="#svc-piping" class="footer-link">Industrial Piping</a></li>
+            <li><a href="#svc-electrical" class="footer-link">Electrical &amp; Automation</a></li>
+            <li><a href="#svc-fabrication" class="footer-link">Fabrication &amp; Revamping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Company</h5>
+          <ul class="space-y-2">
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#why-us" class="footer-link">Why Phoenix</a></li>
+            <li><a href="#industries" class="footer-link">Industries</a></li>
+            <li><a href="#showcase" class="footer-link">Products</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Contact</h5>
+          <ul class="space-y-2">
+            <li><a href="tel:9423239466" class="footer-link">94232 39466</a></li>
+            <li><a href="tel:9890150707" class="footer-link">98901 50707</a></li>
+            <li><a href="mailto:phoenixtechnical.solution4411@gmail.com"
+                class="footer-link break-all">phoenixtechnical.solution4411@gmail.com</a></li>
+          </ul>
+          <p class="text-white/30 text-xs mt-4 leading-relaxed">Kalewadi, Alandi, Haveli<br />Pune – 412 105, MH</p>
         </div>
       </div>
-      <div>
-        <h5 class="footer-heading">Services</h5>
-        <ul class="space-y-2">
-          <li><a href="#svc-reactors"   class="footer-link">High Pressure &amp; Reactors</a></li>
-          <li><a href="#svc-piping"     class="footer-link">Industrial Piping</a></li>
-          <li><a href="#svc-electrical" class="footer-link">Electrical &amp; Automation</a></li>
-          <li><a href="#svc-fabrication" class="footer-link">Fabrication &amp; Revamping</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="footer-heading">Company</h5>
-        <ul class="space-y-2">
-          <li><a href="#about"      class="footer-link">About Us</a></li>
-          <li><a href="#why-us"     class="footer-link">Why Phoenix</a></li>
-          <li><a href="#industries" class="footer-link">Industries</a></li>
-          <li><a href="#showcase"   class="footer-link">Products</a></li>
-          <li><a href="#faq"        class="footer-link">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="footer-heading">Contact</h5>
-        <ul class="space-y-2">
-          <li><a href="tel:9423239466" class="footer-link">94232 39466</a></li>
-          <li><a href="tel:9890150707" class="footer-link">98901 50707</a></li>
-          <li><a href="mailto:phoenixtechnical.solution4411@gmail.com" class="footer-link break-all">phoenixtechnical.solution4411@gmail.com</a></li>
-        </ul>
-        <p class="text-white/30 text-xs mt-4 leading-relaxed">Kalewadi, Alandi, Haveli<br/>Pune – 412 105, MH</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 gap-3 text-xs text-white/30">
+        <p>© 2025 Phoenix Technical Solution. All rights reserved. | GSTIN: 27IJDPS0146D1ZA</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white/60 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white/60 transition-colors">Terms of Service</a>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col sm:flex-row items-center justify-between pt-8 gap-3 text-xs text-white/30">
-      <p>© 2025 Phoenix Technical Solution. All rights reserved. | GSTIN: 27IJDPS0146D1ZA</p>
-      <div class="flex gap-5">
-        <a href="#" class="hover:text-white/60 transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-white/60 transition-colors">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
