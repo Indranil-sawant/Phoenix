@@ -245,6 +245,35 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
 }
 .mob-link:hover { color: var(--purple); }
 
+/* Active nav link — gradient underline pill */
+.nav-link-active {
+  color: var(--purple) !important;
+  font-weight: 600 !important;
+  position: relative;
+}
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--purple), var(--crimson));
+}
+/* Keep visible even on transparent navbar */
+#navbar:not(.scrolled) .nav-link-active {
+  color: #fff !important;
+}
+#navbar:not(.scrolled) .nav-link-active::after {
+  background: rgba(255,255,255,0.75);
+}
+
+/* Mobile active link */
+.mob-link-active {
+  color: var(--purple) !important;
+  font-weight: 600 !important;
+}
+
 /* ── 7. Trust bar ─────────────────────────────────────────── */
 .trust-item {
   display: flex; align-items: center; gap: 0.5rem;

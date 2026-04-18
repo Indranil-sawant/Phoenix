@@ -13,16 +13,45 @@ const allSections = document.querySelectorAll('section[id]');
 function updateNavbar() {
   navbar.classList.toggle('scrolled', window.scrollY > 64);
 }
+
+// Map section IDs → which nav href should be active
+const sectionToHref = {
+  hero:         null,
+  about:        '#about',
+  services:     '#services',
+  'gas-system': '#services',
+  'why-us':     '#services',
+  process:      '#process',
+  industries:   '#industries',
+  showcase:     'services.html',
+  testimonials: null,
+  faq:          '#faq',
+  contact:      '#faq',
+};
+
 function updateActiveLink() {
-  const mid = window.scrollY + window.innerHeight * 0.35;
+  const mid = window.scrollY + window.innerHeight * 0.38;
   let cur = '';
   allSections.forEach(sec => { if (sec.offsetTop <= mid) cur = sec.id; });
+
+  const activeHref = sectionToHref[cur] || (cur ? `#${cur}` : null);
+
   allNavLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === `#${cur}` ? '#6d1fa0' : '';
+    const href = link.getAttribute('href');
+    link.classList.toggle('nav-link-active', !!activeHref && href === activeHref);
+    // Clear old inline style if any
+    link.style.color = '';
+  });
+
+  document.querySelectorAll('.mob-link').forEach(link => {
+    const href = link.getAttribute('href');
+    link.classList.toggle('mob-link-active', !!activeHref && href === activeHref);
   });
 }
+
 window.addEventListener('scroll', () => { updateNavbar(); updateActiveLink(); }, { passive: true });
 updateNavbar();
+updateActiveLink();
 
 
 /* ── 2. MOBILE MENU ─────────────────────────────────────────── */
