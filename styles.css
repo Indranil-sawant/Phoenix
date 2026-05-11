@@ -648,6 +648,22 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
 .form-input:focus { border-color: var(--purple); background: #fff; box-shadow: 0 0 0 3px rgba(109,31,160,.1); }
 .form-input.err { border-color: var(--crimson); box-shadow: 0 0 0 3px rgba(182,23,30,.1); }
 
+/* Underline form inputs for contact card */
+.form-group-line { display: flex; flex-direction: column; position: relative; }
+.form-label-line {
+  font-size: 0.75rem; font-weight: 600; color: #9da1b8;
+  transition: color 0.3s; pointer-events: none;
+}
+.form-input-line {
+  width: 100%; border: none; border-bottom: 2px solid #ebebf0;
+  padding: 0.5rem 0; font-size: 1rem; color: #1a1c2e; font-family: 'Inter', sans-serif;
+  background: transparent; outline: none; transition: border-color 0.3s;
+  border-radius: 0;
+}
+.form-input-line::placeholder { color: #9da1b8; font-weight: 500; font-size: 0.95rem; }
+.form-input-line:focus { border-bottom-color: var(--purple); }
+.form-group-line:focus-within .form-label-line { color: var(--purple); }
+
 /* ── 18. Footer ───────────────────────────────────────────── */
 .footer-heading {
   font-family: 'Space Grotesk', sans-serif; font-size: var(--text-xs);

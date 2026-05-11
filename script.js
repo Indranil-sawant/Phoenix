@@ -290,12 +290,14 @@ function showMsg(type, text) {
 }
 
 function validate() {
-  const name  = document.getElementById('cf-name');
+  const fname = document.getElementById('cf-fname');
+  const lname = document.getElementById('cf-lname');
   const email = document.getElementById('cf-email');
   const msg   = document.getElementById('cf-message');
-  [name, email, msg].forEach(el => el.classList.remove('err'));
+  [fname, lname, email, msg].forEach(el => el.classList.remove('err'));
   const errs = [];
-  if (!name.value.trim() || name.value.trim().length < 2) { name.classList.add('err'); errs.push('name'); }
+  if (!fname.value.trim() || fname.value.trim().length < 2) { fname.classList.add('err'); errs.push('fname'); }
+  if (!lname.value.trim() || lname.value.trim().length < 2) { lname.classList.add('err'); errs.push('lname'); }
   if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('err'); errs.push('email'); }
   if (!msg.value.trim() || msg.value.trim().length < 10) { msg.classList.add('err'); errs.push('message'); }
   return errs;
