@@ -473,6 +473,7 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
   transform: translateY(-5px); border-color: rgba(109,31,160,.18);
 }
 .showcase-img-sm-wrap {
+  position: relative;
   width: 100%; aspect-ratio: 1 / 1; overflow: hidden;
   background: #f9f9fb; display: flex; align-items: center; justify-content: center;
   padding: 1.25rem;
@@ -1123,5 +1124,467 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
 
   /* Product grid — 1 card at a time */
   #showcase .grid.grid-cols-2.md\:grid-cols-4 > * { flex: 0 0 72%; }
+}
+
+/* ============================================================
+   22. INTERACTIVE SERVICE CARD POPUP SYSTEM
+   ============================================================ */
+
+/* --- Interactive Card Hover System --- */
+.interactive-card {
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 45px rgba(109, 31, 160, 0.2), 
+              0 0 0 1px var(--purple), 
+              0 0 20px rgba(109, 31, 160, 0.25) !important;
+  border-color: var(--purple) !important;
+}
+
+.interactive-card:active {
+  transform: translateY(-4px) scale(1.0) !important;
+}
+
+/* Ensure inner images transition smoothly */
+.interactive-card .svc-img,
+.interactive-card .showcase-img,
+.interactive-card .showcase-img-sm {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.interactive-card:hover .svc-img,
+.interactive-card:hover .showcase-img {
+  transform: scale(1.08) !important;
+}
+
+.interactive-card:hover .showcase-img-sm {
+  transform: scale(1.12) !important;
+}
+
+/* --- Popup Overlay & Backdrop --- */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(8, 4, 15, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Popup Modal Container --- */
+.popup-modal {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  max-height: min(650px, 88vh); /* Keep the modal within the viewport height */
+  background: rgba(15, 10, 25, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--r-xl);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  display: grid;
+  grid-template-cols: 1.1fr 1.3fr;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #fff;
+}
+
+.popup-overlay.active .popup-modal {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Close Button --- */
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.popup-close svg {
+  width: 14px;
+  height: 14px;
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* --- Layout Elements --- */
+.popup-left {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0; /* Let column size itself relative to grid */
+  overflow: hidden;
+}
+
+.popup-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(15, 10, 25, 0.85) 95%), 
+              linear-gradient(to top, rgba(15, 10, 25, 0.6), transparent);
+}
+
+.popup-right {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0; /* Extremely critical: allows grid item to shrink below content height so it scrolls */
+  overflow: hidden; /* Hide outer overflow, scroll internally */
+}
+
+/* Internal body scroll wrapper inside the right column */
+.popup-right > div:first-child {
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 0.75rem;
+  margin-bottom: 1.5rem;
+  min-height: 0;
+  
+  /* Custom dark premium scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.03);
+}
+
+.popup-right > div:first-child::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-right > div:first-child::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+
+.popup-right > div:first-child::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+.popup-right > div:first-child::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Typography --- */
+.popup-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #e0a5ff 0%, #ffb3b3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.25;
+}
+
+.popup-desc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.popup-features-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.75rem;
+}
+
+.popup-features-list {
+  list-style: none;
+  margin-bottom: 1.25rem;
+}
+
+.popup-features-list li {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.popup-features-list li::before {
+  content: '✓';
+  color: #ffb3b3;
+  font-weight: bold;
+  flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(255, 179, 179, 0.4);
+}
+
+/* --- Meta / Support Box --- */
+.popup-meta-box {
+  padding: 0.875rem 1rem;
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.popup-meta-title {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  tracking-wider;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.1em;
+}
+
+.popup-meta-value {
+  font-size: var(--text-sm);
+  color: #e0a5ff;
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+/* --- CTA Action Buttons --- */
+.popup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.popup-btn-enquire {
+  flex: 1 1 auto;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--crimson) 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-sm);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(109, 31, 160, 0.3);
+}
+
+.popup-btn-enquire:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(109, 31, 160, 0.45);
+}
+
+.popup-btn-call {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-sm);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.popup-btn-call:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.popup-btn-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-sm);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+}
+
+.popup-btn-wa:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+.popup-btn-wa svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .popup-overlay {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .popup-modal {
+    grid-template-cols: 1fr;
+    max-height: calc(100vh - 2rem);
+    max-width: 480px;
+    border-radius: var(--r-lg);
+  }
+  
+  .popup-left {
+    min-height: 180px;
+    height: 180px;
+  }
+  
+  .popup-img-overlay {
+    background: linear-gradient(to top, rgba(15, 10, 25, 0.85) 90%, transparent), 
+                linear-gradient(to right, rgba(15, 10, 25, 0.4), transparent);
+  }
+  
+  .popup-right {
+    padding: 1.5rem;
+    height: auto;
+    max-height: calc(100vh - 2rem - 180px);
+  }
+  
+  .popup-title {
+    font-size: var(--text-xl);
+    margin-bottom: 0.5rem;
+  }
+  
+  .popup-desc {
+    margin-bottom: 1rem;
+  }
+  
+  .popup-features-list {
+    margin-bottom: 1rem;
+  }
+  
+  .popup-meta-box {
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+  }
+  
+  .popup-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .popup-actions a, .popup-actions button {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ── 22. UNIVERSAL INTERACTIVE CARD STYLING ───────────────── */
+.interactive-card {
+  cursor: pointer !important;
+  position: relative;
+}
+
+/* Elegant glass interactive indicator tag */
+.interactive-card .svc-img-wrap::after,
+.interactive-card .showcase-img-sm-wrap::after,
+.interactive-card .card-img-wrap::after,
+.interactive-card.showcase-card::after {
+  content: '🔍 View Details';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(15, 22, 33, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+/* Position details pill for showcase cards at the top-right */
+.interactive-card.showcase-card::after {
+  bottom: auto;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.interactive-card:hover .svc-img-wrap::after,
+.interactive-card:hover .showcase-img-sm-wrap::after,
+.interactive-card:hover .card-img-wrap::after,
+.interactive-card:hover.showcase-card::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accent glow and borders on hover for interactive cards */
+.interactive-card.svc-card:hover {
+  border-color: rgba(109, 31, 160, 0.3) !important;
+  box-shadow: 0 20px 48px rgba(109, 31, 160, 0.18), 0 0 0 1px rgba(109, 31, 160, 0.1) !important;
+}
+
+.interactive-card.showcase-card:hover {
+  border-color: rgba(109, 31, 160, 0.3) !important;
+  box-shadow: 0 20px 48px rgba(109, 31, 160, 0.18), 0 0 0 1px rgba(109, 31, 160, 0.1) !important;
+}
+
+.interactive-card.showcase-card-sm:hover {
+  border-color: rgba(109, 31, 160, 0.3) !important;
+  box-shadow: 0 16px 36px rgba(109, 31, 160, 0.15), 0 0 0 1px rgba(109, 31, 160, 0.1) !important;
+}
+
+.interactive-card.product-card:hover {
+  border-color: rgba(109, 31, 160, 0.3) !important;
+  box-shadow: 0 20px 48px rgba(109, 31, 160, 0.18), 0 0 0 1px rgba(109, 31, 160, 0.1) !important;
 }
 

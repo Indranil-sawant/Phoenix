@@ -49,7 +49,7 @@
   </script>
 
   <!-- Shared stylesheet (same as index.html) -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3.1" />
 
   <style>
     /* ── Page-specific additions for services.html ── */
@@ -983,32 +983,64 @@ function renderCards(data) {
     return;
   }
 
-  cardsGrid.innerHTML = data.map((svc, i) => `
-    <article class="product-card" data-id="${svc.id}" style="animation-delay:${Math.min(i, 6) * 0.05}s">
-      <div class="card-img-wrap">
-        <img
-          src="${escapeHtml(svc.image)}"
-          alt="${escapeHtml(svc.title)}"
-          class="card-img"
-          loading="lazy"
-          onerror="this.src='img/home/gas_equipments1.jpg'"
-        />
-        <div class="card-img-overlay"></div>
-        <span class="card-category-badge">${escapeHtml(svc.category)}</span>
-      </div>
-      <div class="card-body">
-        <span class="card-num">${String(svc.id).padStart(2, '0')}</span>
-        <h3 class="card-title-text">${escapeHtml(svc.title)}</h3>
-        <p class="card-desc">${escapeHtml(svc.description)}</p>
-        <a href="index.html#contact" class="card-cta">
-          Enquire Now
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-    </article>
-  `).join("");
+  cardsGrid.innerHTML = data.map((svc, i) => {
+    // Generate beautiful custom specifications list dynamically based on category
+    let features = svc.features || "";
+    if (!features) {
+      if (svc.category === "Gas Equipment") {
+        features = "High-precision pressure regulation;Dual gauge monitoring system;Swagelok-certified connections;Leak-tested and safety audited";
+      } else if (svc.category === "Gas Generators") {
+        features = "Continuous on-demand gas generation;PEM cell / ultra-purity technology;Integrated safety sensors & auto-shutoff;No high-pressure cylinders required";
+      } else if (svc.category === "Gas Piping") {
+        features = "Stainless Steel 316L high-purity tubing;Pressure-rated wall manifolds;Precision gas flow control;Certified leak and bubble testing";
+      } else if (svc.category === "Analytical Equipment") {
+        features = "Advanced digital microcontroller;HMI color touch screen interface;Precise sensor calibration;Heavy-duty laboratory design";
+      } else if (svc.category === "Chromatography Consumables") {
+        features = "Exceptional separation and resolution;High batch-to-batch reproducibility;Quality-tested validation certificates;Long column service lifetime";
+      } else {
+        features = "Swagelok-certified parts assembly;High-durability construction;Full operational training;12-month full service warranty";
+      }
+    }
+    
+    let support = svc.support || "24/7 technical support hotline & annual maintenance contracts (AMC) available";
+    let pricing = svc.pricing || "Pricing on request — standard catalog & custom high-end systems in stock";
+
+    return `
+      <article class="product-card interactive-card" 
+               data-id="${svc.id}" 
+               data-title="${escapeHtml(svc.title)}"
+               data-description="${escapeHtml(svc.description)}"
+               data-image="${escapeHtml(svc.image)}"
+               data-features="${escapeHtml(features)}"
+               data-category="${escapeHtml(svc.category)}"
+               data-support="${escapeHtml(support)}"
+               data-pricing="${escapeHtml(pricing)}"
+               style="animation-delay:${Math.min(i, 6) * 0.05}s">
+        <div class="card-img-wrap">
+          <img
+            src="${escapeHtml(svc.image)}"
+            alt="${escapeHtml(svc.title)}"
+            class="card-img"
+            loading="lazy"
+            onerror="this.src='img/home/gas_equipments1.jpg'"
+          />
+          <div class="card-img-overlay"></div>
+          <span class="card-category-badge">${escapeHtml(svc.category)}</span>
+        </div>
+        <div class="card-body">
+          <span class="card-num">${String(svc.id).padStart(2, '0')}</span>
+          <h3 class="card-title-text">${escapeHtml(svc.title)}</h3>
+          <p class="card-desc">${escapeHtml(svc.description)}</p>
+          <a href="index.html#contact" class="card-cta">
+            Enquire Now
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    `;
+  }).join("");
 
   cardCount.textContent = data.length;
 }
@@ -1098,6 +1130,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <!-- Shared script (scroll-reveal, FAQ etc from index.html) -->
-<script src="script.js"></script>
+<script src="script.js?v=3.1"></script>
 </body>
 </html>
