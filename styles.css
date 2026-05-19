@@ -956,32 +956,44 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
   }
   #hero .absolute.bottom-20 .flex {
     flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
     max-width: 22rem;
     margin: 0 auto;
   }
 
-  /* Primary CTA — full-width, gradient, rounded, shadowed */
+  /* Primary CTA — compact auto-width, gradient pill */
   #hero .btn-primary {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border-radius: 0.875rem;
-    font-size: 1rem;
-    font-weight: 700;
-    box-shadow: 0 8px 28px rgba(156, 31, 173, 0.45), 0 0 15px rgba(156, 31, 173, 0.25);
-    min-height: 52px;
+    width: auto !important;
+    padding: 13px 32px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    min-height: 44px;
     justify-content: center;
+    gap: 8px;
+    box-shadow: 0 6px 22px rgba(156, 31, 173, 0.42), 0 0 12px rgba(156, 31, 173, 0.2);
+    flex-direction: row;
+    white-space: nowrap;
   }
 
-  /* Secondary / glass button — slimmer outline */
+  /* Secondary / glass button — compact glassmorphism */
   #hero .btn-glass {
-    width: 100%;
-    padding: 0.875rem 1.5rem;
-    border-radius: 0.875rem;
-    font-size: 0.9375rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    min-height: 48px;
+    width: auto !important;
+    padding: 12px 30px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(15, 10, 25, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-height: 44px;
     justify-content: center;
+    gap: 8px;
+    flex-direction: row;
+    white-space: nowrap;
+    color: #fff;
   }
 
   /* ── Trust bar ─────────────────────────────────────────── */
@@ -1178,9 +1190,10 @@ a:hover .logo-mark { filter: drop-shadow(0 0 6px rgba(109,31,160,.4)); }
 @media (max-width: 480px) {
   /* Hero: CTA bar lower, heading even larger for impact */
   #hero .absolute.bottom-20 { bottom: 5rem; padding: 0 1.125rem; }
+  #hero .absolute.bottom-20 .flex { max-width: 100%; align-items: center; }
+  #hero .btn-primary, #hero .btn-glass { width: auto !important; }
   .slide-h1 { font-size: clamp(1.65rem, 8vw, 2.1rem); }
   .slide-sub { font-size: 0.85rem; }
-  #hero .absolute.bottom-20 .flex { max-width: 100%; }
 
   /* Service cards slightly wider on tiny screens */
   #services .grid .svc-card { flex: 0 0 90%; }
