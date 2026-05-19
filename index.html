@@ -2219,31 +2219,284 @@
         0 20px 50px rgba(93, 18, 140, 0.35);
     }
 
-    @media(max-width:1100px) {
+    /* ── TABLET (≤ 1100px) ───────────────────────────────────── */
+    @media (max-width: 1100px) {
+
+      .industrial-contact-section {
+        padding: 80px 20px;
+      }
 
       .industrial-contact-wrapper {
         grid-template-columns: 1fr;
+        border-radius: 24px;
+      }
+
+      .industrial-contact-info {
+        padding: 56px 48px;
+      }
+
+      .industrial-form-card {
+        padding: 56px 48px;
+      }
+
+      .industrial-contact-info h2 {
+        font-size: 40px;
+      }
+
+      .form-heading h3 {
+        font-size: 34px;
       }
 
     }
 
-    @media(max-width:768px) {
+    /* ── MOBILE LARGE (≤ 768px) ─────────────────────────────── */
+    @media (max-width: 768px) {
 
-      .industrial-contact-info,
-      .industrial-form-card {
-        padding: 50px 28px;
+      .industrial-contact-section {
+        padding: 60px 16px;
+      }
+
+      .industrial-contact-wrapper {
+        border-radius: 20px;
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+      }
+
+      .industrial-contact-info {
+        padding: 44px 28px;
       }
 
       .industrial-contact-info h2 {
-        font-size: 38px;
+        font-size: clamp(26px, 7vw, 36px);
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+
+      .industrial-contact-info p {
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .contact-badge {
+        font-size: 11px;
+        padding: 8px 14px;
+        margin-bottom: 20px;
+        letter-spacing: 0.6px;
+      }
+
+      /* Trust points — 2-column compact grid on mobile */
+      .trust-points {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .trust-points .trust-item {
+        padding: 12px 14px;
+        font-size: 13px !important;
+        border-radius: 10px;
+        line-height: 1.45;
+        white-space: normal;
+      }
+
+      /* Contact details — tighter */
+      .contact-details {
+        margin-top: 36px;
+        gap: 20px;
+      }
+
+      .contact-detail {
+        gap: 14px;
+        align-items: flex-start;
+      }
+
+      .icon-box {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border-radius: 12px;
+        font-size: 18px;
+      }
+
+      .contact-detail h4 {
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      .contact-detail a,
+      .contact-detail p {
+        font-size: 14px;
+        line-height: 1.6;
+        word-break: break-word;
+      }
+
+      /* Form panel */
+      .industrial-form-card {
+        padding: 40px 24px;
+      }
+
+      .form-heading .small-text {
+        font-size: 11px;
       }
 
       .form-heading h3 {
-        font-size: 32px;
+        font-size: clamp(22px, 6vw, 30px);
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .form-heading p {
+        font-size: 14px;
+        margin-bottom: 28px;
+        line-height: 1.65;
       }
 
       .form-grid {
         grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .input-group {
+        margin-bottom: 18px;
+      }
+
+      .input-group label {
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .input-group input,
+      .input-group select,
+      .input-group textarea {
+        padding: 13px 15px;
+        font-size: 15px; /* 16px min avoids iOS zoom */
+        border-radius: 12px;
+      }
+
+      .input-group textarea {
+        rows: 4;
+        min-height: 100px;
+      }
+
+      .industrial-submit-btn {
+        padding: 15px;
+        font-size: 15px;
+        border-radius: 14px;
+        box-shadow: 0 10px 28px rgba(93, 18, 140, 0.22);
+        min-height: 52px;
+      }
+
+    }
+
+    /* ── MOBILE SMALL (≤ 480px) ─────────────────────────────── */
+    @media (max-width: 480px) {
+
+      .industrial-contact-section {
+        padding: 48px 12px;
+      }
+
+      .industrial-contact-wrapper {
+        border-radius: 16px;
+      }
+
+      .industrial-contact-info {
+        padding: 36px 20px;
+      }
+
+      .industrial-contact-info h2 {
+        font-size: clamp(22px, 8vw, 28px);
+      }
+
+      /* Trust points — single column on very small screens */
+      .trust-points {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .trust-points .trust-item {
+        padding: 11px 14px;
+        font-size: 13px !important;
+      }
+
+      .contact-details {
+        margin-top: 28px;
+        gap: 16px;
+      }
+
+      .icon-box {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .industrial-form-card {
+        padding: 32px 20px;
+      }
+
+      .form-heading h3 {
+        font-size: clamp(20px, 7vw, 26px);
+      }
+
+      .input-group input,
+      .input-group select,
+      .input-group textarea {
+        font-size: 16px; /* prevents iOS auto-zoom */
+        padding: 12px 14px;
+        border-radius: 10px;
+      }
+
+      .industrial-submit-btn {
+        font-size: 15px;
+        padding: 14px;
+        border-radius: 12px;
+      }
+
+    }
+
+    /* ── EXTRA SMALL (≤ 375px) ──────────────────────────────── */
+    @media (max-width: 375px) {
+
+      .industrial-contact-section {
+        padding: 40px 10px;
+      }
+
+      .industrial-contact-info,
+      .industrial-form-card {
+        padding: 28px 16px;
+      }
+
+      .industrial-contact-info h2 {
+        font-size: 21px;
+      }
+
+      .contact-badge {
+        font-size: 10px;
+        padding: 7px 12px;
+      }
+
+      .trust-points .trust-item {
+        font-size: 12px !important;
+        padding: 10px 12px;
+      }
+
+      .contact-detail h4 {
+        font-size: 14px;
+      }
+
+      .contact-detail a,
+      .contact-detail p {
+        font-size: 13px;
+      }
+
+      .form-heading h3 {
+        font-size: 19px;
+      }
+
+      .input-group label {
+        font-size: 12px;
       }
 
     }
