@@ -1,0 +1,134 @@
+<!-- ENQUIRY MODAL HTML SNIPPET -->
+<!-- Include this snippet at the bottom of your HTML body -->
+<div id="enqModalOverlay" class="enq-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+  aria-labelledby="enqModalTitle">
+  <div class="enq-modal">
+    <!-- Header -->
+    <div class="enq-modal-header">
+      <h2 id="enqModalTitle" class="enq-modal-title">Request a Quote</h2>
+      <button id="enqModalCloseBtn" class="enq-modal-close" aria-label="Close modal">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Form -->
+    <form id="enqForm" class="enq-form-wrap" novalidate>
+      <div class="enq-modal-body">
+        <div class="enq-form">
+          <!-- Honeypot for spam prevention -->
+          <div style="display:none;">
+            <input type="text" name="hp_website" id="hp_website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Full Name -->
+          <div class="enq-input-group">
+            <label for="enqName">Full Name <span class="required">*</span></label>
+            <input type="text" id="enqName" name="name" class="enq-input" placeholder="e.g. Rahul Sharma" required>
+            <div class="enq-error-msg" id="errName">Please enter your name</div>
+          </div>
+
+          <!-- Company Name -->
+          <div class="enq-input-group">
+            <label for="enqCompany">Company Name</label>
+            <input type="text" id="enqCompany" name="company" class="enq-input" placeholder="e.g. Phoenix Tech">
+          </div>
+
+          <!-- Phone Number -->
+          <div class="enq-input-group">
+            <label for="enqPhone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="enqPhone" name="phone" class="enq-input" placeholder="e.g. +91 98765 43210" required>
+            <div class="enq-error-msg" id="errPhone">Please enter a valid Indian phone number</div>
+          </div>
+
+          <!-- Email Address -->
+          <div class="enq-input-group">
+            <label for="enqEmail">Email Address <span class="required">*</span></label>
+            <input type="email" id="enqEmail" name="email" class="enq-input" placeholder="e.g. rahul@example.com"
+              required>
+            <div class="enq-error-msg" id="errEmail">Please enter a valid email</div>
+          </div>
+
+          <!-- City / Location -->
+          <div class="enq-input-group">
+            <label for="enqCity">City / Location</label>
+            <input type="text" id="enqCity" name="city" class="enq-input" placeholder="e.g. Pune, MH">
+          </div>
+
+          <!-- Service Required -->
+          <div class="enq-input-group">
+            <label for="enqService">Service Required</label>
+            <select id="enqService" name="service" class="enq-select">
+              <option value="" disabled selected>Select a service</option>
+              <option value="Gas Pipeline Installation">Gas Pipeline Installation</option>
+              <option value="Industrial Gas Systems">Industrial Gas Systems</option>
+              <option value="Central Gas Distribution">Central Gas Distribution</option>
+              <option value="Maintenance & AMC">Maintenance & AMC</option>
+              <option value="Safety Inspection">Safety Inspection</option>
+              <option value="Consultation">Consultation</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="enq-input-group enq-field-full">
+            <label for="enqMessage">Message / Requirement <span class="required">*</span></label>
+            <textarea id="enqMessage" name="message" class="enq-textarea"
+              placeholder="Tell us about your project requirements..." required></textarea>
+            <div class="enq-error-msg" id="errMessage">Please describe your requirement</div>
+          </div>
+
+          <!-- Budget Range -->
+          <div class="enq-input-group enq-field-full">
+            <label for="enqBudget">Budget Range (Optional)</label>
+            <select id="enqBudget" name="budget" class="enq-select">
+              <option value="" disabled selected>Select budget range</option>
+              <option value="Under ₹1 Lakh">Under ₹1 Lakh</option>
+              <option value="₹1 Lakh - ₹5 Lakhs">₹1 Lakh - ₹5 Lakhs</option>
+              <option value="₹5 Lakhs - ₹25 Lakhs">₹5 Lakhs - ₹25 Lakhs</option>
+              <option value="Over ₹25 Lakhs">Over ₹25 Lakhs</option>
+              <option value="Not Sure">Not Sure</option>
+            </select>
+          </div>
+
+          <!-- File Upload -->
+          <div class="enq-input-group enq-field-full">
+            <label>Upload PDF / Drawing / Requirement File</label>
+            <div class="enq-file-upload" id="enqDropZone">
+              <input type="file" id="enqFile" name="file" class="enq-file-input" accept=".pdf,.docx,.png,.jpg,.jpeg">
+              <div class="enq-file-label">
+                <svg class="enq-file-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                <span class="enq-file-text">Click to upload or drag & drop</span>
+                <span class="enq-file-hint">PDF, DOCX, PNG, JPG (Max. 10MB)</span>
+                <span class="enq-file-name" id="enqFileName"></span>
+              </div>
+            </div>
+            <div class="enq-error-msg" id="errFile">File exceeds 10MB limit or invalid type.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer / Submit -->
+      <div class="enq-modal-footer">
+        <button type="submit" id="enqSubmitBtn" class="enq-submit-btn">
+          <span class="enq-btn-text">Submit Enquiry</span>
+          <div class="enq-spinner"></div>
+        </button>
+      </div>
+    </form>
+
+    <!-- Success View -->
+    <div id="enqSuccessView" class="enq-success-view">
+      <svg class="enq-success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <h3 class="enq-success-title">Thank You!</h3>
+      <p class="enq-success-text">Your enquiry has been submitted successfully. Our team will contact you shortly.</p>
+    </div>
+  </div>
+</div>

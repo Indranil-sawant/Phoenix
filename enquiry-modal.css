@@ -1,0 +1,413 @@
+/* ── ENQUIRY MODAL STYLES ── */
+
+/* Variables matching branding */
+:root {
+  --modal-brand: #6d1fa0;
+  --modal-brand-hover: #4a1070;
+  --modal-accent: #b6171e;
+  --modal-bg: rgba(255, 255, 255, 0.98);
+  --modal-text: #1a1c2e;
+  --modal-text-light: #5a5e7a;
+  --modal-border: rgba(0, 0, 0, 0.08);
+  --modal-input-bg: #f5f5f7;
+  --modal-focus: rgba(109, 31, 160, 0.15);
+  --modal-error: #e53e3e;
+}
+
+/* Modal Overlay */
+.enq-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 28, 46, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  padding: 1rem;
+}
+
+.enq-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Container */
+.enq-modal {
+  width: 100%;
+  max-width: 600px;
+  background: var(--modal-bg);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--modal-border);
+  position: relative;
+  transform: scale(0.95) translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.enq-modal-overlay.active .enq-modal {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Header */
+.enq-modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--modal-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.enq-modal-title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--modal-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.enq-modal-title::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 24px;
+  background: linear-gradient(to bottom, var(--modal-brand), var(--modal-accent));
+  border-radius: 4px;
+}
+
+.enq-modal-close {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--modal-text-light);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.enq-modal-close:hover {
+  background: var(--modal-input-bg);
+  color: var(--modal-text);
+}
+
+/* Form Wrapper & Body Scroll Area */
+.enq-form-wrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.enq-modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: var(--modal-brand) transparent;
+}
+
+.enq-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.enq-modal-body::-webkit-scrollbar-thumb {
+  background: var(--modal-brand);
+  border-radius: 6px;
+}
+
+/* Form Layout */
+.enq-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.enq-field-full {
+  grid-column: 1 / -1;
+}
+
+/* Floating Labels & Inputs */
+.enq-input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.enq-input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--modal-text-light);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.enq-input-group label span.required {
+  color: var(--modal-accent);
+}
+
+.enq-input,
+.enq-select,
+.enq-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--modal-text);
+  background: var(--modal-input-bg);
+  border: 1px solid transparent;
+  border-radius: 0.625rem;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.enq-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.enq-input:hover,
+.enq-select:hover,
+.enq-textarea:hover {
+  background: #ebebf0;
+}
+
+.enq-input:focus,
+.enq-select:focus,
+.enq-textarea:focus {
+  background: #ffffff;
+  border-color: var(--modal-brand);
+  box-shadow: 0 0 0 3px var(--modal-focus);
+}
+
+.enq-input.error,
+.enq-select.error,
+.enq-textarea.error {
+  border-color: var(--modal-error);
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.15);
+  background: #fffafa;
+}
+
+.enq-error-msg {
+  font-size: 0.75rem;
+  color: var(--modal-error);
+  margin-top: 0.35rem;
+  display: none;
+  animation: enqFadeIn 0.2s ease;
+}
+
+/* File Upload */
+.enq-file-upload {
+  border: 2px dashed rgba(109, 31, 160, 0.3);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(109, 31, 160, 0.02);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.enq-file-upload:hover {
+  background: rgba(109, 31, 160, 0.05);
+  border-color: var(--modal-brand);
+}
+
+.enq-file-upload.dragover {
+  background: rgba(109, 31, 160, 0.1);
+  border-color: var(--modal-brand);
+  transform: scale(1.02);
+}
+
+.enq-file-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.enq-file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.enq-file-icon {
+  color: var(--modal-brand);
+  width: 28px;
+  height: 28px;
+}
+
+.enq-file-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--modal-text);
+}
+
+.enq-file-hint {
+  font-size: 0.75rem;
+  color: var(--modal-text-light);
+}
+
+.enq-file-name {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--modal-brand);
+  font-weight: 600;
+  display: none;
+  word-break: break-all;
+}
+
+/* Footer & Submit */
+.enq-modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--modal-border);
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.enq-submit-btn {
+  background: linear-gradient(135deg, var(--modal-brand), var(--modal-accent));
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(109, 31, 160, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.enq-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(109, 31, 160, 0.35);
+}
+
+.enq-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.enq-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: enqSpin 0.8s linear infinite;
+  display: none;
+}
+
+/* Success View */
+.enq-success-view {
+  position: absolute;
+  inset: 0;
+  background: var(--modal-bg);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s;
+  border-radius: 1.5rem;
+}
+
+.enq-success-view.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.enq-success-icon {
+  width: 64px;
+  height: 64px;
+  color: #10b981;
+  margin-bottom: 1rem;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.enq-success-view.active .enq-success-icon {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.enq-success-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--modal-text);
+  margin-bottom: 0.5rem;
+}
+
+.enq-success-text {
+  color: var(--modal-text-light);
+  font-size: 0.95rem;
+  max-width: 80%;
+}
+
+/* Animations */
+@keyframes enqFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes enqSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 639px) {
+  .enq-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .enq-modal {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+  .enq-modal-header, .enq-modal-body, .enq-modal-footer {
+    padding: 1.25rem 1.5rem;
+  }
+  .enq-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
