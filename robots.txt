@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /enquiry-modal.html
 Allow: /
 
 Sitemap: https://www.phoenixtechincalsolutions.com/sitemap.xml
