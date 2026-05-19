@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Phoenix Technical Solution">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9c1fad"/>
+      <stop offset="100%" stop-color="#b6171e"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#1a1c2e"/>
+  <path d="M16 4 L9 18 L13.5 18 L11 28 L23 14 L18.5 14 L22 4 Z" fill="url(#g)"/>
+</svg>

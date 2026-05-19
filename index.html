@@ -132,7 +132,7 @@
       <div class="container-wide py-4 flex flex-col gap-3">
         <a href="#process" class="mob-link">Process</a>
         <a href="#industries" class="mob-link">Industries</a>
-        <a href="#showcase" class="mob-link">Services</a>
+        <a href="services.html" class="mob-link">Services</a>
         <a href="#faq" class="mob-link">FAQ</a>
         <a href="#about" class="mob-link">About</a>
         <a href="#contact" class="btn-primary text-center mt-2">Get a Free Consultation</a>
@@ -1873,7 +1873,10 @@
 
         </div>
 
-        <form id="industrial-contact-form">
+        <form id="industrial-contact-form" novalidate>
+          <div class="hp-field" aria-hidden="true">
+            <input type="text" name="hp_website" tabindex="-1" autocomplete="off">
+          </div>
 
           <!-- ROW -->
           <div class="form-grid">
@@ -1917,41 +1920,15 @@
 
               <select name="service" required>
 
-                <option value="">
-                  Select Required Service
-                </option>
-
-                <option>
-                  LPG Gas Distribution System
-                </option>
-
-                <option>
-                  Industrial Gas Pipeline
-                </option>
-
-                <option>
-                  Medical Gas Pipeline
-                </option>
-
-                <option>
-                  Industrial Piping
-                </option>
-
-                <option>
-                  Pressure Testing
-                </option>
-
-                <option>
-                  Gas Leak Detection
-                </option>
-
-                <option>
-                  AMC & Maintenance
-                </option>
-
-                <option>
-                  Automation & Control Panel
-                </option>
+                <option value="">Select Required Service</option>
+                <option value="LPG Gas Distribution System">LPG Gas Distribution System</option>
+                <option value="Industrial Gas Pipeline">Industrial Gas Pipeline</option>
+                <option value="Medical Gas Pipeline">Medical Gas Pipeline</option>
+                <option value="Industrial Piping">Industrial Piping</option>
+                <option value="Pressure Testing">Pressure Testing</option>
+                <option value="Gas Leak Detection">Gas Leak Detection</option>
+                <option value="AMC & Maintenance">AMC & Maintenance</option>
+                <option value="Automation & Control Panel">Automation & Control Panel</option>
 
               </select>
             </div>
@@ -1985,11 +1962,10 @@
 
           </div>
 
-          <!-- BUTTON -->
+          <div id="industrial-form-feedback" class="form-feedback" hidden role="status"></div>
+
           <button type="submit" class="industrial-submit-btn">
-
             Request Industrial Consultation
-
           </button>
 
         </form>
@@ -2314,7 +2290,7 @@
           <p class="text-white/50 text-xs leading-relaxed max-w-[220px]">Precision engineering for India's process,
             automation, and infrastructure industry.</p>
           <div class="flex gap-2 mt-5">
-            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"
+            <a href="#" aria-label="LinkedIn — add your company URL before launch"
               class="footer-social-btn">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -2356,13 +2332,15 @@
       <div class="flex flex-col sm:flex-row items-center justify-between pt-8 gap-3 text-xs text-white/30">
         <p>© 2025 Phoenix Technical Solution. All rights reserved. | GSTIN: 27IJDPS0146D1ZA</p>
         <div class="flex gap-5">
-          <a href="#" class="hover:text-white/60 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white/60 transition-colors">Terms of Service</a>
+          <a href="privacy.html" class="hover:text-white/60 transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-white/60 transition-colors">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="config.js"></script>
+  <script src="forms.js"></script>
   <script src="script.js?v=3.1"></script>
 </body>
 

@@ -26,7 +26,7 @@ const sectionToHref = {
   showcase:     'services.html',
   testimonials: null,
   faq:          '#faq',
-  contact:      '#faq',
+  contact:      '#contact',
 };
 
 function updateActiveLink() {
@@ -271,80 +271,16 @@ function addCarouselHints() {
 window.addEventListener('load', addCarouselHints);
 
 
-/* ── 9. CONTACT FORM ────────────────────────────────────────── */
-const contactForm = document.getElementById('contact-form');
-const submitBtn   = document.getElementById('form-submit-btn');
-const btnLabel    = document.getElementById('btn-label');
-const btnIcon     = document.getElementById('btn-icon');
-const btnSpin     = document.getElementById('btn-spin');
-const formMsg     = document.getElementById('form-msg');
-
-function setLoading(on) {
-  submitBtn.disabled = on;
-  btnLabel.textContent = on ? 'Sending…' : 'Request Consultation';
-  btnIcon?.classList.toggle('hidden', on);
-  btnSpin?.classList.toggle('hidden', !on);
-}
-
-function showMsg(type, text) {
-  formMsg.className = 'mt-4 p-4 rounded-xl text-sm text-center font-medium border';
-  formMsg.classList.add(
-    type === 'success'
-      ? 'bg-green-50 text-green-700 border-green-200'
-      : 'bg-red-50 text-red-700 border-red-200'
-  );
-  formMsg.textContent = text;
-  formMsg.classList.remove('hidden');
-  formMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function validate() {
-  const fname = document.getElementById('cf-fname');
-  const lname = document.getElementById('cf-lname');
-  const email = document.getElementById('cf-email');
-  const msg   = document.getElementById('cf-message');
-  [fname, lname, email, msg].forEach(el => el && el.classList.remove('err'));
-  const errs = [];
-  if (fname && (!fname.value.trim() || fname.value.trim().length < 2)) { fname.classList.add('err'); errs.push('fname'); }
-  if (lname && (!lname.value.trim() || lname.value.trim().length < 2)) { lname.classList.add('err'); errs.push('lname'); }
-  if (email && (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value))) { email.classList.add('err'); errs.push('email'); }
-  if (msg && (!msg.value.trim() || msg.value.trim().length < 10)) { msg.classList.add('err'); errs.push('message'); }
-  return errs;
-}
-
-if (contactForm) {
-  contactForm.addEventListener('submit', async e => {
-    e.preventDefault();
-    formMsg.classList.add('hidden');
-    const errors = validate();
-    if (errors.length) { showMsg('error', 'Please fill in all required fields correctly.'); return; }
-    setLoading(true);
-    try {
-      // Replace with your actual API endpoint (Google Apps Script, Formspree, etc.)
-      await new Promise(res => setTimeout(res, 2000));
-      showMsg('success', '✓ Thank you! Your inquiry has been received. Mr. Shinde will contact you within 24 hours.');
-      contactForm.reset();
-    } catch {
-      showMsg('error', 'Something went wrong. Please call us directly: 94232 39466');
-    } finally {
-      setLoading(false);
-    }
-  });
-  contactForm.querySelectorAll('.form-input').forEach(input => {
-    input.addEventListener('input', () => input.classList.remove('err'));
-  });
-}
-
-/* ── 10. UNIVERSAL SERVICE & PRODUCT CARD POPUP SYSTEM ──────── */
+/* ── 9. UNIVERSAL SERVICE & PRODUCT CARD POPUP SYSTEM ──────── */
 const PhoenixPopupSystem = {
   overlay: null,
   modal: null,
   activeCard: null,
 
   config: {
-    phoneNumber: '+919423239466',
-    whatsappNumber: '919423239466',
-    email: 'phoenixtechnical.solution4411@gmail.com'
+    get phoneNumber() { return (window.PHOENIX_CONFIG && window.PHOENIX_CONFIG.phone) || '+919423239466'; },
+    get whatsappNumber() { return (window.PHOENIX_CONFIG && window.PHOENIX_CONFIG.whatsapp) || '919423239466'; },
+    get email() { return (window.PHOENIX_CONFIG && window.PHOENIX_CONFIG.email) || 'phoenixtechnical.solution4411@gmail.com'; },
   },
 
   init() {
@@ -517,24 +453,22 @@ const PhoenixPopupSystem = {
       });
 
       // 3. Select corresponding subject option
-      const subjectSelect = document.getElementById('cf-subject');
-      if (subjectSelect) {
+      const serviceSelect = document.querySelector('#industrial-contact-form [name="service"]');
+      if (serviceSelect) {
         let optionFound = false;
-        for (let i = 0; i < subjectSelect.options.length; i++) {
-          if (subjectSelect.options[i].value === category) {
-            subjectSelect.selectedIndex = i;
+        for (let i = 0; i < serviceSelect.options.length; i++) {
+          if (serviceSelect.options[i].value === category) {
+            serviceSelect.selectedIndex = i;
             optionFound = true;
             break;
           }
         }
-        if (!optionFound) {
-          // fallback to Other
-          subjectSelect.value = 'Other';
+        if (!optionFound && serviceSelect.options.length) {
+          serviceSelect.selectedIndex = 0;
         }
       }
 
-      // 4. Pre-fill message and focus textarea
-      const messageTextarea = document.getElementById('cf-message');
+      const messageTextarea = document.querySelector('#industrial-contact-form [name="message"]');
       if (messageTextarea) {
         messageTextarea.value = `Hi Phoenix Technical Solution, I would like to enquire about your "${title}". Please share technical specifications and pricing details.`;
         
