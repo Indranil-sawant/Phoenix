@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropZone = document.getElementById('enqDropZone');
   const fileNameDisplay = document.getElementById('enqFileName');
   const fileHint = dropZone.querySelector('.enq-file-hint');
-  
+
   // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYOUR_SCRIPT_ID_HERE/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyih-fMVrnuR5rqmLRy3pBRlArY5nFfy8Twn7CRr2CBUzJsXhtsii5zcDDeqNxWZg/exec';
 
   let selectedFileBase64 = null;
   let selectedFileMime = null;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─────────────────────────────────────────────────────────────
      MODAL OPEN/CLOSE LOGIC
   ───────────────────────────────────────────────────────────── */
-  
+
   function openModal() {
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -55,15 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.addEventListener('click', (e) => {
     // Find the closest element that matches our trigger selectors
     const btn = e.target.closest('.card-cta, a[href="#contact"], a[href="index.html#contact"], .btn-primary');
-    
+
     if (btn) {
       const text = btn.textContent.toLowerCase();
       // Only prevent default and open modal if it's an enquiry/quote action
-      if (text.includes('enquire') || text.includes('enquiry') || 
-          text.includes('quote') || text.includes('consultation')) {
-        
+      if (text.includes('enquire') || text.includes('enquiry') ||
+        text.includes('quote') || text.includes('consultation')) {
+
         e.preventDefault();
-        
+
         // Pre-fill service if clicking from a product card
         const card = btn.closest('.product-card');
         if (card) {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             serviceSelect.value = option ? category : "Other";
           }
         }
-        
+
         openModal();
       }
     }
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isValid = true;
-    
+
     // Validate Name
     const name = document.getElementById('enqName').value.trim();
     if (!name) {
@@ -262,15 +262,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Send to Google Apps Script
       // NOTE: Uses no-cors or standard CORS depending on script setup.
       // Usually fetch to Apps script uses method POST, body JSON.stringify
-      
+
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',
         body: JSON.stringify(formData)
       });
-      
+
       // Even if CORS throws an opaque response, we assume success if no exception
       // Alternatively, Google Apps Script can return valid JSON if setup correctly (ContentService)
-      
+
       // Show Success
       successView.classList.add('active');
       btnText.textContent = 'Sent Successfully';

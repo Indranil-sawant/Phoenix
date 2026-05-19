@@ -44,11 +44,19 @@ function doPost(e) {
     
     // Handle File Upload to Google Drive
     if (data.fileData && data.fileName && data.fileMime) {
-      const folder = DriveApp.getFolderById(DRIVE_FOLDER_ID);
-      const decodedFile = Utilities.base64Decode(data.fileData);
-      const blob = Utilities.newBlob(decodedFile, data.fileMime, data.fileName);
-      const file = folder.createFile(blob);
-      fileUrl = file.getUrl();
+      if (DRIVE_FOLDER_ID !== 'YOUR_FOLDER_ID_HERE' && DRIVE_FOLDER_ID !== '') {
+        try {
+          const folder = DriveApp.getFolderById(DRIVE_FOLDER_ID);
+          const decodedFile = Utilities.base64Decode(data.fileData);
+          const blob = Utilities.newBlob(decodedFile, data.fileMime, data.fileName);
+          const file = folder.createFile(blob);
+          fileUrl = file.getUrl();
+        } catch (uploadErr) {
+          fileUrl = 'Error uploading file: ' + uploadErr.toString();
+        }
+      } else {
+        fileUrl = 'Drive Folder ID not configured';
+      }
     }
     
     const timestamp = new Date();

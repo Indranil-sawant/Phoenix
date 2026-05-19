@@ -2093,12 +2093,24 @@
       gap: 16px;
     }
 
-    .trust-item {
-      padding: 16px 18px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
+    .trust-points .trust-item {
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, transform 0.3s;
+    }
+    
+    .trust-points .trust-item:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
     }
 
     .contact-details {
