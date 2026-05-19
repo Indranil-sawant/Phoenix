@@ -6,7 +6,7 @@
   'use strict';
 
   const defaults = {
-    siteUrl: 'https://www.phoenixtechnicalsolution.com',
+    siteUrl: 'https://www.phoenixtechincalsolutions.com',
     businessName: 'Phoenix Technical Solution',
     phone: '+919423239466',
     phoneDisplay: '+91 94232 39466',

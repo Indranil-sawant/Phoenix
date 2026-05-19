@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.phoenixtechnicalsolution.com/sitemap.xml
+Sitemap: https://www.phoenixtechincalsolutions.com/sitemap.xml
